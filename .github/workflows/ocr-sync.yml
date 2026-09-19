@@ -1,0 +1,190 @@
+name: Sync OpenCodeReview
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ocr-sync.yml"
+      - "tools/open-code-review/tool.json"
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-open-code-review
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Prepare verified stable release
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Load distribution policy
+        id: policy
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          config="tools/open-code-review/tool.json"
+
+          release_key="$(jq -r '.release_key' "$config")"
+          source_repository="$(jq -r '.source_repository' "$config")"
+          release_channel="$(jq -r '.release_channel' "$config")"
+          platform="$(jq -r '.platform' "$config")"
+          arch="$(jq -r '.arch' "$config")"
+          upstream_asset="$(jq -r '.upstream_asset' "$config")"
+
+          [[ "$release_key" =~ ^[a-z0-9]+([a-z0-9-]*[a-z0-9])?$ ]] || exit 65
+          [[ "$source_repository" =~ ^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$ ]] || exit 65
+          [ "$release_channel" = "stable" ] || exit 65
+
+          {
+            echo "release_key=$release_key"
+            echo "source_repository=$source_repository"
+            echo "upstream_asset=$upstream_asset"
+            echo "asset_name=${release_key}-${platform}-${arch}"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Prepare verified release artifact
+        id: prepare
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_KEY: ${{ steps.policy.outputs.release_key }}
+          SOURCE_REPOSITORY: ${{ steps.policy.outputs.source_repository }}
+          UPSTREAM_ASSET: ${{ steps.policy.outputs.upstream_asset }}
+          ASSET_NAME: ${{ steps.policy.outputs.asset_name }}
+          ARTIFACT_DIR: ${{ runner.temp }}/open-code-review-release
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          releases="$(gh api "repos/$SOURCE_REPOSITORY/releases?per_page=30")"
+          release="$(
+            jq -ce '
+              [
+                .[]
+                | select(.draft == false and .prerelease == false)
+                | select(.tag_name | test("^v[0-9]+\\.[0-9]+\\.[0-9]+$"))
+              ][0]
+            ' <<< "$releases"
+          )" || {
+            echo "::error::No stable upstream release was found." >&2
+            exit 1
+          }
+
+          upstream_tag="$(jq -r '.tag_name' <<< "$release")"
+          version="${upstream_tag#v}"
+          release_tag="${RELEASE_KEY}-v${version}"
+
+          if gh release view "$release_tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+            {
+              echo "### OpenCodeReview distribution source"
+              echo
+              echo "- upstream: $SOURCE_REPOSITORY@$upstream_tag"
+              echo "- target release: $release_tag (already published)"
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          asset_url="$(jq -r --arg name "$UPSTREAM_ASSET" '.assets[] | select(.name == $name) | .browser_download_url' <<< "$release")"
+          asset_digest="$(jq -r --arg name "$UPSTREAM_ASSET" '.assets[] | select(.name == $name) | .digest // empty' <<< "$release")"
+          checksum_url="$(jq -r '.assets[] | select(.name == "sha256sum.txt") | .browser_download_url' <<< "$release")"
+
+          [ -n "$asset_url" ] && [ "$asset_url" != "null" ] || {
+            echo "::error::$upstream_tag is missing $UPSTREAM_ASSET." >&2
+            exit 1
+          }
+          [ -n "$checksum_url" ] && [ "$checksum_url" != "null" ] || {
+            echo "::error::$upstream_tag is missing sha256sum.txt." >&2
+            exit 1
+          }
+
+          rm -rf "$ARTIFACT_DIR"
+          mkdir -p "$ARTIFACT_DIR"
+          checksum_file="$RUNNER_TEMP/open-code-review-upstream-sha256sum.txt"
+
+          curl -fsSL --retry 3 --retry-delay 2 "$asset_url" -o "$ARTIFACT_DIR/$ASSET_NAME"
+          curl -fsSL --retry 3 --retry-delay 2 "$checksum_url" -o "$checksum_file"
+          curl -fsSL --retry 3 --retry-delay 2 \
+            "https://raw.githubusercontent.com/$SOURCE_REPOSITORY/$upstream_tag/LICENSE" \
+            -o "$ARTIFACT_DIR/LICENSE.open-code-review"
+
+          expected_checksum="$(
+            awk -v name="$UPSTREAM_ASSET" '$2 == name || $2 == ("*" name) {print $1; exit}' "$checksum_file"
+          )"
+          [[ "$expected_checksum" =~ ^[A-Fa-f0-9]{64}$ ]] || {
+            echo "::error::$upstream_tag has no valid upstream SHA256." >&2
+            exit 1
+          }
+
+          actual_checksum="$(sha256sum "$ARTIFACT_DIR/$ASSET_NAME" | awk '{print $1}')"
+          [ "$actual_checksum" = "${expected_checksum,,}" ] || {
+            echo "::error::$upstream_tag checksum verification failed." >&2
+            exit 1
+          }
+
+          if [ -n "$asset_digest" ]; then
+            [ "$actual_checksum" = "${asset_digest#sha256:}" ] || {
+              echo "::error::$upstream_tag GitHub asset digest mismatch." >&2
+              exit 1
+            }
+          fi
+
+          license_checksum="$(sha256sum "$ARTIFACT_DIR/LICENSE.open-code-review" | awk '{print $1}')"
+          jq -n \
+            --arg version "$version" \
+            --arg asset_name "$ASSET_NAME" \
+            --arg asset_checksum "$actual_checksum" \
+            --arg license_checksum "$license_checksum" \
+            --arg source_repository "$SOURCE_REPOSITORY" \
+            --arg upstream_tag "$upstream_tag" \
+            '{
+              schema_version: "1",
+              target_repository: "fongap/external-vault",
+              release_key: "open-code-review",
+              version: $version,
+              release_name: ("OpenCodeReview " + $version),
+              release_notes: (
+                "Verified mirror of " + $source_repository + " " + $upstream_tag
+                + ". The upstream SHA256 and GitHub asset digest (when provided) were validated before dispatch."
+              ),
+              prerelease: false,
+              license: {
+                expression: "Apache-2.0",
+                file: "LICENSE.open-code-review"
+              },
+              assets: [
+                {name: $asset_name, sha256: $asset_checksum},
+                {name: "LICENSE.open-code-review", sha256: $license_checksum}
+              ]
+            }' > "$ARTIFACT_DIR/release-manifest.json"
+
+          echo "publish=true" >> "$GITHUB_OUTPUT"
+          {
+            echo "### OpenCodeReview distribution source"
+            echo
+            echo "- upstream: $SOURCE_REPOSITORY@$upstream_tag"
+            echo "- target release: $release_tag"
+            echo "- artifact: open-code-review-release"
+            echo "- publication owner: fongap/action-worker"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload release artifact
+        if: ${{ steps.prepare.outputs.publish == 'true' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: open-code-review-release
+          path: ${{ runner.temp }}/open-code-review-release/*
+          if-no-files-found: error
+          retention-days: 7

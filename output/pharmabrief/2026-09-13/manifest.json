@@ -1,0 +1,735 @@
+{
+  "schema_version": 3,
+  "project": "PharmaBrief",
+  "date": "2026-09-13",
+  "week_start": "2026-09-07",
+  "week_end": "2026-09-13",
+  "generated_at": "2026-09-17T14:59:47+08:00",
+  "model": "Pro",
+  "status": "publish",
+  "signal": "neutral",
+  "usage": {
+    "calls": 9,
+    "requests": 11,
+    "total_tokens": 34169
+  },
+  "source_health": {
+    "configured": 24,
+    "successful": 17,
+    "failed": 7,
+    "success_rate": 0.708
+  },
+  "sources": [
+    {
+      "name": "FDA",
+      "priority": "P0",
+      "kind": "regulatory",
+      "url": "https://www.fda.gov/drugs/news-events-human-drugs",
+      "ok": true,
+      "quality_score": 91,
+      "error": null,
+      "role": "authoritative",
+      "source_quality": "high",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": "https://www.fda.gov/drugs/news-events-human-drugs",
+      "fetch_quality": 91,
+      "rss_item_count": 0
+    },
+    {
+      "name": "EMA",
+      "priority": "P0",
+      "kind": "regulatory",
+      "url": "https://www.ema.europa.eu/en/news-events",
+      "ok": true,
+      "quality_score": 76,
+      "error": null,
+      "role": "authoritative",
+      "source_quality": "high",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": "https://www.ema.europa.eu/en/news-events",
+      "fetch_quality": 76,
+      "rss_item_count": 0
+    },
+    {
+      "name": "NMPA",
+      "priority": "P0",
+      "kind": "regulatory",
+      "url": "https://www.nmpa.gov.cn/yaopin/index.html",
+      "ok": false,
+      "quality_score": null,
+      "error": "html https://www.nmpa.gov.cn/yaopin/index.html: 412 Client Error: Precondition Failed for url: https://www.nmpa.gov.cn/yaopin/index.html",
+      "role": "authoritative",
+      "source_quality": "high",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": null,
+      "fetch_quality": null,
+      "rss_item_count": 0
+    },
+    {
+      "name": "CDE",
+      "priority": "P0",
+      "kind": "regulatory",
+      "url": "https://www.cde.org.cn/main/news/listpage",
+      "ok": false,
+      "quality_score": null,
+      "error": "html https://www.cde.org.cn/main/news/listpage: 正文过短: 0",
+      "role": "authoritative",
+      "source_quality": "high",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": null,
+      "fetch_quality": null,
+      "rss_item_count": 0
+    },
+    {
+      "name": "SEC",
+      "priority": "P2",
+      "kind": "capital",
+      "url": "https://www.sec.gov/edgar/search/",
+      "ok": true,
+      "quality_score": 54,
+      "error": null,
+      "role": "structured",
+      "source_quality": "high",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": "https://www.sec.gov/edgar/search/",
+      "fetch_quality": 54,
+      "rss_item_count": 0
+    },
+    {
+      "name": "ClinicalTrialsGov",
+      "priority": "P2",
+      "kind": "clinical",
+      "url": "https://clinicaltrials.gov/",
+      "ok": true,
+      "quality_score": 41,
+      "error": null,
+      "role": "structured",
+      "source_quality": "high",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": "https://clinicaltrials.gov/",
+      "fetch_quality": 41,
+      "rss_item_count": 0
+    },
+    {
+      "name": "STATNews",
+      "priority": "P3",
+      "kind": "industry",
+      "url": "https://www.statnews.com/category/pharma/",
+      "ok": true,
+      "quality_score": 100,
+      "error": null,
+      "role": "professional",
+      "source_quality": "high",
+      "transport": "rss",
+      "configured_transport": "rss",
+      "fetch_url": "https://www.statnews.com/feed/",
+      "fetch_quality": 100,
+      "rss_item_count": 20
+    },
+    {
+      "name": "EndpointsNews",
+      "priority": "P3",
+      "kind": "industry",
+      "url": "https://endpts.com/",
+      "ok": false,
+      "quality_score": null,
+      "error": "rss: 403 Client Error: Forbidden for url: https://endpoints.news/feed/ | html https://endpts.com/: 403 Client Error: Forbidden for url: https://endpoints.news/",
+      "role": "professional",
+      "source_quality": "high",
+      "transport": "rss",
+      "configured_transport": "rss",
+      "fetch_url": null,
+      "fetch_quality": null,
+      "rss_item_count": 0
+    },
+    {
+      "name": "FiercePharma",
+      "priority": "P3",
+      "kind": "industry",
+      "url": "https://www.fiercepharma.com/",
+      "ok": true,
+      "quality_score": 56,
+      "error": null,
+      "role": "professional",
+      "source_quality": "high",
+      "transport": "html",
+      "configured_transport": "rss",
+      "fetch_url": "https://www.fiercepharma.com/",
+      "fetch_quality": 56,
+      "rss_item_count": 0
+    },
+    {
+      "name": "FierceBiotech",
+      "priority": "P3",
+      "kind": "industry",
+      "url": "https://www.fiercebiotech.com/",
+      "ok": true,
+      "quality_score": 57,
+      "error": null,
+      "role": "professional",
+      "source_quality": "high",
+      "transport": "html",
+      "configured_transport": "rss",
+      "fetch_url": "https://www.fiercebiotech.com/",
+      "fetch_quality": 57,
+      "rss_item_count": 0
+    },
+    {
+      "name": "BioCentury",
+      "priority": "P3",
+      "kind": "industry",
+      "url": "https://www.biocentury.com/",
+      "ok": true,
+      "quality_score": 100,
+      "error": null,
+      "role": "professional",
+      "source_quality": "high",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": "https://www.biocentury.com/",
+      "fetch_quality": 100,
+      "rss_item_count": 0
+    },
+    {
+      "name": "BioPharmaDive",
+      "priority": "P3",
+      "kind": "industry",
+      "url": "https://www.biopharmadive.com/",
+      "ok": true,
+      "quality_score": 100,
+      "error": null,
+      "role": "professional",
+      "source_quality": "high",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": "https://www.biopharmadive.com/",
+      "fetch_quality": 100,
+      "rss_item_count": 0
+    },
+    {
+      "name": "BioSpace",
+      "priority": "P3",
+      "kind": "industry",
+      "url": "https://www.biospace.com/",
+      "ok": true,
+      "quality_score": 100,
+      "error": null,
+      "role": "professional",
+      "source_quality": "medium",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": "https://www.biospace.com/",
+      "fetch_quality": 100,
+      "rss_item_count": 0
+    },
+    {
+      "name": "NatureBiotech",
+      "priority": "P4",
+      "kind": "technology",
+      "url": "https://www.nature.com/nbt/",
+      "ok": true,
+      "quality_score": 76,
+      "error": null,
+      "role": "lead",
+      "source_quality": "high",
+      "transport": "rss",
+      "configured_transport": "rss",
+      "fetch_url": "https://www.nature.com/nbt.rss",
+      "fetch_quality": 76,
+      "rss_item_count": 4
+    },
+    {
+      "name": "PharmCube",
+      "priority": "P4",
+      "kind": "industry",
+      "url": "https://bydrug.pharmcube.com/",
+      "ok": true,
+      "quality_score": 71,
+      "error": null,
+      "role": "lead",
+      "source_quality": "medium",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": "https://bydrug.pharmcube.com/",
+      "fetch_quality": 71,
+      "rss_item_count": 0
+    },
+    {
+      "name": "YaoZh",
+      "priority": "P4",
+      "kind": "industry",
+      "url": "https://www.yaozh.com/",
+      "ok": true,
+      "quality_score": 87,
+      "error": null,
+      "role": "lead",
+      "source_quality": "medium",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": "https://www.yaozh.com/",
+      "fetch_quality": 87,
+      "rss_item_count": 0
+    },
+    {
+      "name": "WuXiAppTec",
+      "priority": "P4",
+      "kind": "industry",
+      "url": "https://www.wuxiapptec.cn/",
+      "ok": true,
+      "quality_score": 60,
+      "error": null,
+      "role": "lead",
+      "source_quality": "medium",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": "https://www.wuxiapptec.cn/",
+      "fetch_quality": 60,
+      "rss_item_count": 0
+    },
+    {
+      "name": "TongXieYi",
+      "priority": "P4",
+      "kind": "industry",
+      "url": "https://www.tongxieyi.com/",
+      "ok": false,
+      "quality_score": null,
+      "error": "html https://www.tongxieyi.com/: HTTPSConnectionPool(host='www.tongxieyi.com', port=443): Max retries exceeded with url: / (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "role": "lead",
+      "source_quality": "medium",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": null,
+      "fetch_quality": null,
+      "rss_item_count": 0
+    },
+    {
+      "name": "EYJLR",
+      "priority": "P4",
+      "kind": "industry",
+      "url": "https://www.eyjlr.com/",
+      "ok": false,
+      "quality_score": null,
+      "error": "html https://www.eyjlr.com/: HTTPSConnectionPool(host='www.eyjlr.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.eyjlr.com', port=443) at 0x7fc94345be60>, 'Connection to www.eyjlr.com timed out. (connect timeout=30)'))",
+      "role": "lead",
+      "source_quality": "low",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": null,
+      "fetch_quality": null,
+      "rss_item_count": 0
+    },
+    {
+      "name": "SIMM",
+      "priority": "P4",
+      "kind": "technology",
+      "url": "https://www.simm.cas.cn/web/jgsz/gjsbjyjzx/xyyj/kydt_170104/",
+      "ok": false,
+      "quality_score": null,
+      "error": "html https://www.simm.cas.cn/web/jgsz/gjsbjyjzx/xyyj/kydt_170104/: HTTPSConnectionPool(host='www.simm.cas.cn', port=443): Max retries exceeded with url: /web/jgsz/gjsbjyjzx/xyyj/kydt_170104/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1000)')))",
+      "role": "lead",
+      "source_quality": "high",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": null,
+      "fetch_quality": null,
+      "rss_item_count": 0
+    },
+    {
+      "name": "IMM",
+      "priority": "P4",
+      "kind": "technology",
+      "url": "https://www.imm.ac.cn/",
+      "ok": true,
+      "quality_score": 100,
+      "error": null,
+      "role": "lead",
+      "source_quality": "high",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": "https://www.imm.ac.cn/",
+      "fetch_quality": 100,
+      "rss_item_count": 0
+    },
+    {
+      "name": "NikkeiHealthcare",
+      "priority": "P4",
+      "kind": "regional",
+      "url": "https://asia.nikkei.com/Business/Health",
+      "ok": false,
+      "quality_score": null,
+      "error": "html https://asia.nikkei.com/Business/Health: 404 Client Error: Not Found for url: https://asia.nikkei.com/business/health",
+      "role": "lead",
+      "source_quality": "medium",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": null,
+      "fetch_quality": null,
+      "rss_item_count": 0
+    },
+    {
+      "name": "Gelonghui",
+      "priority": "P4",
+      "kind": "sentiment",
+      "url": "https://www.gelonghui.com/",
+      "ok": true,
+      "quality_score": 100,
+      "error": null,
+      "role": "lead",
+      "source_quality": "low",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": "https://www.gelonghui.com/",
+      "fetch_quality": 100,
+      "rss_item_count": 0
+    },
+    {
+      "name": "XueQiu_Pharma",
+      "priority": "P4",
+      "kind": "sentiment",
+      "url": "https://xueqiu.com/",
+      "ok": true,
+      "quality_score": 100,
+      "error": null,
+      "role": "lead",
+      "source_quality": "low",
+      "transport": "html",
+      "configured_transport": "html",
+      "fetch_url": "https://xueqiu.com/",
+      "fetch_quality": 100,
+      "rss_item_count": 0
+    }
+  ],
+  "candidate_event_count": 6,
+  "deep_analysis_event_count": 6,
+  "llm_failures": [
+    {
+      "provider": "api.135468.xyz",
+      "model": "Pro",
+      "request_id": "bc7d77d6-c63a-4038-8e22-d291f2e938c8",
+      "retry_count": 0,
+      "status": 200,
+      "error": "ValueError"
+    },
+    {
+      "provider": "api.135468.xyz",
+      "model": "Pro",
+      "request_id": "dfdad34b-84a3-4660-b786-d790b761927d",
+      "retry_count": 0,
+      "status": 504,
+      "error": "HTTPError"
+    }
+  ],
+  "content": {
+    "status": "publish",
+    "hook_title": "本周制药产业速览",
+    "overview": "基于本周公开信息，为决策者整理以下5条结构化事件。",
+    "events": [
+      {
+        "id": "E01",
+        "event_key": "article|330bbc12e1aad560c397b5c0cc2f8d028b80540b6a74b078a1a58ae3f066f102",
+        "category": "competition",
+        "title": "New lawsuit argues NIH violated First Amendment rights of gr",
+        "fact": "2026-09-17 · The lawsuit seeks to halt the process of searching grant applications for specific terms to determine if they should be rejected.",
+        "why_it_matters": "",
+        "industry_implication": "",
+        "company_implication": "",
+        "capital_implication": "",
+        "next_watch": [],
+        "source_refs": [
+          "STATNews"
+        ],
+        "evidence": [
+          {
+            "source": "STATNews",
+            "source_id": "STATNews",
+            "role": "professional",
+            "kind": "industry",
+            "source_quality": "high",
+            "url": "https://www.statnews.com/category/pharma/",
+            "role_rank": 2.0
+          }
+        ],
+        "independent_sources": 1,
+        "evidence_conflict": false,
+        "conflict_note": "",
+        "evidence_policy": {
+          "confidence_cap": 6,
+          "independent_sources": 1,
+          "best_role": "professional",
+          "roles": [
+            "professional"
+          ],
+          "conflict": false
+        },
+        "scores": {
+          "strategic_impact": 5,
+          "industry_impact": 5,
+          "capital_impact": 5,
+          "execution_risk": 5,
+          "confidence": 6,
+          "scope": 5,
+          "novelty": 5,
+          "overall_score": 5.0
+        },
+        "signal": "neutral",
+        "black_swan": false,
+        "alert_level": "WATCH",
+        "change": "new",
+        "status": "developing"
+      },
+      {
+        "id": "E02",
+        "event_key": "article|4ca29a97afe8e36a7e081c9d6790d0f6abe8b19916bd8003ea0afd14262fce74",
+        "category": "competition",
+        "title": "STAT+: GOP aims to change Medicare adviser’s math so it’s mo",
+        "fact": "2026-09-16 · The GOP bill directs MedPAC to study the topic of overpayments to Medicare Advantage plans in a manner that’s more favorable to insurers.",
+        "why_it_matters": "",
+        "industry_implication": "",
+        "company_implication": "",
+        "capital_implication": "",
+        "next_watch": [],
+        "source_refs": [
+          "STATNews"
+        ],
+        "evidence": [
+          {
+            "source": "STATNews",
+            "source_id": "STATNews",
+            "role": "professional",
+            "kind": "industry",
+            "source_quality": "high",
+            "url": "https://www.statnews.com/category/pharma/",
+            "role_rank": 2.0
+          }
+        ],
+        "independent_sources": 1,
+        "evidence_conflict": false,
+        "conflict_note": "",
+        "evidence_policy": {
+          "confidence_cap": 6,
+          "independent_sources": 1,
+          "best_role": "professional",
+          "roles": [
+            "professional"
+          ],
+          "conflict": false
+        },
+        "scores": {
+          "strategic_impact": 5,
+          "industry_impact": 5,
+          "capital_impact": 5,
+          "execution_risk": 5,
+          "confidence": 6,
+          "scope": 5,
+          "novelty": 5,
+          "overall_score": 5.0
+        },
+        "signal": "neutral",
+        "black_swan": false,
+        "alert_level": "WATCH",
+        "change": "new",
+        "status": "developing"
+      },
+      {
+        "id": "E03",
+        "event_key": "article|57ad92b73402bfae98cba51fa91160c2c4aa9fdb1a7b20adad6d2a98a85b4b7c",
+        "category": "competition",
+        "title": "STAT+: Senators highlight the power Chris Klomp wields at co",
+        "fact": "2026-09-16 · Chris Klomp has already played a major role in the Trump administration and its Make America Healthy Again agenda.",
+        "why_it_matters": "",
+        "industry_implication": "",
+        "company_implication": "",
+        "capital_implication": "",
+        "next_watch": [],
+        "source_refs": [
+          "STATNews"
+        ],
+        "evidence": [
+          {
+            "source": "STATNews",
+            "source_id": "STATNews",
+            "role": "professional",
+            "kind": "industry",
+            "source_quality": "high",
+            "url": "https://www.statnews.com/category/pharma/",
+            "role_rank": 2.0
+          }
+        ],
+        "independent_sources": 1,
+        "evidence_conflict": false,
+        "conflict_note": "",
+        "evidence_policy": {
+          "confidence_cap": 6,
+          "independent_sources": 1,
+          "best_role": "professional",
+          "roles": [
+            "professional"
+          ],
+          "conflict": false
+        },
+        "scores": {
+          "strategic_impact": 5,
+          "industry_impact": 5,
+          "capital_impact": 5,
+          "execution_risk": 5,
+          "confidence": 6,
+          "scope": 5,
+          "novelty": 5,
+          "overall_score": 5.0
+        },
+        "signal": "neutral",
+        "black_swan": false,
+        "alert_level": "WATCH",
+        "change": "new",
+        "status": "developing"
+      },
+      {
+        "id": "E04",
+        "event_key": "article|ff74a04ec7da12ae848f62467d0db941de5d2deeb710d82da02292daa1d839a4",
+        "category": "technology",
+        "title": "FDA approves pioneering breast cancer drug that nips resista",
+        "fact": "2026-09-16 · Nature Biotechnology, Published online: 16 September 2026; doi:10.1038/s41587-026-03333-8 A breast cancer drug linked with a test to detect ESR1 mutations in circulating tumor DNA is one of a wave of new drugs developed to tackle resistance to estrogen-receptor-targeted therapies.",
+        "why_it_matters": "",
+        "industry_implication": "",
+        "company_implication": "",
+        "capital_implication": "",
+        "next_watch": [],
+        "source_refs": [
+          "NatureBiotech"
+        ],
+        "evidence": [
+          {
+            "source": "NatureBiotech",
+            "source_id": "NatureBiotech",
+            "role": "lead",
+            "kind": "technology",
+            "source_quality": "high",
+            "url": "https://www.nature.com/nbt/",
+            "role_rank": 1.0
+          }
+        ],
+        "independent_sources": 1,
+        "evidence_conflict": false,
+        "conflict_note": "",
+        "evidence_policy": {
+          "confidence_cap": 5,
+          "independent_sources": 1,
+          "best_role": "lead",
+          "roles": [
+            "lead"
+          ],
+          "conflict": false
+        },
+        "scores": {
+          "strategic_impact": 5,
+          "industry_impact": 5,
+          "capital_impact": 5,
+          "execution_risk": 5,
+          "confidence": 5,
+          "scope": 5,
+          "novelty": 5,
+          "overall_score": 5.0
+        },
+        "signal": "neutral",
+        "black_swan": false,
+        "alert_level": "WATCH",
+        "change": "new",
+        "status": "developing"
+      },
+      {
+        "id": "E05",
+        "event_key": "article|c3777b3a045cd354f51e7bb9ff379c054715bba6e0c29ea9a3c92f75e535974c",
+        "category": "technology",
+        "title": "A versatile nanopore identifies four classes of analytes sim",
+        "fact": "2026-09-15 · Nature Biotechnology, Published online: 15 September 2026; doi:10.1038/s41587-026-03322-x A versatile nanopore sensor, created by modifying a bacterial porin, enables the simultaneous identification of amino acids, nucleoside monophosphates, saccharides and peptides. Coupled with machine learning, it achieves 98.7% classification accuracy and enables the compositional analysis of native glycopeptides.",
+        "why_it_matters": "",
+        "industry_implication": "",
+        "company_implication": "",
+        "capital_implication": "",
+        "next_watch": [],
+        "source_refs": [
+          "NatureBiotech"
+        ],
+        "evidence": [
+          {
+            "source": "NatureBiotech",
+            "source_id": "NatureBiotech",
+            "role": "lead",
+            "kind": "technology",
+            "source_quality": "high",
+            "url": "https://www.nature.com/nbt/",
+            "role_rank": 1.0
+          }
+        ],
+        "independent_sources": 1,
+        "evidence_conflict": false,
+        "conflict_note": "",
+        "evidence_policy": {
+          "confidence_cap": 5,
+          "independent_sources": 1,
+          "best_role": "lead",
+          "roles": [
+            "lead"
+          ],
+          "conflict": false
+        },
+        "scores": {
+          "strategic_impact": 5,
+          "industry_impact": 5,
+          "capital_impact": 5,
+          "execution_risk": 5,
+          "confidence": 5,
+          "scope": 5,
+          "novelty": 5,
+          "overall_score": 5.0
+        },
+        "signal": "neutral",
+        "black_swan": false,
+        "alert_level": "WATCH",
+        "change": "new",
+        "status": "developing"
+      }
+    ],
+    "sections": {
+      "rd": [],
+      "capital": [],
+      "risk": []
+    },
+    "executive_view": {
+      "industry": "本期为RSS证据驱动的结构化摘要，待后续完整分析补充。",
+      "business": "基于公开信息整理，保持独立判断，关注事实变化。",
+      "watch_3_12m": [
+        "继续观察本周事件后续发展。"
+      ]
+    },
+    "signal": "neutral"
+  },
+  "source_policy": {
+    "catalog": "projects/PharmaBrief/sources.json",
+    "policy": "projects/PharmaBrief/policy.json"
+  },
+  "publish_policy": "projects/PharmaBrief/publish.json",
+  "article_evidence": {
+    "count": 0,
+    "historical_deduped": 0,
+    "items": [],
+    "footnote_count": 2
+  },
+  "publish": {
+    "title": "本周制药产业速览",
+    "intro": "基于本周公开信息，为决策者整理以下5条结构化事件。",
+    "tags": [
+      "竞争格局",
+      "医药创新",
+      "医药行业",
+      "临床研发",
+      "监管动态"
+    ]
+  }
+}
