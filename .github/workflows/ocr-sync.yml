@@ -59,6 +59,7 @@ jobs:
         id: prepare
         env:
           GH_TOKEN: ${{ github.token }}
+          RELEASE_TARGET_REPOSITORY: ${{ vars.RELEASE_TARGET_REPOSITORY }}
           RELEASE_KEY: ${{ steps.policy.outputs.release_key }}
           SOURCE_REPOSITORY: ${{ steps.policy.outputs.source_repository }}
           UPSTREAM_ASSET: ${{ steps.policy.outputs.upstream_asset }}
@@ -67,6 +68,12 @@ jobs:
         shell: bash
         run: |
           set -Eeuo pipefail
+
+          target_repository="${RELEASE_TARGET_REPOSITORY:-$GITHUB_REPOSITORY}"
+          [[ "$target_repository" =~ ^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$ ]] || {
+            echo "::error::RELEASE_TARGET_REPOSITORY is invalid: $target_repository" >&2
+            exit 65
+          }
 
           releases="$(gh api "repos/$SOURCE_REPOSITORY/releases?per_page=30")"
           release="$(
@@ -149,9 +156,10 @@ jobs:
             --arg license_checksum "$license_checksum" \
             --arg source_repository "$SOURCE_REPOSITORY" \
             --arg upstream_tag "$upstream_tag" \
+            --arg target_repository "$target_repository" \
             '{
               schema_version: "1",
-              target_repository: "fongap/external-vault",
+              target_repository: $target_repository,
               release_key: "open-code-review",
               version: $version,
               release_name: ("OpenCodeReview " + $version),
@@ -177,7 +185,7 @@ jobs:
             echo "- upstream: $SOURCE_REPOSITORY@$upstream_tag"
             echo "- target release: $release_tag"
             echo "- artifact: open-code-review-release"
-            echo "- publication owner: fongap/action-worker"
+            echo "- publication owner: Action Worker"
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload release artifact
