@@ -11,3 +11,8 @@ test/** linguist-detectable=false
 **/conftest.py linguist-detectable=false
 e2e/** linguist-detectable=false
 **/e2e/** linguist-detectable=false
+
+# Normalize workflow and script text for Linux runners.
+*.sh text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
