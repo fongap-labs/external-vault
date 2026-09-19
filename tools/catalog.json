@@ -1,0 +1,12 @@
+{
+  "schema_version": "1",
+  "tools": [
+    {
+      "key": "open-code-review",
+      "name": "OpenCodeReview",
+      "source_repository": "alibaba/open-code-review",
+      "distribution": "github-release",
+      "metadata": "tools/open-code-review/tool.json"
+    }
+  ]
+}

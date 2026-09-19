@@ -1,0 +1,108 @@
+name: Repository CI
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'output/adfilter/**'
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - 'output/adfilter/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: repository-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  layout:
+    name: Validate repository layout
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Validate repository layout
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          required_paths=(
+            "AGENTS.md"
+            "CLAUDE.md"
+            "docs/README.md"
+            "docs/ARCHITECTURE_GOVERNANCE.md"
+            "docs/DISTRIBUTION_GOVERNANCE.md"
+            "docs/NAMING_CONVENTIONS.md"
+            "tools/README.md"
+            "tools/catalog.json"
+            "skills"
+            "output"
+          )
+
+          for path in "${required_paths[@]}"; do
+            if [ ! -e "$path" ]; then
+              echo "::error::Repository layout drift: missing $path"
+              exit 1
+            fi
+          done
+
+          forbidden_paths=(
+            ".githooks"
+            "projects"
+            ".github/workflows/agentdock.yml"
+            ".github/workflows/build-agentdock.yml"
+            ".github/workflows/oci-capacity-watch.yml"
+          )
+
+          for path in "${forbidden_paths[@]}"; do
+            if [ -e "$path" ]; then
+              echo "::error::Source/build residue detected: $path"
+              exit 1
+            fi
+          done
+
+          if git ls-files -z | grep -zEi '\.(exe|msi|dmg|pkg|deb|rpm|appimage)$' >/dev/null; then
+            echo "::error::Program release binary detected in Git tree. Publish program payloads through GitHub Releases."
+            git ls-files | grep -Ei '\.(exe|msi|dmg|pkg|deb|rpm|appimage)$' || true
+            exit 1
+          fi
+
+          jq -e '
+            .schema_version == "1"
+            and (.tools | type == "array")
+          ' tools/catalog.json >/dev/null
+
+  validate-merge:
+    name: validate-merge
+    if: ${{ always() }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    needs:
+      - layout
+
+    steps:
+      - name: Evaluate required checks
+        env:
+          NEEDS_JSON: ${{ toJSON(needs) }}
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          jq -e '
+            to_entries
+            | all(.value.result == "success")
+          ' <<< "$NEEDS_JSON" >/dev/null || {
+            echo "::error::CI required checks did not all succeed." >&2
+            jq -r 'to_entries[] | "  \(.key): \(.value.result)"' <<< "$NEEDS_JSON" >&2
+            exit 1
+          }
+
+          echo "all required checks passed"
