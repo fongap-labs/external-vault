@@ -2,9 +2,9 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-[![Repository CI](https://github.com/fongap/external-vault/actions/workflows/ci.yml/badge.svg)](https://github.com/fongap/external-vault/actions/workflows/ci.yml)
-[![Dispatch PR Governance](https://github.com/fongap/external-vault/actions/workflows/dispatch-pr-governance.yml/badge.svg)](https://github.com/fongap/external-vault/actions/workflows/dispatch-pr-governance.yml)
-[![Release](https://img.shields.io/github/v/release/fongap/external-vault?label=Release&display_name=tag&sort=semver)](https://github.com/fongap/external-vault/releases)
+[![Repository CI](https://github.com/fongap-labs/external-vault/actions/workflows/ci.yml/badge.svg)](https://github.com/fongap-labs/external-vault/actions/workflows/ci.yml)
+[![Dispatch PR Governance](https://github.com/fongap-labs/external-vault/actions/workflows/dispatch-pr-governance.yml/badge.svg)](https://github.com/fongap-labs/external-vault/actions/workflows/dispatch-pr-governance.yml)
+[![Release](https://img.shields.io/github/v/release/fongap-labs/external-vault?label=Release&display_name=tag&sort=semver)](https://github.com/fongap-labs/external-vault/releases)
 
 **公开发布、可复用资产与分发元数据，不承载程序源码。**
 
@@ -14,7 +14,7 @@
 
 | 位置 | 用途 |
 | --- | --- |
-| [Releases](https://github.com/fongap/external-vault/releases) | 版本化可执行文件、安装包、压缩包、校验文件与发布说明 |
+| [Releases](https://github.com/fongap-labs/external-vault/releases) | 版本化可执行文件、安装包、压缩包、校验文件与发布说明 |
 | [`tools/`](tools/) | 公开工具目录与分发元数据 |
 | [`output/`](output/) | 自动生成、可直接使用的非程序资产 |
 
@@ -53,7 +53,7 @@ external-vault/
 
 ## 治理
 
-仓库级规范位于 [`docs/`](docs/)。跨仓 PR Governance、AI Review、Gate、Source Policy 与 Release Policy 统一交由 [Action Worker](https://github.com/fongap/action-worker)。
+仓库级规范位于 [`docs/`](docs/)。跨仓 PR Governance、AI Review、Gate、Source Policy 与 Release Policy 统一交由 [Action Worker](https://github.com/fongap-labs/action-worker)。
 
 ## 授权
 
