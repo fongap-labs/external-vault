@@ -2,9 +2,9 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-[![Repository CI](https://github.com/fongap/external-vault/actions/workflows/ci.yml/badge.svg)](https://github.com/fongap/external-vault/actions/workflows/ci.yml)
-[![Dispatch PR Governance](https://github.com/fongap/external-vault/actions/workflows/dispatch-pr-governance.yml/badge.svg)](https://github.com/fongap/external-vault/actions/workflows/dispatch-pr-governance.yml)
-[![Release](https://img.shields.io/github/v/release/fongap/external-vault?label=Release&display_name=tag&sort=semver)](https://github.com/fongap/external-vault/releases)
+[![Repository CI](https://github.com/fongap-labs/external-vault/actions/workflows/ci.yml/badge.svg)](https://github.com/fongap-labs/external-vault/actions/workflows/ci.yml)
+[![Dispatch PR Governance](https://github.com/fongap-labs/external-vault/actions/workflows/dispatch-pr-governance.yml/badge.svg)](https://github.com/fongap-labs/external-vault/actions/workflows/dispatch-pr-governance.yml)
+[![Release](https://img.shields.io/github/v/release/fongap-labs/external-vault?label=Release&display_name=tag&sort=semver)](https://github.com/fongap-labs/external-vault/releases)
 
 **Public releases, reusable assets, and distribution metadata — without source-code clutter.**
 
@@ -14,7 +14,7 @@ Program source, tests, and build logic stay in their owning source repositories.
 
 | Destination | Purpose |
 | --- | --- |
-| [Releases](https://github.com/fongap/external-vault/releases) | Versioned executables, installers, archives, checksums, and release notes |
+| [Releases](https://github.com/fongap-labs/external-vault/releases) | Versioned executables, installers, archives, checksums, and release notes |
 | [`tools/`](tools/) | Public tool catalog and distribution metadata |
 | [`output/`](output/) | Generated, directly consumable non-program assets |
 
@@ -53,7 +53,7 @@ external-vault/
 
 ## Governance
 
-Repository-wide rules are maintained in [`docs/`](docs/). Cross-repository PR governance, AI review, Gate, source policy, and release policy are delegated to [Action Worker](https://github.com/fongap/action-worker).
+Repository-wide rules are maintained in [`docs/`](docs/). Cross-repository PR governance, AI review, Gate, source policy, and release policy are delegated to [Action Worker](https://github.com/fongap-labs/action-worker).
 
 ## Licensing
 
