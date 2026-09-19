@@ -1,0 +1,9 @@
+{
+  "schema_version": "1",
+  "release_key": "open-code-review",
+  "source_repository": "alibaba/open-code-review",
+  "release_channel": "stable",
+  "platform": "linux",
+  "arch": "amd64",
+  "upstream_asset": "opencodereview-linux-amd64"
+}
