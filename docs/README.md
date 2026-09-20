@@ -1,32 +1,22 @@
 # Documentation
 
-Repository-wide engineering and distribution guidance for `external-vault`.
+Project-specific documentation for `external-vault`.
 
-Agents must first follow the root [CLAUDE.md](../CLAUDE.md).
+Shared Fongap Labs governance is maintained in [Action Worker](https://github.com/fongap-labs/action-worker/tree/main/docs) and is not duplicated here.
 
 | Document | Purpose |
 | --- | --- |
-| [ARCHITECTURE_GOVERNANCE.md](ARCHITECTURE_GOVERNANCE.md) | Long-term repository ownership and boundaries |
-| [DISTRIBUTION_GOVERNANCE.md](DISTRIBUTION_GOVERNANCE.md) | Source-to-Release publication model |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | Current repository structure |
-| [NAMING_CONVENTIONS.md](NAMING_CONVENTIONS.md) | Naming rules for files, releases, workflows, and metadata |
-| [CHANGELOG_CONVENTIONS.md](CHANGELOG_CONVENTIONS.md) | Shared change classification |
-| [DEVELOPMENT_GUIDE.md](DEVELOPMENT_GUIDE.md) | Change, verification, and publication workflow |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | Repository ownership, structure and current distribution architecture |
+| [DISTRIBUTION_GOVERNANCE.md](DISTRIBUTION_GOVERNANCE.md) | Source-to-Release publication model and distribution-specific invariants |
 
 Authority order:
 
 ```text
-ARCHITECTURE_GOVERNANCE
+Action Worker shared governance
         ↓
 DISTRIBUTION_GOVERNANCE
         ↓
 ARCHITECTURE
         ↓
-NAMING_CONVENTIONS
-        ↓
-DEVELOPMENT_GUIDE
-        ↓
 README
 ```
-
-Cross-repository governance contracts remain authoritative in `fongap/action-worker`.
