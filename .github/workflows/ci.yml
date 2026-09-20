@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: read
+  statuses: read
 
 concurrency:
   group: repository-ci-${{ github.workflow }}-${{ github.ref }}
@@ -38,9 +39,8 @@ jobs:
             "AGENTS.md"
             "CLAUDE.md"
             "docs/README.md"
-            "docs/ARCHITECTURE_GOVERNANCE.md"
+            "docs/ARCHITECTURE.md"
             "docs/DISTRIBUTION_GOVERNANCE.md"
-            "docs/NAMING_CONVENTIONS.md"
             "tools/README.md"
             "tools/catalog.json"
             "skills"
@@ -80,8 +80,8 @@ jobs:
             and (.tools | type == "array")
           ' tools/catalog.json >/dev/null
 
-  validate-merge:
-    name: validate-merge
+  ci-evidence:
+    name: ci-evidence
     if: ${{ always() }}
     runs-on: ubuntu-24.04
     timeout-minutes: 5
