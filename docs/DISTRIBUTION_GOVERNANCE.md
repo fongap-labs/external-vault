@@ -95,7 +95,7 @@ Action Worker owns:
 4. `release-manifest.json` and SHA256 validation;
 5. target repository allowlist validation;
 6. target-scoped Tag and Release collision checks;
-7. publication with the centrally held `GH_RELEASE_TOKEN`;
+7. publication with the centrally held `RELEASE_TOKEN`;
 8. Release asset re-download verification and rollback.
 
 The Release tag is created in the target repository. Source provenance is recorded separately and must not be confused with the target repository Tag commit.
