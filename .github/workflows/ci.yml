@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
@@ -106,3 +106,18 @@ jobs:
           }
 
           echo "all required checks passed"
+
+  validate-merge:
+    name: validate-merge
+    if: ${{ always() }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    needs:
+      - ci-evidence
+    steps:
+      - name: Validate merge policy
+        uses: fongap-labs/action-worker/.github/actions/validate-merge-policy@main
+        with:
+          ci-result: ${{ needs.ci-evidence.result }}
+          head-sha: ${{ github.event.pull_request.head.sha || github.sha }}
+          require-pr-governance: ${{ github.event_name == 'pull_request' && 'true' || 'false' }}
