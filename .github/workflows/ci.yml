@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: read
+  statuses: read
 
 concurrency:
   group: repository-ci-${{ github.workflow }}-${{ github.ref }}
@@ -80,8 +81,8 @@ jobs:
             and (.tools | type == "array")
           ' tools/catalog.json >/dev/null
 
-  validate-merge:
-    name: validate-merge
+  ci-evidence:
+    name: ci-evidence
     if: ${{ always() }}
     runs-on: ubuntu-24.04
     timeout-minutes: 5
@@ -106,3 +107,19 @@ jobs:
           }
 
           echo "all required checks passed"
+
+  validate-merge:
+    name: validate-merge
+    if: ${{ always() }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    needs:
+      - ci-evidence
+
+    steps:
+      - name: Validate merge policy
+        uses: fongap-labs/action-worker/.github/actions/validate-merge-policy@main
+        with:
+          ci-result: ${{ needs.ci-evidence.result }}
+          head-sha: ${{ github.event.pull_request.head.sha || github.sha }}
+          require-pr-governance: ${{ github.event_name == 'pull_request' && 'true' || 'false' }}
