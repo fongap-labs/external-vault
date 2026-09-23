@@ -59,7 +59,6 @@ jobs:
         id: prepare
         env:
           GH_TOKEN: ${{ github.token }}
-          RELEASE_TARGET_REPOSITORY: ${{ vars.RELEASE_TARGET_REPOSITORY }}
           RELEASE_KEY: ${{ steps.policy.outputs.release_key }}
           SOURCE_REPOSITORY: ${{ steps.policy.outputs.source_repository }}
           UPSTREAM_ASSET: ${{ steps.policy.outputs.upstream_asset }}
@@ -69,11 +68,7 @@ jobs:
         run: |
           set -Eeuo pipefail
 
-          target_repository="${RELEASE_TARGET_REPOSITORY:-$GITHUB_REPOSITORY}"
-          [[ "$target_repository" =~ ^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$ ]] || {
-            echo "::error::RELEASE_TARGET_REPOSITORY is invalid: $target_repository" >&2
-            exit 65
-          }
+          target_repository="$GITHUB_REPOSITORY"
 
           releases="$(gh api "repos/$SOURCE_REPOSITORY/releases?per_page=30")"
           release="$(
