@@ -23,7 +23,7 @@ Program source, tests, and build logic stay in their owning source repositories.
 | Path | Purpose |
 | --- | --- |
 | [`tools/`](tools/) | Tool catalog and small text-based distribution metadata |
-| [`skills/`](skills/) | Reusable rules, specifications, prompts, and references |
+| [`skills/`](skills/) | Reusable distributable specifications and reference material; shared Agent behavior belongs to Action Worker |
 | [`output/`](output/) | Reports, feeds, rule data, briefs, and other generated public artifacts |
 | [`docs/`](docs/) | Repository-wide engineering and distribution guidance |
 | [`.github/`](.github/) | CI and governance entry points |
@@ -45,7 +45,7 @@ Program source, build logic, and binary payloads do not belong in the Git tree.
 ```text
 external-vault/
 ├─ tools/      Public tool catalog and distribution metadata
-├─ skills/     Reusable rules, specifications, prompts, and references
+├─ skills/     Reusable distributable specifications and references
 ├─ output/     Generated non-program public artifacts
 ├─ docs/       Repository-wide engineering and distribution guidance
 └─ .github/    CI and governance entry points
@@ -53,7 +53,7 @@ external-vault/
 
 ## Governance
 
-Repository-wide rules are maintained in [`docs/`](docs/). Cross-repository PR governance, AI review, Gate, source policy, and release policy are delegated to [Action Worker](https://github.com/fongap-labs/action-worker).
+Repository-wide rules are maintained in [`docs/`](docs/). Cross-repository PR governance, AI review, Gate, source policy, release policy, and organization-wide Agent Skills are owned by [Action Worker](https://github.com/fongap-labs/action-worker). The local `skills/` directory contains distribution assets only.
 
 ## Licensing
 
