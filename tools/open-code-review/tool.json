@@ -5,5 +5,8 @@
   "release_channel": "stable",
   "platform": "linux",
   "arch": "amd64",
-  "upstream_asset": "opencodereview-linux-amd64"
+  "upstream_asset": "opencodereview-linux-amd64",
+  "checksum_asset": "sha256sum.txt",
+  "license_path": "LICENSE",
+  "license_expression": "Apache-2.0"
 }
