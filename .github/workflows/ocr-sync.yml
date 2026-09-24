@@ -173,6 +173,19 @@ jobs:
               ]
             }' > "$ARTIFACT_DIR/release-manifest.json"
 
+          jq -n \
+            --arg source_repository "$GITHUB_REPOSITORY" \
+            --arg source_sha "$GITHUB_SHA" \
+            --arg artifact_repository "$GITHUB_REPOSITORY" \
+            --argjson artifact_run_id "$GITHUB_RUN_ID" \
+            '{
+              schema_version: "1",
+              source_repository: $source_repository,
+              source_sha: $source_sha,
+              artifact_repository: $artifact_repository,
+              artifact_run_id: $artifact_run_id
+            }' > "$ARTIFACT_DIR/release-provenance.json"
+
           echo "publish=true" >> "$GITHUB_OUTPUT"
           {
             echo "### OpenCodeReview distribution source"
