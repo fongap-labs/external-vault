@@ -23,7 +23,7 @@
 | 路径 | 用途 |
 | --- | --- |
 | [`tools/`](tools/) | 工具索引与小型文本分发元数据 |
-| [`skills/`](skills/) | 可复用规则、规范、提示词与参考资料 |
+| [`skills/`](skills/) | 可复用的分发型规范与参考资料；组织级 Agent 行为由 Action Worker 管理 |
 | [`output/`](output/) | 报告、Feed、规则数据、简报等公开生成物 |
 | [`docs/`](docs/) | 仓库级工程与分发规范 |
 | [`.github/`](.github/) | CI 与治理入口 |
@@ -45,7 +45,7 @@ GitHub Releases 是版本化程序产物的唯一正式分发位置。Release Ta
 ```text
 external-vault/
 ├─ tools/      工具目录与分发元数据
-├─ skills/     可复用规则、规范与参考资料
+├─ skills/     可复用的分发型规范与参考资料
 ├─ output/     生成型非程序公开资产
 ├─ docs/       仓库级工程与分发规范
 └─ .github/    CI 与治理入口
@@ -53,7 +53,7 @@ external-vault/
 
 ## 治理
 
-仓库级规范位于 [`docs/`](docs/)。跨仓 PR Governance、AI Review、Gate、Source Policy 与 Release Policy 统一交由 [Action Worker](https://github.com/fongap-labs/action-worker)。
+仓库级规范位于 [`docs/`](docs/)。跨仓 PR Governance、AI Review、Gate、Source Policy、Release Policy 与组织级 Agent Skills 统一由 [Action Worker](https://github.com/fongap-labs/action-worker) 管理；本仓 `skills/` 仅保存分发型资产。
 
 ## 授权
 
