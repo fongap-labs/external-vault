@@ -2,8 +2,6 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-[![Repository CI](https://github.com/fongap-labs/external-vault/actions/workflows/ci.yml/badge.svg)](https://github.com/fongap-labs/external-vault/actions/workflows/ci.yml)
-[![Dispatch PR Governance](https://github.com/fongap-labs/external-vault/actions/workflows/dispatch-pr-governance.yml/badge.svg)](https://github.com/fongap-labs/external-vault/actions/workflows/dispatch-pr-governance.yml)
 [![Release](https://img.shields.io/github/v/release/fongap-labs/external-vault?label=Release&display_name=tag&sort=semver)](https://github.com/fongap-labs/external-vault/releases)
 
 **公开发布、可复用资产与分发元数据，不承载程序源码。**
@@ -26,7 +24,7 @@
 | [`skills/`](skills/) | 可复用的分发型规范与参考资料；组织级 Agent 行为由 Action Worker 管理 |
 | [`output/`](output/) | 报告、Feed、规则数据、简报等公开生成物 |
 | [`docs/`](docs/) | 仓库级工程与分发规范 |
-| [`.github/`](.github/) | CI 与治理入口 |
+| [`.github/`](.github/) | 源仓执行 Manifest 与中央 CI 脚本 |
 
 ## 发布约定
 
@@ -48,7 +46,7 @@ external-vault/
 ├─ skills/     可复用的分发型规范与参考资料
 ├─ output/     生成型非程序公开资产
 ├─ docs/       仓库级工程与分发规范
-└─ .github/    CI 与治理入口
+└─ .github/    源仓执行 Manifest 与中央 CI 脚本
 ```
 
 ## 治理
