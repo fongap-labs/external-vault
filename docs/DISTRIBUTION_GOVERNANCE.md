@@ -3,15 +3,15 @@
 ## Publication model
 
 ```text
-private or dedicated source repository
+source repository + release manifest
         ↓
-build + test + package
+Action Worker source / CI admission
         ↓
-release artifact + release-manifest.json
+central build + test + package
         ↓
-repository_dispatch: run-release
+release artifact + release provenance
         ↓
-Action Worker release governance
+Action Worker Release Governance
         ↓
 external-vault GitHub Release
         ↓
@@ -76,27 +76,21 @@ Preferred asset pattern:
 
 ## Cross-repository publication
 
-The source repository owns build, test, package, signing, SBOM, and installer validation. It uploads a release artifact whose root contains:
+The source repository owns product source, project-specific build scripts, tests, and the versioned `.github/release.manifest.json`. It does not upload the governed release artifact itself.
 
-```text
-release-manifest.json
-<declared release assets>
-```
+Action Worker owns the heavy release path:
 
-After the source build run completes successfully, the source repository sends only a minimal `run-release` task to Action Worker.
+1. source repository capability and immutable default-branch source validation;
+2. trusted Central CI Evidence and Main Write Guard validation;
+3. source-owned release manifest validation;
+4. centrally resolved build runners and source-owned build script execution;
+5. artifact packaging, optional signing/attestation/SBOM steps, release manifest materialization, and release provenance;
+6. target repository capability validation;
+7. target-scoped Tag and Release collision checks;
+8. publication with centrally held target credentials;
+9. Release asset re-download verification and rollback.
 
 The source repository must not hold write credentials for `external-vault`.
-
-Action Worker owns:
-
-1. source repository allowlist validation;
-2. source default-branch HEAD and successful `ci.yml` verification;
-3. source build-run and artifact identity verification;
-4. `release-manifest.json` and SHA256 validation;
-5. target repository allowlist validation;
-6. target-scoped Tag and Release collision checks;
-7. publication with the centrally held `RELEASE_TOKEN`;
-8. Release asset re-download verification and rollback.
 
 The Release tag is created in the target repository. Source provenance is recorded separately and must not be confused with the target repository Tag commit.
 

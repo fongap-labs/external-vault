@@ -2,8 +2,6 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-[![Repository CI](https://github.com/fongap-labs/external-vault/actions/workflows/ci.yml/badge.svg)](https://github.com/fongap-labs/external-vault/actions/workflows/ci.yml)
-[![Dispatch PR Governance](https://github.com/fongap-labs/external-vault/actions/workflows/dispatch-pr-governance.yml/badge.svg)](https://github.com/fongap-labs/external-vault/actions/workflows/dispatch-pr-governance.yml)
 [![Release](https://img.shields.io/github/v/release/fongap-labs/external-vault?label=Release&display_name=tag&sort=semver)](https://github.com/fongap-labs/external-vault/releases)
 
 **Public releases, reusable assets, and distribution metadata — without source-code clutter.**
@@ -26,7 +24,7 @@ Program source, tests, and build logic stay in their owning source repositories.
 | [`skills/`](skills/) | Reusable distributable specifications and reference material; shared Agent behavior belongs to Action Worker |
 | [`output/`](output/) | Reports, feeds, rule data, briefs, and other generated public artifacts |
 | [`docs/`](docs/) | Repository-wide engineering and distribution guidance |
-| [`.github/`](.github/) | CI and governance entry points |
+| [`.github/`](.github/) | Source-owned execution manifest and central CI scripts |
 
 ## Release convention
 
@@ -48,7 +46,7 @@ external-vault/
 ├─ skills/     Reusable distributable specifications and references
 ├─ output/     Generated non-program public artifacts
 ├─ docs/       Repository-wide engineering and distribution guidance
-└─ .github/    CI and governance entry points
+└─ .github/    Source-owned execution manifest and central CI scripts
 ```
 
 ## Governance
