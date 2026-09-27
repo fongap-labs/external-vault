@@ -407,24 +407,6 @@
   ],
   "candidate_event_count": 6,
   "deep_analysis_event_count": 6,
-  "llm_failures": [
-    {
-      "provider": "[redacted-host]",
-      "model": "Pro",
-      "request_id": "[redacted-request-id]",
-      "retry_count": 0,
-      "status": 200,
-      "error": "ValueError"
-    },
-    {
-      "provider": "[redacted-host]",
-      "model": "Pro",
-      "request_id": "[redacted-request-id]",
-      "retry_count": 0,
-      "status": 504,
-      "error": "HTTPError"
-    }
-  ],
   "content": {
     "status": "publish",
     "hook_title": "本周制药产业速览",
