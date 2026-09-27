@@ -299,7 +299,7 @@
       "url": "https://www.tongxieyi.com/",
       "ok": false,
       "quality_score": null,
-      "error": "html https://www.tongxieyi.com/: HTTPSConnectionPool(host='www.tongxieyi.com', port=443): Max retries exceeded with url: / (Caused by ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))",
+      "error": "[redacted-traceback]",
       "role": "lead",
       "source_quality": "medium",
       "transport": "html",
@@ -315,7 +315,7 @@
       "url": "https://www.eyjlr.com/",
       "ok": false,
       "quality_score": null,
-      "error": "html https://www.eyjlr.com/: HTTPSConnectionPool(host='www.eyjlr.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.eyjlr.com', port=443) at 0x7fc94345be60>, 'Connection to www.eyjlr.com timed out. (connect timeout=30)'))",
+      "error": "[redacted-traceback]",
       "role": "lead",
       "source_quality": "low",
       "transport": "html",
@@ -331,7 +331,7 @@
       "url": "https://www.simm.cas.cn/web/jgsz/gjsbjyjzx/xyyj/kydt_170104/",
       "ok": false,
       "quality_score": null,
-      "error": "html https://www.simm.cas.cn/web/jgsz/gjsbjyjzx/xyyj/kydt_170104/: HTTPSConnectionPool(host='www.simm.cas.cn', port=443): Max retries exceeded with url: /web/jgsz/gjsbjyjzx/xyyj/kydt_170104/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1000)')))",
+      "error": "[redacted-traceback]",
       "role": "lead",
       "source_quality": "high",
       "transport": "html",
@@ -407,24 +407,6 @@
   ],
   "candidate_event_count": 6,
   "deep_analysis_event_count": 6,
-  "llm_failures": [
-    {
-      "provider": "api.135468.xyz",
-      "model": "Pro",
-      "request_id": "bc7d77d6-c63a-4038-8e22-d291f2e938c8",
-      "retry_count": 0,
-      "status": 200,
-      "error": "ValueError"
-    },
-    {
-      "provider": "api.135468.xyz",
-      "model": "Pro",
-      "request_id": "dfdad34b-84a3-4660-b786-d790b761927d",
-      "retry_count": 0,
-      "status": 504,
-      "error": "HTTPError"
-    }
-  ],
   "content": {
     "status": "publish",
     "hook_title": "本周制药产业速览",
@@ -711,10 +693,10 @@
     "signal": "neutral"
   },
   "source_policy": {
-    "catalog": "projects/PharmaBrief/sources.json",
-    "policy": "projects/PharmaBrief/policy.json"
+    "catalog": "[redacted]",
+    "policy": "[redacted]"
   },
-  "publish_policy": "projects/PharmaBrief/publish.json",
+  "publish_policy": "[redacted-path]",
   "article_evidence": {
     "count": 0,
     "historical_deduped": 0,
