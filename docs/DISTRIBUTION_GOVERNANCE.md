@@ -52,6 +52,22 @@ A tool entry may describe:
 
 Keep metadata small, deterministic, and text-based.
 
+## Published manifests
+
+`output/**/manifest.json` is published brief output. The publish path and Central CI enforce `.github/manifest-allowlist.json` fail-closed:
+
+- field allowlist: any field outside `allowed_keys` fails the gate;
+- value blacklist on every string: traceback patterns, `0x` hex addresses and Windows paths;
+- URL and user-path blacklist on every field except `url_fields` (`url`, `fetch_url`, `body_markdown`);
+- `url` and `fetch_url` must carry an `http(s)://` value;
+- a trailing newline is required.
+
+Pipeline telemetry such as `model`, `total_tokens`, `quality_score` and `elapsed_sec` is explicitly allowlisted and stays publishable. Extending `allowed_keys`, `url_fields` or the blacklists requires distribution governance review.
+
+## Output retention
+
+The Git tree keeps at most the newest 14 periods per project under `output/`. The publish pipeline prunes older periods; long-term history belongs to GitHub Releases or an archive rather than the Git tree. Central CI fails when the window is exceeded.
+
 ## Release naming
 
 A shared distribution repository uses product-scoped tags:

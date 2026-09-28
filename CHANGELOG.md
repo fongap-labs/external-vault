@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+- feat: enforce published manifest field allowlist, value blacklist, trailing newline and the 14-period output retention window in Central CI.
+- feat: add gitleaks configuration and a fail-closed secret scanning step to Central CI.
+- fix: strip residual gateway URLs and embedded source URLs from published brief manifests.
+- docs: declare the published manifest contract and output retention window; correct layout listings.
+
 - chore: refresh main write provenance after the billing outage recovery.
 
 - fix: redact internal infrastructure details (gateway endpoint, request ids, tracebacks, memory addresses, internal source paths) from all published brief manifests.

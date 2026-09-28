@@ -19,6 +19,8 @@ required_paths=(
   "tools/catalog.json"
   "skills"
   "output"
+  ".gitleaks.toml"
+  ".github/manifest-allowlist.json"
 )
 
 for path in "${required_paths[@]}"; do
@@ -53,3 +55,19 @@ jq -e '
   .schema_version == "1"
   and (.tools | type == "array")
 ' tools/catalog.json >/dev/null
+
+script_root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+bash "$script_root/validate-manifests.sh" "$TARGET_ROOT"
+bash "$script_root/secret-scan.sh" "$TARGET_ROOT"
+
+# Published brief retention: each project keeps at most the newest periods in the Git tree.
+output_retention_periods=14
+for project_dir in output/*/; do
+  [ -d "$project_dir" ] || continue
+  periods="$(find "$project_dir" -type f -name manifest.json | wc -l | tr -d '[:space:]')"
+  if [ "$periods" -gt "$output_retention_periods" ]; then
+    echo "central-ci: output retention exceeded: ${project_dir%/} holds $periods periods (limit $output_retention_periods)" >&2
+    exit 1
+  fi
+done
