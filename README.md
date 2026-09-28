@@ -49,6 +49,8 @@ external-vault/
 └─ .github/    Source-owned execution manifest and central CI scripts
 ```
 
+The [`Repository contents`](#repository-contents) table above describes each path in detail.
+
 ## Governance
 
 Repository-wide rules are maintained in [`docs/`](docs/). Cross-repository PR governance, AI review, Gate, source policy, release policy, and organization-wide Agent Skills are owned by [Action Worker](https://github.com/fongap-labs/action-worker). The local `skills/` directory contains distribution assets only.
