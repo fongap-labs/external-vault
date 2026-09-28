@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- chore: refresh main write provenance after the billing outage recovery.
+
 - fix: redact internal infrastructure details (gateway endpoint, request ids, tracebacks, memory addresses, internal source paths) from all published brief manifests.
 
 - refactor [breaking]: centralize final merge governance through Action Worker.
