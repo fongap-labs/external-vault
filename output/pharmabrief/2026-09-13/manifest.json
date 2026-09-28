@@ -75,7 +75,7 @@
       "url": "https://www.cde.org.cn/main/news/listpage",
       "ok": false,
       "quality_score": null,
-      "error": "html: 正文过短: 0",
+      "error": "html: body too short: 0",
       "role": "authoritative",
       "source_quality": "high",
       "transport": "html",
