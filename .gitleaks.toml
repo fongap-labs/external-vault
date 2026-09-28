@@ -1,0 +1,13 @@
+title = "external-vault secret scanning policy"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Redacted placeholders and third-party generated content"
+paths = [
+  '''output/adfilter/adfilter\.txt''',
+]
+regexes = [
+  '''\[redacted[a-z0-9_-]*\]''',
+]

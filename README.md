@@ -42,11 +42,11 @@ Program source, build logic, and binary payloads do not belong in the Git tree.
 
 ```text
 external-vault/
-├─ tools/      Public tool catalog and distribution metadata
-├─ skills/     Reusable distributable specifications and references
-├─ output/     Generated non-program public artifacts
-├─ docs/       Repository-wide engineering and distribution guidance
-└─ .github/    Source-owned execution manifest and central CI scripts
+├─ tools/
+├─ skills/
+├─ output/
+├─ docs/
+└─ .github/
 ```
 
 The [`Repository contents`](#repository-contents) table above describes each path in detail.
