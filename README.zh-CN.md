@@ -42,12 +42,14 @@ GitHub Releases 是版本化程序产物的唯一正式分发位置。Release Ta
 
 ```text
 external-vault/
-├─ tools/      工具目录与分发元数据
-├─ skills/     可复用的分发型规范与参考资料
-├─ output/     生成型非程序公开资产
-├─ docs/       仓库级工程与分发规范
-└─ .github/    源仓执行 Manifest 与中央 CI 脚本
+├─ tools/
+├─ skills/
+├─ output/
+├─ docs/
+└─ .github/
 ```
+
+上文 [`仓库内容`](#仓库内容) 表格已给出各路径的详细说明。
 
 ## 治理
 
