@@ -28,7 +28,7 @@ action-worker
 
 ```text
 external-vault/
-├─ .github/workflows/   CI and thin governance dispatch
+├─ .github/            Execution manifest, central CI scripts and manifest allowlist
 ├─ docs/                Distribution-specific documentation
 ├─ tools/               Public tool catalog and distribution metadata
 ├─ skills/              Reusable public guidance and references
@@ -73,5 +73,7 @@ The source repository never needs target-repository write credentials.
 ## Security and stability
 
 Credentials stay in platform secret stores. Public assets must not expose private source, logs, configuration or secrets. Third-party content keeps its upstream licensing and attribution obligations.
+
+Central CI enforces this contract fail-closed: published manifests must pass the field allowlist and value blacklist in `.github/manifest-allowlist.json`, and `.gitleaks.toml` drives secret scanning with redacted placeholders allowlisted.
 
 `main` is the supported public baseline. Repository structure should change rarely; generated public content may evolve independently while the source/distribution boundary remains intact.
