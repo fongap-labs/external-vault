@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- ci: add the approved thin PR dispatcher so pull request events reach central governance within about a minute; it runs no PR code and skips Dependabot.
+
 - feat: enforce published manifest field allowlist, value blacklist, trailing newline and the 14-period output retention window in Central CI.
 - feat: add gitleaks configuration and a fail-closed secret scanning step to Central CI.
 - fix: strip residual gateway URLs and embedded source URLs from published brief manifests.
