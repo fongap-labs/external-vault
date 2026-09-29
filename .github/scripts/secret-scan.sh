@@ -14,6 +14,23 @@ fi
 
 cd "$target_root"
 
+# When the runner has no gitleaks, fetch a pinned release and verify its SHA-256 (same pin as
+# internal-vault). A download problem falls back to the built-in scan below; a checksum
+# mismatch is fatal because it means the archive is not the release we pinned.
+GITLEAKS_VERSION="8.30.1"
+GITLEAKS_LINUX_X64_SHA256="551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb"
+if ! command -v gitleaks >/dev/null 2>&1   && [ "$(uname -s)-$(uname -m)" = "Linux-x86_64" ]   && command -v curl >/dev/null 2>&1; then
+  gitleaks_dir="$(mktemp -d)"
+  gitleaks_archive="gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz"
+  if curl -fsSLo "$gitleaks_dir/$gitleaks_archive"     "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/$gitleaks_archive"; then
+    echo "${GITLEAKS_LINUX_X64_SHA256}  $gitleaks_dir/$gitleaks_archive" | sha256sum -c - >&2       || { echo "secret-scan: gitleaks archive checksum mismatch" >&2; exit 1; }
+    tar -xzf "$gitleaks_dir/$gitleaks_archive" -C "$gitleaks_dir" gitleaks
+    export PATH="$gitleaks_dir:$PATH"
+  else
+    echo "secret-scan: could not download gitleaks; using the built-in pattern scan" >&2
+  fi
+fi
+
 if command -v gitleaks >/dev/null 2>&1; then
   gitleaks detect --source . --config .gitleaks.toml --no-banner --redact --exit-code 1
   exit $?
