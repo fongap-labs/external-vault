@@ -62,7 +62,14 @@ bash "$script_root/validate-manifests.sh" "$TARGET_ROOT"
 bash "$script_root/secret-scan.sh" "$TARGET_ROOT"
 
 # Published brief retention: each project keeps at most the newest periods in the Git tree.
-output_retention_periods=14
+# Default 14; set EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS (a whole number) to change it.
+output_retention_periods="${EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS:-14}"
+case "$output_retention_periods" in
+  '' | *[!0-9]*)
+    echo "central-ci: EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS must be a whole number, got: $output_retention_periods" >&2
+    exit 64
+    ;;
+esac
 for project_dir in output/*/; do
   [ -d "$project_dir" ] || continue
   periods="$(find "$project_dir" -type f -name manifest.json | wc -l | tr -d '[:space:]')"
