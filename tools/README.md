@@ -10,7 +10,7 @@ It does not store application source code or versioned binary payloads.
 
 Current distributions:
 
-- `open-code-review`: verified Linux amd64 mirror of stable OpenCodeReview releases. This repository verifies and packages upstream inputs; `fongap/action-worker` exclusively publishes the resulting GitHub Releases.
+- `open-code-review`: verified Linux amd64 mirror of stable OpenCodeReview releases. This repository verifies and packages upstream inputs; `fongap-labs/action-worker` exclusively publishes the resulting GitHub Releases.
 
 Future tool metadata should stay small and text-based.
 
