@@ -3,11 +3,44 @@ title = "external-vault secret scanning policy"
 [extend]
 useDefault = true
 
-[allowlist]
-description = "Redacted placeholders and third-party generated content"
-paths = [
-  '''output/adfilter/adfilter\.txt''',
-]
+# Redacted placeholders written by this repository's own tooling.
+[[allowlists]]
+description = "Redacted placeholders"
 regexes = [
   '''\[redacted[a-z0-9_-]*\]''',
+]
+
+# output/adfilter/adfilter.txt is generated third-party rule data (see THIRD_PARTY_NOTICES.md). The
+# file is still scanned. Only a line that is built entirely from lowercase CSS selector fragments
+# containing an "sk-<word>[-<word>]" class or id (for example "##.sk-cookie-message") is accepted,
+# because that shape is what the OpenAI-style key patterns misreport. Both conditions must hold
+# (condition = "AND"): the path and the line shape. A line with an uppercase letter or an underscore
+# (as in real "ghp_..." or "AKIA..." material), or whose "sk-" part is longer or contains mixed case
+# or digits in its first word (as in real keys), is not accepted and is reported.
+[[allowlists]]
+description = "Lowercase CSS selector fragments such as sk-cookie-message in the generated AdFilter list"
+condition = "AND"
+regexTarget = "line"
+paths = [
+  '''^output/adfilter/adfilter\.txt$''',
+]
+regexes = [
+  '''^[^A-Z_]*(?:^|[^A-Za-z0-9])sk-[a-z]{2,20}(?:-{1,2}[a-z0-9]{1,24}){0,6}(?:[^A-Za-z0-9-][^A-Z_]*)?$''',
+]
+
+# uBlock Origin "trusted-set-cookie cookiehub" rules carry a base64 encoded cookie-consent JSON whose
+# "token" field is a public consent-cookie value, not a credential. gitleaks decodes the base64 and
+# reports the decoded text as generic-api-key (seen in older versions of the list). The allowance is
+# limited to that one rule (targetRules), to the generated list (path) and to a match that is a JSON
+# "token" field (regexTarget = "match"); all three must hold (condition = "AND").
+[[allowlists]]
+description = "Decoded cookie-consent JSON token in uBlock cookiehub rules of the generated AdFilter list"
+condition = "AND"
+targetRules = ["generic-api-key"]
+regexTarget = "match"
+paths = [
+  '''^output/adfilter/adfilter\.txt$''',
+]
+regexes = [
+  '''^token":"[A-Za-z0-9+/=_-]{20,}"?$''',
 ]
