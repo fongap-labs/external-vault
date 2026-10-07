@@ -3,6 +3,7 @@
 ## [Unreleased]
 
 - ci: add `.github/CODEOWNERS` naming the maintainers for the whole repository, `.github/` and `tools/`.
+- docs: correct `THIRD_PARTY_NOTICES.md` to the lists the AdFilter build actually fetches and the licences their upstreams state (AdGuard lists GPL-3.0, CJX LGPL-3.0, uBlock lists GPL-3.0, EasyList dual GPL-3.0-or-later / CC BY-SA 3.0-or-later), remove the dead `easylistcookie` link, add `output/adfilter/NOTICE`, and point `LICENSE` to it; the open licensing questions are marked as needing legal review.
 
 - chore: add `SECURITY.md` with the reporting channel and the scope of this distribution repository, and remove the unused `CNAME` left from GitHub Pages (Pages is disabled; the domain resolves elsewhere).
 
