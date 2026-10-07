@@ -3,11 +3,27 @@ title = "external-vault secret scanning policy"
 [extend]
 useDefault = true
 
-[allowlist]
-description = "Redacted placeholders and third-party generated content"
-paths = [
-  '''output/adfilter/adfilter\.txt''',
-]
+# Redacted placeholders written by this repository's own tooling.
+[[allowlists]]
+description = "Redacted placeholders"
 regexes = [
   '''\[redacted[a-z0-9_-]*\]''',
+]
+
+# output/adfilter/adfilter.txt is generated third-party rule data (see THIRD_PARTY_NOTICES.md). The
+# file is still scanned. Only a line that is built entirely from lowercase CSS selector fragments
+# containing an "sk-<word>[-<word>]" class or id (for example "##.sk-cookie-message") is accepted,
+# because that shape is what the OpenAI-style key patterns misreport. Both conditions must hold
+# (condition = "AND"): the path and the line shape. A line with an uppercase letter or an underscore
+# (as in real "ghp_..." or "AKIA..." material), or whose "sk-" part is longer or contains mixed case
+# or digits in its first word (as in real keys), is not accepted and is reported.
+[[allowlists]]
+description = "Lowercase CSS selector fragments such as sk-cookie-message in the generated AdFilter list"
+condition = "AND"
+regexTarget = "line"
+paths = [
+  '''^output/adfilter/adfilter\.txt$''',
+]
+regexes = [
+  '''^[^A-Z_]*(?:^|[^A-Za-z0-9])sk-[a-z]{2,20}(?:-{1,2}[a-z0-9]{1,24}){0,6}(?:[^A-Za-z0-9-][^A-Z_]*)?$''',
 ]

@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- fix [security]: stop exempting the whole of `output/adfilter/adfilter.txt` from gitleaks; the file is scanned again and only lines made of lowercase CSS selector fragments such as `sk-cookie-message` (the known false positive) are allowed, so a real credential injected into the list is still reported.
+
 - chore: add `SECURITY.md` with the reporting channel and the scope of this distribution repository, and remove the unused `CNAME` left from GitHub Pages (Pages is disabled; the domain resolves elsewhere).
 
 - ci: when the runner has no gitleaks, the secret-scan step downloads the pinned gitleaks 8.30.1 release and verifies its SHA-256 (a mismatch fails the run) instead of silently falling back to the smaller built-in pattern list; `EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS` overrides the 14-period output retention limit (default unchanged).
