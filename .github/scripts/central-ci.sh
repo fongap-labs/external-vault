@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Central execution contract: invoked by fongap-labs/action-worker.
+# The secret scan prints its (redacted) findings, so a failure can be read from the CI log.
 set -Eeuo pipefail
 
 TARGET_ROOT="${1:-}"
