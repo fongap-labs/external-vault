@@ -30,16 +30,17 @@ regexes = [
 
 # uBlock Origin "trusted-set-cookie cookiehub" rules carry a base64 encoded cookie-consent JSON whose
 # "token" field is a public consent-cookie value, not a credential. gitleaks decodes the base64 and
-# reports it as generic-api-key (found in older versions of the list). Accepted only for lines that are
-# exactly such a rule: a host list, "##+js(trusted-set-cookie, cookiehub, ...". Both the path and the
-# line shape must match.
+# reports the decoded text as generic-api-key (seen in older versions of the list). The allowance is
+# limited to that one rule (targetRules), to the generated list (path) and to a match that is a JSON
+# "token" field (regexTarget = "match"); all three must hold (condition = "AND").
 [[allowlists]]
-description = "Cookie-consent JSON in uBlock trusted-set-cookie cookiehub rules of the generated AdFilter list"
+description = "Decoded cookie-consent JSON token in uBlock cookiehub rules of the generated AdFilter list"
 condition = "AND"
-regexTarget = "line"
+targetRules = ["generic-api-key"]
+regexTarget = "match"
 paths = [
   '''^output/adfilter/adfilter\.txt$''',
 ]
 regexes = [
-  '''^[a-z0-9.*,~-]+##\+js\(trusted-set-cookie, cookiehub, (?:eyJ[A-Za-z0-9+/=_-]+|\{"answered":[^\r\n]*\}), [0-9a-z]+\)\r?$''',
+  '''^token":"[A-Za-z0-9+/=_-]{20,}"?$''',
 ]

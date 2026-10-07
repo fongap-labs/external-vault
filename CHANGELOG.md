@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-- fix [security]: stop exempting the whole of `output/adfilter/adfilter.txt` from gitleaks; the file is scanned again and only lines made of lowercase CSS selector fragments such as `sk-cookie-message` (the known false positive) are allowed, so a real credential injected into the list is still reported. A second allowance covers the base64 cookie-consent JSON in uBlock `trusted-set-cookie cookiehub` rules, which gitleaks decodes and misreports as `generic-api-key` in older versions of the list.
+- fix [security]: stop exempting the whole of `output/adfilter/adfilter.txt` from gitleaks; the file is scanned again and only lines made of lowercase CSS selector fragments such as `sk-cookie-message` (the known false positive) are allowed, so a real credential injected into the list is still reported. A second allowance, limited to the `generic-api-key` rule, covers the decoded cookie-consent JSON `token` in uBlock `trusted-set-cookie cookiehub` rules that gitleaks misreports in older versions of the list.
 
 - chore: add `SECURITY.md` with the reporting channel and the scope of this distribution repository, and remove the unused `CNAME` left from GitHub Pages (Pages is disabled; the domain resolves elsewhere).
 
