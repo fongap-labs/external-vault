@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- ci: add `.github/CODEOWNERS` naming the maintainers for the whole repository, `.github/` and `tools/`.
+
 - chore: add `SECURITY.md` with the reporting channel and the scope of this distribution repository, and remove the unused `CNAME` left from GitHub Pages (Pages is disabled; the domain resolves elsewhere).
 
 - ci: when the runner has no gitleaks, the secret-scan step downloads the pinned gitleaks 8.30.1 release and verifies its SHA-256 (a mismatch fails the run) instead of silently falling back to the smaller built-in pattern list; `EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS` overrides the 14-period output retention limit (default unchanged).
