@@ -10,7 +10,7 @@ Unless a file, directory, Release, or accompanying notice states otherwise, orig
 
 Third-party content, externally sourced assets, and generated or aggregated material derived from third-party sources are not relicensed by the MIT License below. They remain subject to their applicable upstream copyright, license, attribution, and distribution terms.
 
-See THIRD_PARTY_NOTICES.md and any file- or directory-specific notices.
+See THIRD_PARTY_NOTICES.md, output/adfilter/NOTICE for the AdFilter aggregate, and any file- or directory-specific notices.
 
 3. Release assets
 

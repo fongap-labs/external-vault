@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- docs: correct `THIRD_PARTY_NOTICES.md` to the lists the AdFilter build actually fetches and the licences their upstreams state (AdGuard lists GPL-3.0, CJX LGPL-3.0, uBlock lists GPL-3.0, EasyList dual GPL-3.0-or-later / CC BY-SA 3.0-or-later), remove the dead `easylistcookie` link, add `output/adfilter/NOTICE`, and point `LICENSE` to it; the open licensing questions are marked as needing legal review.
+
 - chore: add `SECURITY.md` with the reporting channel and the scope of this distribution repository, and remove the unused `CNAME` left from GitHub Pages (Pages is disabled; the domain resolves elsewhere).
 
 - ci: when the runner has no gitleaks, the secret-scan step downloads the pinned gitleaks 8.30.1 release and verifies its SHA-256 (a mismatch fails the run) instead of silently falling back to the smaller built-in pattern list; `EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS` overrides the 14-period output retention limit (default unchanged).
