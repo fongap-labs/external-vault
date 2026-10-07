@@ -32,7 +32,7 @@ if ! command -v gitleaks >/dev/null 2>&1   && [ "$(uname -s)-$(uname -m)" = "Lin
 fi
 
 if command -v gitleaks >/dev/null 2>&1; then
-  gitleaks detect --source . --config .gitleaks.toml --no-banner --redact --exit-code 1
+  gitleaks detect --source . --config .gitleaks.toml --no-banner --redact --verbose --exit-code 1
   exit $?
 fi
 
