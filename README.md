@@ -62,3 +62,4 @@ This repository uses mixed licensing. Original repository-authored material is l
 For cross-repository App Releases governed by Action Worker, the default license is `Apache-2.0` when the source manifest does not declare another license. Each App / Release may explicitly override that default, and the effective license is recorded with that Release. The root repository [LICENSE](LICENSE) does not override an App Release license.
 
 See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for third-party attribution.
+
