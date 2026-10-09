@@ -13,7 +13,7 @@ cd "$TARGET_ROOT"
 
 required_paths=(
   "AGENTS.md"
-  "AGENTS.md"
+  "CLAUDE.md"
   "docs/README.md"
   "docs/DISTRIBUTION_GOVERNANCE.md"
   "tools/README.md"

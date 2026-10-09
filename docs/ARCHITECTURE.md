@@ -34,7 +34,7 @@ external-vault/
 ├─ skills/              Reusable public guidance and references
 ├─ output/              Generated non-program public artifacts
 ├─ AGENTS.md             Agent redirect
-├─ AGENTS.md             Repository Agent entry point
+├─ CLAUDE.md             Repository Agent entry point
 ├─ README.md             Default English index
 └─ README.zh-CN.md       Simplified Chinese index
 ```
