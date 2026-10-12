@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "release_key": "r-base",
+  "platform": "source",
+  "arch": "any",
+  "upstream_url": "https://cran.r-project.org/src/base/R-4/R-4.6.0.tar.xz",
+  "upstream_version": "4.6.0",
+  "upstream_asset": "R-4.6.0.tar.xz",
+  "upstream_sha256": "91f2b3693fa5252cdea9b62abc84a1c58db5547cb9f0fe3d15f44eef8aff5a27",
+  "license_expression": "GPL-2.0-or-later"
+}
