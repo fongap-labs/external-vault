@@ -10,7 +10,7 @@
     },
     {
       "key": "r-base",
-      "name": "R (base distribution)",
+      "name": "R Base Package",
       "source_repository": "cran.r-project.org",
       "distribution": "url",
       "metadata": "tools/r-base/tool.json"
