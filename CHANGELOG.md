@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+- docs: `docs/DISTRIBUTION_GOVERNANCE.md` states that a release tag points at a verified commit, and that the tool sync defers a release while the default-branch HEAD is unsigned.
+
+- docs: the `r-base` catalog name is `R Base Package`, so the mirrored release is titled `R Base Package 4.6.0`.
+
 - feat: register `r-base` in the tool catalog as a `url` distribution (CRAN R 4.6.0 source tarball, SHA-256 pinned in `tools/r-base/tool.json`). The tool sync mirrors the file into a `r-base-v4.6.0` GitHub Release only after Action Worker's URL distribution mode is on `main`; the upstream file must match the pin or nothing is published.
 
 - ci: add `.github/CODEOWNERS` naming the maintainers for the whole repository, `.github/` and `tools/`.
