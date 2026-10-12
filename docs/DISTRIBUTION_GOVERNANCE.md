@@ -96,7 +96,7 @@ Preferred asset pattern:
 
 ## Cross-repository publication
 
-The source repository owns product source, project-specific build scripts, tests, and the versioned `.github/release.manifest.json`. It does not upload the governed release artifact itself.
+The source repository owns product source, project-specific build scripts, tests, and the version-controlled `.github/release.manifest.json`, which carries no version. It does not upload the governed release artifact itself.
 
 Action Worker owns the heavy release path:
 
