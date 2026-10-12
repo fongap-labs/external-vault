@@ -35,6 +35,10 @@ GitHub Releases are the canonical location for:
 
 Do not commit versioned program payloads into the Git tree.
 
+## Release tags and verification
+
+A release tag points at a commit. A release shows GitHub's verified badge only when that commit has a valid signature, so a release made by the pipeline must point at a signed commit. The tool sync defers a release while the default-branch HEAD has no valid signature (see Action Worker's tool sync). Releases created before this rule may point at unsigned commits; their tags are not moved without the owner's approval.
+
 ## tools/
 
 `tools/` is the catalog and metadata layer.
