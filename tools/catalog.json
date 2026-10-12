@@ -7,6 +7,13 @@
       "source_repository": "alibaba/open-code-review",
       "distribution": "github-release",
       "metadata": "tools/open-code-review/tool.json"
+    },
+    {
+      "key": "r-base",
+      "name": "R (base distribution)",
+      "source_repository": "cran.r-project.org",
+      "distribution": "url",
+      "metadata": "tools/r-base/tool.json"
     }
   ]
 }
