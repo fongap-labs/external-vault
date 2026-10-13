@@ -1,65 +1,51 @@
 # external-vault
 
-[English](README.md) · [简体中文](README.zh-CN.md)
-
 [![Release](https://img.shields.io/github/v/release/fongap-labs/external-vault?label=Release&display_name=tag&sort=semver)](https://github.com/fongap-labs/external-vault/releases)
 
-**Public releases, reusable assets, and distribution metadata — without source-code clutter.**
+**公开发布、可复用资产与分发元数据，不承载程序源码。**
 
-Program source, tests, and build logic stay in their owning source repositories. This repository keeps only public distribution metadata, reusable material, generated non-program artifacts, and versioned program payloads published through GitHub Releases.
+程序源码、测试与构建逻辑保留在各自的源仓库中。本仓库只保留公开分发元数据、可复用资料、生成型非程序资产，以及通过 GitHub Releases 发布的版本化程序产物。
 
-## Distribution
+## 分发入口
 
-| Destination | Purpose |
+| 位置 | 用途 |
 | --- | --- |
-| [Releases](https://github.com/fongap-labs/external-vault/releases) | Versioned executables, installers, archives, checksums, and release notes |
-| [`tools/`](tools/) | Public tool catalog and distribution metadata |
-| [`output/`](output/) | Generated, directly consumable non-program assets |
+| [Releases](https://github.com/fongap-labs/external-vault/releases) | 版本化可执行文件、安装包、压缩包、校验文件与发布说明 |
+| [`tools/`](tools/) | 公开工具目录与分发元数据 |
+| [`output/`](output/) | 自动生成、可直接使用的非程序资产 |
 
-## Repository contents
+## 仓库内容
 
-| Path | Purpose |
+仓库根目录包含以下五个目录：
+
+| 路径 | 用途 |
 | --- | --- |
-| [`tools/`](tools/) | Tool catalog and small text-based distribution metadata |
-| [`skills/`](skills/) | Reusable distributable specifications and reference material; shared Agent behavior belongs to Action Worker |
-| [`output/`](output/) | Reports, feeds, rule data, briefs, and other generated public artifacts |
-| [`docs/`](docs/) | Repository-wide engineering and distribution guidance |
-| [`.github/`](.github/) | Source-owned execution manifest and central CI scripts |
+| [`tools/`](tools/) | 工具索引与小型文本分发元数据 |
+| [`skills/`](skills/) | 可复用的分发型规范与参考资料；组织级 Agent 行为由 Action Worker 管理 |
+| [`output/`](output/) | 报告、Feed、规则数据、简报等公开生成物 |
+| [`docs/`](docs/) | 仓库级工程与分发规范 |
+| [`.github/`](.github/) | 源仓库执行清单（manifest）与中央 CI 脚本 |
 
-## Release convention
+## 发布约定
 
-GitHub Releases are the canonical location for versioned program payloads. Release tags are product-scoped:
+GitHub Releases 是版本化程序产物的规范位置（canonical location）。Release 标签按产品划分，格式如下：
 
 ```text
 <release-key>-v<semver>
 ```
 
-Example: `agentdock-v0.1.0`.
+示例：`agentdock-v0.1.0`。
 
-Program source, build logic, and binary payloads do not belong in the Git tree.
+程序源码、构建逻辑与二进制产物不进入 Git 树。
 
-## Repository layout
+## 治理
 
-```text
-external-vault/
-├─ tools/
-├─ skills/
-├─ output/
-├─ docs/
-└─ .github/
-```
+仓库级规范维护在 [`docs/`](docs/) 中。跨仓库的 PR 治理、AI 评审（AI Review）、门禁（Gate）、源码策略（Source Policy）、Release 策略与组织级 Agent Skills 由 [Action Worker](https://github.com/fongap-labs/action-worker) 统一管理。本仓库的 `skills/` 目录仅包含分发资产。
 
-The [`Repository contents`](#repository-contents) table above describes each path in detail.
+## 授权
 
-## Governance
+本仓库采用混合授权。除非另有说明，本仓库原创内容按 MIT 条款授权；第三方、衍生与生成型资产继续遵循各自上游的许可条款。
 
-Repository-wide rules are maintained in [`docs/`](docs/). Cross-repository PR governance, AI review, Gate, source policy, release policy, and organization-wide Agent Skills are owned by [Action Worker](https://github.com/fongap-labs/action-worker). The local `skills/` directory contains distribution assets only.
+由 Action Worker 管理的跨仓库 App Release，若源仓库 manifest 未声明其他许可证，则默认采用 `Apache-2.0`。每个 App / Release 均可显式覆盖该默认值，实际生效的许可证随对应 Release 记录。根目录的 [LICENSE](LICENSE) 不覆盖 App Release 的许可证。
 
-## Licensing
-
-This repository uses mixed licensing. Original repository-authored material is licensed under the MIT terms unless stated otherwise. Third-party, derived, and generated assets retain their applicable upstream licenses.
-
-For cross-repository App Releases governed by Action Worker, the default license is `Apache-2.0` when the source manifest does not declare another license. Each App / Release may explicitly override that default, and the effective license is recorded with that Release. The root repository [LICENSE](LICENSE) does not override an App Release license.
-
-See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for third-party attribution.
-
+第三方归属与许可信息见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。

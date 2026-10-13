@@ -1,19 +1,20 @@
-# Tools
+# 工具
 
-`tools/` is the public catalog and distribution-metadata layer for released programs and utilities.
+`tools/` 是已发布程序与实用工具的公开目录层与分发元数据层。
 
-It does not store application source code or versioned binary payloads.
+它不存放应用源码，也不存放版本化的二进制产物。
 
-## Contents
+## 目录内容
 
-- [catalog.json](catalog.json): machine-readable catalog entry point.
+- [catalog.json](catalog.json)：机器可读的目录入口。
 
-Current distributions:
+当前分发的工具：
 
-- `open-code-review`: verified Linux amd64 mirror of stable OpenCodeReview releases. This repository verifies and packages upstream inputs; `fongap-labs/action-worker` exclusively publishes the resulting GitHub Releases.
+- `open-code-review`：已验证的 Linux amd64 镜像，同步上游 OpenCodeReview 的稳定版本。本仓库负责校验与打包上游输入；GitHub Releases 仅由 `fongap-labs/action-worker` 唯一发布。
+- `r-base`（R Base Package）：CRAN R 4.6.0 源码压缩包，以 URL 方式分发，SHA-256 固定于 [`r-base/tool.json`](r-base/tool.json)。仅当 Action Worker 的 URL 分发模式在 `main` 上启用后，工具同步才会将该文件镜像到 `r-base-v4.6.0` Release。
 
-Future tool metadata should stay small and text-based.
+后续的工具元数据应保持小巧、基于文本。
 
-Versioned executable payloads belong in GitHub Releases.
+可执行文件的版本化载荷属于 GitHub Releases。
 
-Generated reports, feeds, and datasets belong under `output/`.
+生成的报告、Feed 与数据集属于 `output/`。

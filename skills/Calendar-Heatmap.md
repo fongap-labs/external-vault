@@ -1,47 +1,41 @@
-# 通用 Calendar Heatmap 实现规范
+# Generic Calendar Heatmap Implementation Specification
 
-请将系统中的日期热力图统一抽象为两种标准模式：
+Unify all date heatmaps in the system into two standard modes:
 
-1. `rolling-52-weeks`：近 52 周
-2. `calendar-year`：自然年
+1. `rolling-52-weeks`: the most recent 52 weeks
+2. `calendar-year`: a natural (calendar) year
 
-两种模式共用同一套日期、星期、月份和数据映射基础逻辑，但时间范围计算必须严格分离。
+Both modes share the same base logic for dates, weekdays, months and data mapping, but the time-range calculation must be strictly separated.
 
 ---
 
-# 一、统一基础规则
+# 1. Common Base Rules
 
-## 1. 日期单位
+## 1. Date unit
 
-热力图最小单位是：
+The smallest heatmap unit is the `calendar day`.
 
-`calendar day`
-
-数据 Key 统一使用：
-
-`YYYY-MM-DD`
-
-例如：
+Data keys always use `YYYY-MM-DD`, for example:
 
 2026-09-04
 
-不要使用时间戳作为前端热力图的数据匹配 Key。
+Do not use timestamps as the data-matching key for the frontend heatmap.
 
 ---
 
-## 2. 星期排列
+## 2. Weekday layout
 
-统一采用 Monday-first：
+Always use Monday-first:
 
-周一
-周二
-周三
-周四
-周五
-周六
-周日
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
 
-内部：
+Internal index:
 
 Monday    = 0
 Tuesday   = 1
@@ -51,22 +45,22 @@ Friday    = 4
 Saturday  = 5
 Sunday    = 6
 
-JavaScript `Date.getDay()` 是：
+JavaScript `Date.getDay()` uses:
 
 Sunday = 0
 Monday = 1
 ...
 Saturday = 6
 
-因此必须转换：
+Therefore the conversion is required:
 
 const weekdayIndex = (date.getDay() + 6) % 7
 
 ---
 
-## 3. 每个日期的数据结构
+## 3. Per-day data structure
 
-建议统一为：
+The recommended shape is:
 
 type HeatmapDay = {
   date: string
@@ -77,263 +71,251 @@ type HeatmapDay = {
   isFuture: boolean
 }
 
-职责明确：
+Responsibilities are explicit:
 
-- `weekIndex`：X 轴
-- `weekdayIndex`：Y 轴
-- `date`：数据匹配
-- `value`：业务数据
+- `weekIndex`: X axis
+- `weekdayIndex`: Y axis
+- `date`: data matching
+- `value`: business data
 
-不要依赖 DOM 顺序反推日期。
-
----
-
-# 二、模式 A：近 52 周
-
-## 定义
-
-“近 52 周”定义为：
-
-> 包含当前周在内，连续显示最近 52 个 calendar weeks。
-
-不是：
-
-- 最近 365 天
-- 最近 364 天简单切块
-- 当前日期减一年
+Do not infer dates from DOM order.
 
 ---
 
-## 1. 时间范围
+# 2. Mode A: rolling-52-weeks
 
-假设：
+## Definition
+
+"The last 52 weeks" is defined as:
+
+> Continuously display the most recent 52 calendar weeks, including the current week.
+
+It is not:
+
+- the last 365 days
+- the last 364 days simply split into weeks
+- the current date minus one year
+
+---
+
+## 1. Time range
+
+Assume:
 
 today = 2026-09-04 Friday
 
-Monday-first 时：
+With Monday-first:
 
 currentWeekStart = 2026-08-31
 
-第一列：
+First column:
 
 firstWeekStart =
   currentWeekStart - 51 weeks
 
-因此：
+Therefore:
 
 week 0  = firstWeekStart
 ...
 week 51 = currentWeekStart
 
-始终严格：
+The grid is always strictly:
 
 52 columns
 
 ---
 
-## 2. 当前周
+## 2. Current week
 
-例如当前日期：
+For the current date:
 
 2026-09-04
 
-最后一列：
+The last column is:
 
-周一  2026-08-31
-周二  2026-09-01
-周三  2026-09-02
-周四  2026-09-03
-周五  2026-09-04
-周六  2026-09-05
-周日  2026-09-06
+Monday    2026-08-31
+Tuesday   2026-09-01
+Wednesday 2026-09-02
+Thursday  2026-09-03
+Friday    2026-09-04
+Saturday  2026-09-05
+Sunday    2026-09-06
 
-其中未来日期：
+The future dates:
 
 2026-09-05
 2026-09-06
 
-保留格子位置，但：
+keep their grid positions, but:
 
 value = null
 isFuture = true
 
-不要把未来日期当作 0 次活动。
+Do not treat future dates as 0 activity.
 
-`0` 和 `future/null` 是不同语义。
-
----
-
-## 3. 左边界
-
-第一列也是完整 calendar week。
-
-因此第一列可能包含一部分早于“实际 52×7 日窗口”的日期。
-
-这是正常的。
-
-本模式追求：
-
-52 个完整周列
-
-而不是：
-
-精确 364 个业务日期。
+`0` and `future/null` have different meanings.
 
 ---
 
-## 4. 月份标签
+## 3. Left boundary
 
-月份标签不能根据：
+The first column is also a complete calendar week.
+
+Therefore the first column may contain some dates earlier than the nominal 52×7-day window.
+
+This is expected.
+
+This mode targets:
+
+52 complete week columns
+
+not:
+
+exactly 364 business dates.
+
+---
+
+## 4. Month labels
+
+Month labels must not be generated from:
 
 weekStart.getMonth()
 
-生成。
+They must be determined by:
 
-必须根据：
+"which week column the 1st day of each month falls in"
 
-“每个月的 1 日落在哪一个 week column”
-
-确定。
-
-例如：
+For example:
 
 2026-08-31 Monday
 2026-09-01 Tuesday
 ...
 2026-09-06 Sunday
 
-虽然该周 `weekStart` 是 8 月 31 日，
-
-但：
+Although this week's `weekStart` is August 31,
 
 2026-09-01
 
-位于这一列，所以：
+falls in this column, so the September label must be anchored to this column.
 
-`9月`
-
-必须定位到这一列。
-
-逻辑应类似：
+Logic should look like:
 
 monthStart = YYYY-MM-01
 weekIndex = getWeekIndex(monthStart)
 
-然后将月份标签锚定到这个 weekIndex。
+Then anchor the month label to this `weekIndex`.
 
 ---
 
-## 5. 适用场景
+## 5. Applicable scenarios
 
-近 52 周适合：
+Rolling 52 weeks suits:
 
-- GitHub 风格活动图
-- API 请求活动
-- Token 使用量
-- 登录活动
-- 调用次数
-- 错误事件
-- 最近一年运行状态
+- GitHub-style activity charts
+- API request activity
+- Token usage
+- Login activity
+- Call counts
+- Error events
+- Run status over the last year
 
-特点：
+Characteristics:
 
-- 永远 52 列
-- 页面宽度稳定
-- 随时间滚动
-- 关注“最近活动”
+- always 52 columns
+- stable page width
+- scrolls over time
+- focuses on "recent activity"
 
 ---
 
-# 三、模式 B：自然年
+# 3. Mode B: calendar-year
 
-## 定义
+## Definition
 
-“一年”定义为：
+"A year" is defined as:
 
-> 指定自然年的 1 月 1 日至 12 月 31 日。
+> January 1 through December 31 of a specified calendar year.
 
-例如：
+For example:
 
 2026-01-01
-～
+~
 2026-12-31
 
-不是：
+It is not:
 
 today - 365 days
 
-也不是：
+Nor is it:
 
-最近 52 周。
+the most recent 52 weeks.
 
 ---
 
-## 1. 时间范围
+## 1. Time range
 
-指定：
+Given:
 
 year = 2026
 
-则：
+then:
 
 rangeStart = 2026-01-01
 rangeEnd   = 2026-12-31
 
-闰年自动为：
+A leap year automatically has:
 
 366 days
 
-普通年：
+A common year has:
 
 365 days
 
 ---
 
-## 2. 周列
+## 2. Week columns
 
-为了维持 Monday → Sunday 的二维布局，需要把：
+To keep a Monday → Sunday two-dimensional layout, the week containing
 
-1 月 1 日所在周
+January 1
 
-作为第一列，
+is the first column, and the week containing
 
-把：
+December 31
 
-12 月 31 日所在周
+is the last column.
 
-作为最后一列。
+Therefore a calendar-year heatmap:
 
-因此自然年热力图：
+**must not be fixed at 52 columns.**
 
-**不应强制固定为 52 列。**
+It typically has:
 
-通常会出现：
+53 columns
 
-53 列
+Some week layouts may require:
 
-某些周历布局可能需要：
+54 visual columns
 
-54 个视觉列
+depending on:
 
-取决于：
+- the week-start rule
+- the position of January 1 within its week
+- the position of December 31 within its week
 
-- 星期起始规则
-- 年初星期位置
-- 年末星期位置
+The correct principle is:
 
-正确原则是：
-
-> 根据自然年的实际日期计算 week columns，不写死 52。
+> Compute week columns from the actual dates of the calendar year. Do not hard-code 52.
 
 ---
 
-# 四、自然年的年初空白
+# 4. Leading blanks in calendar-year
 
-例如：
+For example:
 
-2026-01-01 是 Thursday。
+2026-01-01 is a Thursday.
 
-那么第一列：
+Then the first column is:
 
 Monday    2025-12-29
 Tuesday   2025-12-30
@@ -343,119 +325,121 @@ Friday    2026-01-02
 Saturday  2026-01-03
 Sunday    2026-01-04
 
-但自然年模式只统计 2026。
+However, calendar-year mode counts only 2026.
 
-因此：
+Therefore:
 
 2025-12-29
 2025-12-30
 2025-12-31
 
-对应格子可以保留布局占位，但必须：
+may keep their layout placeholders, but must have:
 
 inRange = false
 value = null
 
-视觉上为空白/禁用格。
+Visually they are blank/disabled cells.
 
-不能读取 2025 年数据填进去。
+Do not read 2025 data into them.
 
 ---
 
-# 五、自然年的年末空白
+# 5. Trailing blanks in calendar-year
 
-同理，如果 12 月 31 日不是 Sunday，
+Likewise, if December 31 is not a Sunday, the last column may extend into the next year.
 
-最后一列可能进入下一年。
-
-例如：
+For example:
 
 2027-01-01
 2027-01-02
 ...
 
-这些日期：
+These dates must have:
 
 inRange = false
 value = null
 
-不得计入当前年份。
+They must not be counted toward the current year.
 
 ---
 
-# 六、当前自然年
+# 6. Current calendar year
 
-如果展示：
+If the displayed year is:
 
-2026 年
+2026
 
-且今天：
+and today is:
 
 2026-09-04
 
-那么：
+then:
 
 2026-09-05
-～
+~
 2026-12-31
 
-均属于：
+all belong to:
 
 inRange = true
 isFuture = true
 value = null
 
-这里需要区分三种状态：
+Three states must be distinguished:
 
-### 年外日期
+### Out-of-year dates
 
 inRange = false
 
-### 年内未来日期
+### In-year future dates
 
 inRange = true
 isFuture = true
 
-### 年内有效日期
+### In-year valid dates
 
 inRange = true
 isFuture = false
 
-不要全部简单渲染成：
+Do not render everything simply as:
 
 value = 0
 
 ---
 
-# 七、历史自然年
+# 7. Historical calendar year
 
-如果展示：
+If the displayed year is:
 
-2025 年
+2025
 
-而当前已经是：
+while the current year is:
 
-2026 年
+2026
 
-则：
+then:
 
-2025-01-01 ～ 2025-12-31
+2025-01-01 ~ 2025-12-31
 
-全部属于已完成日期。
+are all completed dates.
 
-不存在未来格子。
+No future cells exist.
 
 ---
 
-# 八、月份标签
+# 8. Month labels
 
-自然年模式同样采用：
+Calendar-year mode also uses:
 
 monthStart
 
-作为锚点。
+as the anchor.
 
-分别计算：
+Compute which:
+
+weekIndex
+
+each of the following belongs to:
 
 2026-01-01
 2026-02-01
@@ -463,142 +447,122 @@ monthStart
 ...
 2026-12-01
 
-属于哪个：
+then display the labels Jan through Dec in the corresponding columns.
 
-weekIndex
-
-然后在对应列显示：
-
-1月
-2月
-3月
-...
-12月
-
-不要按照每周 Monday 属于哪个月份生成标签。
+Do not generate labels from the month that each week's Monday belongs to.
 
 ---
 
-# 九、推荐 UI
+# 9. Recommended UI
 
-## A. 近 52 周
+## A. rolling-52-weeks
 
-标题：
+Title:
 
-Token 活动 · 近 52 周
+Token activity · last 52 weeks
 
-横向：
+Horizontal axis:
 
-约 52 个固定周列
+about 52 fixed week columns
 
-月份标签：
+Month labels:
 
-9月 10月 11月 ... 8月 9月
+Sep Oct Nov ... Aug Sep
 
-这是滚动窗口，因此首尾月份重复是完全正常的。
+This is a rolling window, so the first and last months repeating is entirely normal.
 
-例如可能：
+For example:
 
-9月 → 10月 → ... → 8月 → 9月
+Sep → Oct → ... → Aug → Sep
 
 ---
 
-## B. 自然年
+## B. calendar-year
 
-标题：
+Title:
 
-Token 活动 · 2026
+Token activity · 2026
 
-或：
+or:
 
-Token 活动 · 本年
+Token activity · this year
 
-提供年份选择：
+Provide a year selector:
 
 ‹ 2025   2026 ›
 
-月份固定：
+Months are fixed:
 
-1月 → 2月 → ... → 12月
+Jan → Feb → ... → Dec
 
-适合年度回顾和历史比较。
+Suitable for annual reviews and historical comparison.
 
 ---
 
-# 十、两种模式的核心区别
+# 10. Core differences between the two modes
 
-| 项目 | 近 52 周 | 自然年 |
+| Item | rolling-52-weeks | calendar-year |
 |---|---|---|
-| 时间语义 | 滚动窗口 | 自然年度 |
-| 起点 | 当前周往前 51 周 | 1 月 1 日 |
-| 终点 | 当前周 | 12 月 31 日 |
-| 周列 | 固定 52 | 动态计算 |
-| 日期数 | 最多约 364 天 | 365/366 天 |
-| 跨年 | 必然可能 | 不跨业务年度 |
-| 月份 | 可能首尾重复 | 固定 1～12 月 |
-| 未来日期 | 当前周未来几天 | 当前年剩余日期 |
-| 适合 | 最近活动 | 年度统计 |
+| Time semantics | Rolling window | Calendar year |
+| Start | Current week minus 51 weeks | January 1 |
+| End | Current week | December 31 |
+| Week columns | Fixed at 52 | Computed dynamically |
+| Number of dates | About 364 days at most | 365 or 366 days |
+| Crossing years | Expected | Does not cross the business year |
+| Months | First and last may repeat | Fixed Jan–Dec |
+| Future dates | Remaining days of the current week | Remaining dates of the current year |
+| Best for | Recent activity | Annual statistics |
 
 ---
 
-# 十一、不要混用两个概念
+# 11. Do not conflate the two concepts
 
-禁止将：
-
-“近 52 周”
-
-实现为：
+Forbidden: implementing "last 52 weeks" as
 
 new Date(today.getFullYear() - 1, ...)
 
-也禁止将：
-
-“自然年”
-
-实现为：
+Also forbidden: implementing "calendar year" as
 
 currentWeek - 51 weeks
 
-这两者虽然都接近“一年”，但统计语义完全不同。
+Both approximate "one year", but their statistical semantics are entirely different.
 
 ---
 
-# 十二、日期/时区
+# 12. Dates and time zones
 
-热力图属于 date-only 数据。
+A heatmap is date-only data.
 
-避免：
+Avoid:
 
 new Date("2026-09-01")
 
-后又混合：
+followed by a mix of:
 
 getUTCDate()
 getDate()
 getUTCDay()
 getDay()
 
-建议提供统一 date helper。
-
-例如：
+Provide a single shared date helper, for example:
 
 createLocalDate(year, month, day)
 
-或者全套 UTC date-only helper。
+or a complete set of UTC date-only helpers.
 
-整个 heatmap 只能选择一种时间体系。
+A single heatmap must use exactly one time system.
 
-禁止 UTC/local 混用导致：
+Mixing UTC and local time causes:
 
-日期 ±1
-星期错位
-月份错位
+off-by-one dates
+weekday misalignment
+month misalignment
 
 ---
 
-# 十三、推荐通用 API
+# 13. Recommended generic API
 
-可以抽象：
+The API can be abstracted as:
 
 buildCalendarHeatmap({
   mode: "rolling-52-weeks" | "calendar-year",
@@ -607,7 +571,7 @@ buildCalendarHeatmap({
   weekStartsOn: "monday"
 })
 
-返回：
+It returns:
 
 {
   weeks: HeatmapDay[][],
@@ -624,99 +588,91 @@ buildCalendarHeatmap({
 
 ---
 
-# 十四、关键测试
+# 14. Key tests
 
-必须覆盖：
-
-### rolling-52-weeks
+## rolling-52-weeks
 
 today = 2026-09-04
 
-最后一列必须：
+The last column must be:
 
 2026-08-31 Monday
 2026-09-01 Tuesday
 2026-09-02 Wednesday
 2026-09-03 Thursday
 2026-09-04 Friday
-2026-09-05 Saturday future
-2026-09-06 Sunday future
+2026-09-05 Saturday (future)
+2026-09-06 Sunday (future)
 
-且：
+And:
 
-9月 label → 该列
+September label → that column
 
-总列数：
+Total columns:
 
 52
 
 ---
 
-### calendar-year
+## calendar-year
 
 year = 2026
 
-必须：
+Must have:
 
 rangeStart = 2026-01-01
 rangeEnd   = 2026-12-31
 
-第一列允许包含：
+The first column may contain:
 
-2025-12-29 ～ 2025-12-31
+2025-12-29 ~ 2025-12-31
 
-但这些必须：
+but these must have:
 
 inRange = false
 
-同样检查年底跨入 2027 的占位日期。
+Also check the placeholder dates that cross into 2027 at the end of the year.
 
 ---
 
-### 其他边界
+## Other boundaries
 
-必须测试：
+The following must be tested:
 
-- 月初为 Monday
-- 月初为 Sunday
-- 12 月 → 1 月
-- 普通年
-- 闰年
+- a month starting on Monday
+- a month starting on Sunday
+- December → January
+- a common year
+- a leap year
 - 2028-02-29
-- 当前年
-- 历史年
-- UTC/local 边界
+- the current year
+- a historical year
+- the UTC/local boundary
 
 ---
 
-# 十五、最终原则
+# 15. Final principles
 
-两个热力图应遵循：
+The two heatmaps must follow these rules:
 
-### 近 52 周
+### rolling-52-weeks
 
-固定周数，滚动时间窗口。
+Fixed number of weeks, rolling time window.
 
-### 自然年
+### calendar-year
 
-固定年度，动态周数。
+Fixed year, dynamic number of weeks.
 
-月份永远根据：
+Months are always located by:
 
-`monthStart 所属 weekIndex`
+the `weekIndex` that contains `monthStart`
 
-定位。
+Weekdays are always located by:
 
-星期永远根据：
+the real calendar date
 
-真实 calendar date
-
-定位。
-
-业务数据永远根据：
+Business data is always matched by:
 
 `YYYY-MM-DD`
 
-匹配。
-
-不要使用视觉位置反推业务日期。
+Never infer business dates from visual position.
