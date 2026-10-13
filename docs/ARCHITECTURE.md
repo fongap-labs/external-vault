@@ -1,8 +1,8 @@
-# Architecture
+# 架构
 
-`external-vault` is a public distribution and asset repository, not a program source repository.
+`external-vault` 是公开分发与资产仓库，不是程序源码仓库。
 
-## Ownership boundary
+## 归属边界
 
 ```text
 source repositories
@@ -24,7 +24,7 @@ action-worker
 + cross-repository machine contracts
 ```
 
-## Repository structure
+## 仓库结构
 
 ```text
 external-vault/
@@ -35,13 +35,12 @@ external-vault/
 ├─ output/              Generated non-program public artifacts
 ├─ AGENTS.md             Agent redirect
 ├─ CLAUDE.md             Repository Agent entry point
-├─ README.md             Default English index
-└─ README.zh-CN.md       Simplified Chinese index
+└─ README.md             Repository index
 ```
 
-There is intentionally no program source tree.
+本仓库有意不包含程序源码目录。
 
-## Distribution flow
+## 分发流程
 
 ```text
 source repository
@@ -61,19 +60,19 @@ tools/ catalog metadata
 public consumer
 ```
 
-The source repository never needs target-repository write credentials.
+源仓库永远不需要目标仓库的写入凭据。
 
-## Asset domains
+## 资产域
 
-- `tools/`: small text metadata for distributed programs.
-- `skills/`: reusable rules, specifications, prompts and references.
-- `output/`: generated reports, feeds, rule data, briefs and other non-program public assets.
-- GitHub Releases: executables, installers, program archives, checksums and release notes.
+- `tools/`：已分发程序的小型文本元数据。
+- `skills/`：可复用的规则、规范、提示词与参考资料。
+- `output/`：生成的报告、Feed、规则数据、简报及其他非程序公开资产。
+- GitHub Releases：可执行文件、安装包、程序压缩包、校验和与发布说明。
 
-## Security and stability
+## 安全与稳定性
 
-Credentials stay in platform secret stores. Public assets must not expose private source, logs, configuration or secrets. Third-party content keeps its upstream licensing and attribution obligations.
+凭据保存在平台密钥存储中。公开资产不得暴露私有源码、日志、配置或密钥。第三方内容须保留其上游的许可与署名义务。
 
-Central CI enforces this contract fail-closed: published manifests must pass the field allowlist and value blacklist in `.github/manifest-allowlist.json`, and `.gitleaks.toml` drives secret scanning with redacted placeholders allowlisted.
+中央 CI 以失败即关闭（fail-closed）的方式执行本契约：已发布的 manifest 必须通过 `.github/manifest-allowlist.json` 中的字段允许列表与值黑名单，`.gitleaks.toml` 驱动密钥扫描，并放行脱敏占位符。
 
-`main` is the supported public baseline. Repository structure should change rarely; generated public content may evolve independently while the source/distribution boundary remains intact.
+`main` 是受支持的公开基线。仓库结构应极少变动；生成的公开内容可以独立演进，同时保持源码与分发边界不变。
