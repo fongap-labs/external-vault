@@ -4,7 +4,7 @@
 
 **公开发布、可复用资产与分发元数据，不承载程序源码。**
 
-[![Release](https://img.shields.io/github/v/release/fongap-labs/external-vault?label=Release&display_name=tag&sort=semver&style=flat-square&labelColor=1B2A41&color=2A5588)](https://github.com/fongap-labs/external-vault/releases) [![OpenCodeReview](https://img.shields.io/badge/OpenCodeReview-1.13.0-2A5588?style=flat-square&labelColor=1B2A41&logo=github)](https://github.com/fongap-labs/external-vault/releases?q=open-code-review-v) [![R Base](https://img.shields.io/badge/R%20Base-4.6.0-2A5588?style=flat-square&labelColor=1B2A41&logo=github)](https://github.com/fongap-labs/external-vault/releases?q=r-base-v) [![License](https://img.shields.io/badge/License-MIT%20%7C%20per--release-2A5588?style=flat-square&labelColor=1B2A41)](#许可证) [![Governed by Action Worker](https://img.shields.io/badge/Governed%20by-Action%20Worker-2A5588?style=flat-square&labelColor=1B2A41)](https://github.com/fongap-labs/action-worker)
+[![Release](https://img.shields.io/github/v/release/fongap-labs/external-vault?label=Release&display_name=tag&sort=semver&style=flat-square&labelColor=1B2A41&color=2A5588)](https://github.com/fongap-labs/external-vault/releases) [![License](https://img.shields.io/badge/License-MIT%20%7C%20per--release-2A5588?style=flat-square&labelColor=1B2A41)](#许可证) [![Governed by Action Worker](https://img.shields.io/badge/Governed%20by-Action%20Worker-2A5588?style=flat-square&labelColor=1B2A41)](https://github.com/fongap-labs/action-worker)
 
 [获取产物](#获取产物) · [发布约定](#发布约定) · [治理](#治理) · [许可证](#许可证) · [安全](#安全)
 
