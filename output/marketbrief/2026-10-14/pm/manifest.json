@@ -1,0 +1,229 @@
+{
+  "schema_version": 2,
+  "project": "MarketBrief",
+  "date": "2026-10-14",
+  "edition": "pm",
+  "generated_at": "2026-10-14T21:12:33+08:00",
+  "model": "Editor-Air",
+  "status": "publish",
+  "hook_title": "9月外贸与通胀数据出炉 外部变量密集",
+  "overview": "9月进出口增速上行，AI与价格为主要拉动；输入性通胀再升温，消费端刚性持续。美国CPI与实际工资数据于10月14日发布，就业报告已于10月2日出炉。A股当日具体行情数据暂无足够信息。",
+  "visual_tone": "divergent",
+  "usage": {
+    "calls": 4,
+    "total_tokens": 9244
+  },
+  "sources": [
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2530,
+      "quality_score": 65,
+      "cache_hit": false,
+      "elapsed_sec": 0.744,
+      "analysis_ok": false
+    },
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2100,
+      "quality_score": 61,
+      "cache_hit": false,
+      "elapsed_sec": 2.007,
+      "analysis_ok": false
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3751,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 1.6,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3205,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 3.211,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 0.251,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "api",
+      "chars": 3788,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 6.19,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 5.213,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 5148,
+      "quality_score": 91,
+      "cache_hit": false,
+      "elapsed_sec": 1.753,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 2538,
+      "quality_score": 65,
+      "cache_hit": false,
+      "elapsed_sec": 1.799,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4794,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.174,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4118,
+      "quality_score": 81,
+      "cache_hit": false,
+      "elapsed_sec": 0.575,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4799,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.96,
+      "analysis_ok": true
+    }
+  ],
+  "content": {
+    "status": "publish",
+    "hook_title": "9月外贸与通胀数据出炉 外部变量密集",
+    "overview": "9月进出口增速上行，AI与价格为主要拉动；输入性通胀再升温，消费端刚性持续。美国CPI与实际工资数据于10月14日发布，就业报告已于10月2日出炉。A股当日具体行情数据暂无足够信息。",
+    "market_sentiment": {
+      "tone": "divergent",
+      "emotion_score": 48,
+      "risk_level": 55,
+      "dispersion_level": 55,
+      "confidence_level": 40
+    },
+    "cards": [
+      {
+        "kicker": "今日简报",
+        "title": "9月外贸与通胀数据出炉 外部变量密集",
+        "subtitle": "9月进出口增速上行，AI与价格为主要拉动；输入性通胀再升温，消费端刚性持续。美国CPI与实际工资数据于10月14日发布，就业报告已于10月2日出炉。A股当日具体行情数据暂无足够信息。",
+        "bullets": [
+          "9月贸易数据点评：进出口增速上行，AI与价格为主要拉动",
+          "9月通胀数据跟踪：输入性通胀再升温，消费端刚性持续",
+          "银行理财周度跟踪：公募基金运作规则系统性修订，银行理财影响几何"
+        ]
+      },
+      {
+        "kicker": "全球市场",
+        "title": "全球市场",
+        "subtitle": "外部变量与关键数据发布",
+        "bullets": [
+          "美国CPI消费者价格指数于10月14日发布最新数据",
+          "美国实际工资数据于10月14日发布",
+          "美国月度就业报告已于10月2日发布"
+        ]
+      },
+      {
+        "kicker": "市场概览",
+        "title": "市场概览",
+        "subtitle": "A股当日表现与资金特征",
+        "bullets": [
+          "A股当日指数、成交量、涨跌结构数据暂无足够信息",
+          "暂无可靠信息支持具体市场表现描述",
+          "当日公告显示部分公司召开临时股东会，涉及广和通无线等"
+        ]
+      },
+      {
+        "kicker": "热点追踪",
+        "title": "热点追踪",
+        "subtitle": "研究与产业趋势关注方向",
+        "bullets": [
+          "银行理财周度跟踪：公募基金运作规则系统性修订，银行理财影响几何",
+          "2025年中国水下机器人行业概览：167亿到637亿的五年跃迁，CAGR 25%，深海科技崛起撬动万亿市场",
+          "MLCC制造产业在AI算力与新能源汽车双轮驱动下的技术突围与国产进阶"
+        ]
+      },
+      {
+        "kicker": "事实分歧",
+        "title": "事实分歧",
+        "subtitle": "确认事实与不同解释并存",
+        "bullets": [
+          "事实：9月进出口增速上行，AI与价格为主要拉动",
+          "事实：输入性通胀再升温，消费端刚性持续",
+          "研究观点：银行理财受公募基金运作规则修订影响，具体影响程度待观察"
+        ]
+      },
+      {
+        "kicker": "风险提示",
+        "title": "风险提示",
+        "subtitle": "后续事件与宏观政策风险",
+        "bullets": [
+          "输入性通胀再升温，消费端刚性持续，政策应对存在不确定性",
+          "美国CPI与实际工资数据今日发布，后续政策路径存在不确定性",
+          "部分上市公司控股股东、实际控制人、董事长被留置，公司治理风险需关注"
+        ]
+      }
+    ],
+    "article": {
+      "title": "9月外贸与通胀数据出炉 外部变量密集",
+      "summary": "9月进出口增速上行，AI与价格为主要拉动；输入性通胀再升温，消费端刚性持续。美国CPI与实际工资数据于10月14日发布，就业报告已于10月2日出炉。A股当日具体行情数据暂无足够信息。",
+      "body_markdown": "## 全球市场\n\n外部变量与关键数据发布\n\n- 美国CPI消费者价格指数于10月14日发布最新数据\n- 美国实际工资数据于10月14日发布\n- 美国月度就业报告已于10月2日发布\n\n## 市场概览\n\nA股当日表现与资金特征\n\n- A股当日指数、成交量、涨跌结构数据暂无足够信息\n- 暂无可靠信息支持具体市场表现描述\n- 当日公告显示部分公司召开临时股东会，涉及广和通无线等\n\n## 热点追踪\n\n研究与产业趋势关注方向\n\n- 银行理财周度跟踪：公募基金运作规则系统性修订，银行理财影响几何\n- 2025年中国水下机器人行业概览：167亿到637亿的五年跃迁，CAGR 25%，深海科技崛起撬动万亿市场\n- MLCC制造产业在AI算力与新能源汽车双轮驱动下的技术突围与国产进阶\n\n## 事实分歧\n\n确认事实与不同解释并存\n\n- 事实：9月进出口增速上行，AI与价格为主要拉动\n- 事实：输入性通胀再升温，消费端刚性持续\n- 研究观点：银行理财受公募基金运作规则修订影响，具体影响程度待观察\n\n## 风险提示\n\n后续事件与宏观政策风险\n\n- 输入性通胀再升温，消费端刚性持续，政策应对存在不确定性\n- 美国CPI与实际工资数据今日发布，后续政策路径存在不确定性\n- 部分上市公司控股股东、实际控制人、董事长被留置，公司治理风险需关注",
+      "disclaimer": "本文仅作公开信息整理与讨论，不构成任何投资建议。"
+    }
+  },
+  "publish": {
+    "title": "9月外贸与通胀数据出炉 外部变量密集",
+    "intro": "9月进出口增速上行，AI与价格为主要拉动；输入性通胀再升温，消费端刚性持续。美国CPI与实际工资数据于10月14日发布，就业报告已于10月2日出炉。A股当日具体行情数据暂无足够信息。",
+    "tags": [
+      "AI算力",
+      "市场观察",
+      "市场主线",
+      "行业轮动",
+      "资金情绪"
+    ]
+  }
+}
