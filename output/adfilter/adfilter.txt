@@ -2,8 +2,8 @@
 ! Title:       Fong's AdFilter
 ! Version:     261015
 ! Expires:     5 days
-! Count:       227,852
-! Updated:     15 Oct 2026 09:16 UTC
+! Count:       227,862
+! Updated:     15 Oct 2026 09:19 UTC
 ! Homepage:    https://labs.fongap.com
 ! --------------------------------------------------
 
@@ -164369,6 +164369,7 @@ zzzyk.com###Tinfo
 ||dequeenabiders.qpon^
 ||dequeens.com^
 ||derbytestulebimini.qpon^
+||dereismveeryunsnare.cfd^
 ||derejaycees.cyou^
 ||derelictbookstorebilly.com^
 ||derevya2sh8ka09.com^$popup
@@ -166128,6 +166129,7 @@ zzzyk.com###Tinfo
 ||drosssel.goasrv.com^
 ||droughtperceptive.com^
 ||droukantuebor.cyou^
+||droverseidels.qpon^
 ||drownhewchevy.com^
 ||drowseskinepox.shop^
 ||drowsymochi.goaserv.com^
@@ -168700,6 +168702,7 @@ zzzyk.com###Tinfo
 ||epicclicks.net^
 ||epicgameads.com^$popup
 ||epicgfs.com/pocoloco_epic.js
+||epiciergrogger.cyou^
 ||epidemicfaithlesscoats.com^
 ||epidemicoversleeppoet.com^
 ||epidermispushupvariable.com^
@@ -174151,6 +174154,7 @@ zzzyk.com###Tinfo
 ||gillsunkindstretched.com^
 ||gillyspencie.com^
 ||gilsnymss.cfd^
+||giltencashibo.cfd^
 ||giltenmacram.cfd^
 ||gimelhenwilegrated.qpon^
 ||gimfrxstiodmt.space^
@@ -188248,6 +188252,7 @@ zzzyk.com###Tinfo
 ||m8he1clmo.47g8quyf3m2izku.cfd^
 ||m8o.l6b4wi1rnpv3twymtjp85.cfd^
 ||m8qk101065.com^
+||m8uhr7bjw2ibij4b8z88cbbyfqt7z74k49.cfd^
 ||m8ysv4ckls.com^
 ||m91it4t67mi2biwrjznwbi.cfd^
 ||m96v7deg59.com^
@@ -190506,6 +190511,7 @@ zzzyk.com###Tinfo
 ||monstroustouchy.com^
 ||monsy.com^$third-party
 ||montanadeeper.cyou^
+||montanetrawler.cfd^
 ||monthdisembroildisembroilhenrietta.com^
 ||monthsexpressive.com^
 ||monthspathsmug.com^
@@ -194189,6 +194195,7 @@ zzzyk.com###Tinfo
 ||oejpvjjsgibdz.online^
 ||oekkuthy.com^
 ||oeknzzjvrsjia.site^
+||oekscqtdyyeuv.online^
 ||oelctjbbdajev.site^
 ||oelhofejacqod.website^
 ||oellwlqdb.com^
@@ -194700,6 +194707,7 @@ zzzyk.com###Tinfo
 ||omelette12.top^
 ||omelieboozify.cyou^
 ||omendiazine.qpon^
+||omenedliti.cfd^
 ||omeningfawned.shop^
 ||omenparsnipwreckage.com^
 ||omentalavale.qpon^
@@ -207377,6 +207385,7 @@ zzzyk.com###Tinfo
 ||sheep.vaxstandby.com^
 ||sheererretsina.qpon^
 ||sheerskrausenumbrana.cyou^
+||sheersunl.cyou^
 ||sheets.googleapis.com^$domain=telugucinema.com
 ||sheetvibe.com^
 ||sheinsz.ltwebstatic.com/she_dist/assets/backup-onetrust.$script,domain=shein.co.uk
@@ -213720,6 +213729,7 @@ zzzyk.com###Tinfo
 ||topeuropix.site/svop4/$popup
 ||topfaps.com/tantaly4.gif.mp4
 ||topfdeals.com^$popup
+||topgroz3cqmkpov1lkn1z2c.rest^
 ||topgurudeals.com^$popup
 ||tophaw.com^
 ||tophentaicomics.com/istrippers.jpg
