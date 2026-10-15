@@ -1,0 +1,228 @@
+{
+  "schema_version": 2,
+  "project": "MarketBrief",
+  "date": "2026-10-15",
+  "edition": "am",
+  "generated_at": "2026-10-15T08:45:01+08:00",
+  "model": "Editor-Air",
+  "status": "publish",
+  "hook_title": "开源晨会成为市场焦点",
+  "overview": "早刊基于3份有效来源分析，当前重点为开源晨会。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+  "visual_tone": "optimistic",
+  "usage": {
+    "calls": 2,
+    "total_tokens": 3313
+  },
+  "sources": [
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2523,
+      "quality_score": 65,
+      "cache_hit": false,
+      "elapsed_sec": 0.708,
+      "analysis_ok": false
+    },
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 1979,
+      "quality_score": 59,
+      "cache_hit": false,
+      "elapsed_sec": 2.618,
+      "analysis_ok": false
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3763,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 2.16,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3244,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 0.573,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 0.504,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "api",
+      "chars": 3803,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 2.457,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 4.532,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 5148,
+      "quality_score": 91,
+      "cache_hit": false,
+      "elapsed_sec": 1.975,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 2538,
+      "quality_score": 65,
+      "cache_hit": false,
+      "elapsed_sec": 2.552,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4794,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.138,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4118,
+      "quality_score": 81,
+      "cache_hit": false,
+      "elapsed_sec": 0.195,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4799,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.563,
+      "analysis_ok": true
+    }
+  ],
+  "content": {
+    "status": "publish",
+    "hook_title": "开源晨会成为市场焦点",
+    "overview": "早刊基于3份有效来源分析，当前重点为开源晨会。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "market_sentiment": {
+      "tone": "optimistic",
+      "emotion_score": 58,
+      "risk_level": 45,
+      "dispersion_level": 50,
+      "confidence_level": 82
+    },
+    "cards": [
+      {
+        "kicker": "今日简报",
+        "title": "开源晨会成为市场焦点",
+        "subtitle": "早刊基于3份有效来源分析，当前重点为开源晨会。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+        "bullets": [
+          "开源晨会",
+          "北交所定期报告：2026年前三季度集成电路等重点商品出口量大增",
+          "晨会纪要"
+        ]
+      },
+      {
+        "kicker": "全球市场",
+        "title": "隔夜外部变量",
+        "subtitle": "当前来源未形成足够清晰的外盘事实，不补写缺失行情数据。",
+        "bullets": []
+      },
+      {
+        "kicker": "市场概览",
+        "title": "A股结构与资金",
+        "subtitle": "只呈现有当前证据支持的指数、成交、涨跌结构和资金特征。",
+        "bullets": [
+          "市场日报：两市低开后回升 沪指微幅收涨"
+        ]
+      },
+      {
+        "kicker": "热点追踪",
+        "title": "主线与事件交叉验证",
+        "subtitle": "优先采用官方与研究信息，社区热度只作为辅助信号。",
+        "bullets": [
+          "2026年股票期权激励计划实施考核管理办法",
+          "2026年股票期权激励计划首次授予激励对象名单",
+          "第九届董事会第三十一次临时会议决议公告"
+        ]
+      },
+      {
+        "kicker": "事实分歧",
+        "title": "事实、观点与情绪分开看",
+        "subtitle": "先看已确认事实，再看研究判断和市场情绪是否一致。",
+        "bullets": [
+          "2026年股票期权激励计划实施考核管理办法",
+          "开源晨会"
+        ]
+      },
+      {
+        "kicker": "风险提示",
+        "title": "后续变量仍需确认",
+        "subtitle": "只保留来源自身限制和当前证据中的风险项，不额外推演。",
+        "bullets": [
+          "9月进出口数据点评：出口广谱走强，年末压力渐增"
+        ]
+      }
+    ],
+    "article": {
+      "title": "开源晨会成为市场焦点",
+      "summary": "早刊基于3份有效来源分析，当前重点为开源晨会。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+      "body_markdown": "## 隔夜外部变量\n\n当前来源未形成足够清晰的外盘事实，不补写缺失行情数据。\n\n\n## A股结构与资金\n\n只呈现有当前证据支持的指数、成交、涨跌结构和资金特征。\n\n- 市场日报：两市低开后回升 沪指微幅收涨\n\n## 主线与事件交叉验证\n\n优先采用官方与研究信息，社区热度只作为辅助信号。\n\n- 2026年股票期权激励计划实施考核管理办法\n- 2026年股票期权激励计划首次授予激励对象名单\n- 第九届董事会第三十一次临时会议决议公告\n\n## 事实、观点与情绪分开看\n\n先看已确认事实，再看研究判断和市场情绪是否一致。\n\n- 2026年股票期权激励计划实施考核管理办法\n- 开源晨会\n\n## 后续变量仍需确认\n\n只保留来源自身限制和当前证据中的风险项，不额外推演。\n\n- 9月进出口数据点评：出口广谱走强，年末压力渐增",
+      "disclaimer": "本文仅作公开信息整理与讨论，不构成任何投资建议。"
+    },
+    "editor_note": "最终主编综合服务异常，已使用时效过滤后的前置来源分析进行本地综合；fallback_reason=504 Server Error: Gateway Timeout for url: https://api.135468.xyz/v1/chat/completions",
+    "fallback": {
+      "used": true,
+      "mode": "fresh_local_source_analysis",
+      "analysis_count": 3,
+      "evidence_rows": 18,
+      "max_age_days": 14
+    }
+  },
+  "publish": {
+    "title": "开源晨会成为市场焦点",
+    "intro": "早刊基于3份有效来源分析，当前重点为开源晨会。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "tags": [
+      "市场观察",
+      "市场主线",
+      "行业轮动",
+      "资金情绪",
+      "风险观察"
+    ]
+  }
+}
