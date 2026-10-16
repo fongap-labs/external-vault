@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- ci: replace the deprecated dispatch-pr-governance workflow with the approved notify-action-worker bridge, so every push to main wakes central Intake and the Main Write Guard and CI Evidence statuses are written immediately.
+
 - docs: `docs/DISTRIBUTION_GOVERNANCE.md` states that a release tag points at a verified commit, and that the tool sync defers a release while the default-branch HEAD is unsigned.
 
 - docs: the `r-base` catalog name is `R Base Package`, so the mirrored release is titled `R Base Package 4.6.0`.
