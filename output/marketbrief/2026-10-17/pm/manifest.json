@@ -1,0 +1,236 @@
+{
+  "schema_version": 2,
+  "project": "MarketBrief",
+  "date": "2026-10-17",
+  "edition": "pm",
+  "generated_at": "2026-10-17T21:18:06+08:00",
+  "model": "Editor-Air",
+  "status": "publish",
+  "hook_title": "市场主线与外部变量成焦点",
+  "overview": "晚刊基于4份有效来源分析，当前重点为主要市场线索。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+  "visual_tone": "optimistic",
+  "usage": {
+    "calls": 3,
+    "total_tokens": 6822
+  },
+  "sources": [
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2520,
+      "quality_score": 65,
+      "cache_hit": false,
+      "elapsed_sec": 0.897,
+      "analysis_ok": false
+    },
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2056,
+      "quality_score": 60,
+      "cache_hit": false,
+      "elapsed_sec": 1.895,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3730,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 0.603,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3175,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 0.813,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 0.362,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "api",
+      "chars": 4000,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 2.971,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 6.074,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 5302,
+      "quality_score": 93,
+      "cache_hit": false,
+      "elapsed_sec": 1.583,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 2538,
+      "quality_score": 65,
+      "cache_hit": false,
+      "elapsed_sec": 1.358,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4794,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.163,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4099,
+      "quality_score": 80,
+      "cache_hit": false,
+      "elapsed_sec": 0.247,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4799,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.545,
+      "analysis_ok": true
+    }
+  ],
+  "content": {
+    "status": "publish",
+    "hook_title": "市场主线与外部变量成焦点",
+    "overview": "晚刊基于4份有效来源分析，当前重点为主要市场线索。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "market_sentiment": {
+      "tone": "optimistic",
+      "emotion_score": 62,
+      "risk_level": 54,
+      "dispersion_level": 50,
+      "confidence_level": 82
+    },
+    "cards": [
+      {
+        "kicker": "今日简报",
+        "title": "市场主线与外部变量成焦点",
+        "subtitle": "晚刊基于4份有效来源分析，当前重点为主要市场线索。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+        "bullets": [
+          "宏观周报：国内确立健康优先战略地位，美国通胀反弹推升加息预期",
+          "2026年9月社融数据点评：政府债融资支撑增强，政策成效静待释放",
+          "2026年9月进出口数据点评：进出口同比增长延续高增且远超预期"
+        ]
+      },
+      {
+        "kicker": "全球市场",
+        "title": "今晚外部变量",
+        "subtitle": "只保留当前时效窗口内、已有公开信息支持的海外市场与宏观线索。",
+        "bullets": [
+          "宏观周报：国内确立健康优先战略地位，美国通胀反弹推升加息预期",
+          "9月美国CPI数据点评：通胀超预期之下，加息预期剧烈波动"
+        ]
+      },
+      {
+        "kicker": "市场概览",
+        "title": "A股结构与资金",
+        "subtitle": "只呈现有当前证据支持的指数、成交、涨跌结构和资金特征。",
+        "bullets": [
+          "关于2026年度向特定对象发行A股股票预案及相关文件修订情况说明的公告",
+          "2026年度向特定对象发行A股股票方案论证分析报告（二次修订稿）",
+          "上海市锦天城律师事务所关于胜科纳米（苏州）股份有限公司2026年度向特定对象发行A股股票的补充法律意见书（三）"
+        ]
+      },
+      {
+        "kicker": "热点追踪",
+        "title": "主线与事件交叉验证",
+        "subtitle": "优先采用官方与研究信息，社区热度只作为辅助信号。",
+        "bullets": [
+          "关于2026年度向特定对象发行A股股票的审核问询函回复及募集说明书等申请文件更新的提示性公告",
+          "关于本次募集资金投向属于科技创新领域的说明（二次修订稿）",
+          "胜科纳米（苏州）股份有限公司2026年度向特定对象发行A股股票证券募集说明书（申报稿）"
+        ]
+      },
+      {
+        "kicker": "事实分歧",
+        "title": "事实、观点与情绪分开看",
+        "subtitle": "先看已确认事实，再看研究判断和市场情绪是否一致。",
+        "bullets": [
+          "关于2026年度向特定对象发行A股股票预案及相关文件修订情况说明的公告",
+          "宏观周报：国内确立健康优先战略地位，美国通胀反弹推升加息预期",
+          "CPO板块活跃：易中天相关标的上涨，板块热度居前"
+        ]
+      },
+      {
+        "kicker": "风险提示",
+        "title": "后续变量仍需确认",
+        "subtitle": "只保留来源自身限制和当前证据中的风险项，不额外推演。",
+        "bullets": [
+          "部分社区信息存在时效性不足，过期内容已从当前证据中剔除。",
+          "页面内容为实时行情快照，属导航页性质，不宜作为当前事件的事实锚",
+          "社区榜单仅反映讨论热度，不代表基本面事实"
+        ]
+      }
+    ],
+    "article": {
+      "title": "市场主线与外部变量成焦点",
+      "summary": "晚刊基于4份有效来源分析，当前重点为主要市场线索。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+      "body_markdown": "## 今晚外部变量\n\n只保留当前时效窗口内、已有公开信息支持的海外市场与宏观线索。\n\n- 宏观周报：国内确立健康优先战略地位，美国通胀反弹推升加息预期\n- 9月美国CPI数据点评：通胀超预期之下，加息预期剧烈波动\n\n## A股结构与资金\n\n只呈现有当前证据支持的指数、成交、涨跌结构和资金特征。\n\n- 关于2026年度向特定对象发行A股股票预案及相关文件修订情况说明的公告\n- 2026年度向特定对象发行A股股票方案论证分析报告（二次修订稿）\n- 上海市锦天城律师事务所关于胜科纳米（苏州）股份有限公司2026年度向特定对象发行A股股票的补充法律意见书（三）\n\n## 主线与事件交叉验证\n\n优先采用官方与研究信息，社区热度只作为辅助信号。\n\n- 关于2026年度向特定对象发行A股股票的审核问询函回复及募集说明书等申请文件更新的提示性公告\n- 关于本次募集资金投向属于科技创新领域的说明（二次修订稿）\n- 胜科纳米（苏州）股份有限公司2026年度向特定对象发行A股股票证券募集说明书（申报稿）\n\n## 事实、观点与情绪分开看\n\n先看已确认事实，再看研究判断和市场情绪是否一致。\n\n- 关于2026年度向特定对象发行A股股票预案及相关文件修订情况说明的公告\n- 宏观周报：国内确立健康优先战略地位，美国通胀反弹推升加息预期\n- CPO板块活跃：易中天相关标的上涨，板块热度居前\n\n## 后续变量仍需确认\n\n只保留来源自身限制和当前证据中的风险项，不额外推演。\n\n- 部分社区信息存在时效性不足，过期内容已从当前证据中剔除。\n- 页面内容为实时行情快照，属导航页性质，不宜作为当前事件的事实锚\n- 社区榜单仅反映讨论热度，不代表基本面事实",
+      "disclaimer": "本文仅作公开信息整理与讨论，不构成任何投资建议。"
+    },
+    "editor_note": "最终主编综合服务异常，已使用时效过滤后的前置来源分析进行本地综合；fallback_reason=504 Server Error: Gateway Timeout for url: https://api.135468.xyz/v1/chat/completions",
+    "fallback": {
+      "used": true,
+      "mode": "fresh_local_source_analysis",
+      "analysis_count": 4,
+      "evidence_rows": 21,
+      "max_age_days": 14
+    }
+  },
+  "publish": {
+    "title": "市场主线与外部变量成焦点",
+    "intro": "晚刊基于4份有效来源分析，当前重点为主要市场线索。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "tags": [
+      "市场观察",
+      "市场主线",
+      "行业轮动",
+      "资金情绪",
+      "风险观察"
+    ]
+  }
+}
