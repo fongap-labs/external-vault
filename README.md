@@ -96,7 +96,7 @@ README
 
 ## 许可证
 
-本仓库采用混合授权。除非另有说明，本仓库原创内容按 MIT 条款授权；第三方、衍生与生成型资产继续遵循各自上游的许可条款。
+本仓库采用混合授权。除非另有说明，本仓库原创内容按 Apache License 2.0 条款授权；第三方、衍生与生成型资产继续遵循各自上游的许可条款。
 
 由 Action Worker 管理的跨仓库 App Release，**若源仓库 manifest 未声明其他许可证，则默认采用 `Apache-2.0`**。每个 App / Release 均可显式覆盖该默认值，实际生效的许可证随对应 Release 记录。根目录的 [LICENSE](LICENSE) 不覆盖 App Release 的许可证。
 
