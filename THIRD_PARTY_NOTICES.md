@@ -1,6 +1,6 @@
 # Third-party notices
 
-The root [licensing notice](LICENSE) defines the repository's mixed-license scope. Its MIT terms apply only to original repository-authored material unless a more specific notice says otherwise.
+The root [licensing notice](LICENSE) defines the repository's mixed-license scope. Its Apache-2.0 terms apply only to original repository-authored material unless a more specific notice says otherwise.
 
 ## AdFilter data
 
