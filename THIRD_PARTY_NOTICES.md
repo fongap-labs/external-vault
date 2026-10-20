@@ -4,7 +4,7 @@ The root [licensing notice](LICENSE) defines the repository's mixed-license scop
 
 ## AdFilter data
 
-Files under `output/adfilter/` are generated from third-party filter rules. Those rules remain subject to the terms, notices, attribution requirements, and copyright of their respective upstream projects. The MIT License in this repository does not replace or relicense third-party rule data.
+Files under `output/adfilter/` are generated from third-party filter rules. Those rules remain subject to the terms, notices, attribution requirements, and copyright of their respective upstream projects. The Apache-2.0 License in this repository does not replace or relicense third-party rule data.
 
 | Upstream list | Fetched from | Licence stated by the upstream | Evidence | Legal review |
 | --- | --- | --- | --- | --- |
