@@ -119,3 +119,8 @@ Release 标签在目标仓库中创建。源来源证明（provenance）需单�
 ## 原则
 
 公开仓库只存放公众消费者用于发现、下载、验证和理解已发布资产所需的内容。
+
+
+## Self-distribution
+
+A product may declare its own repository as the `target_repository` in its `release.manifest.json` and self-distribute its releases there. The tag convention `<release_key>-v<version>` applies to both this repository and a self-distributing repository. The `tools/` catalogue in this repository is the discovery layer for releases distributed here; a self-distributing product does not need a `tools/<key>/tool.json` entry here, but should state its distribution point in its own README.
