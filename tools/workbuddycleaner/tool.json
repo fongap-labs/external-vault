@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "release_key": "workbuddy-cleaner",
+  "release_key": "workbuddycleaner",
   "source_repository": "fongap-labs/app-source",
   "release_channel": "stable",
   "platform": "windows",

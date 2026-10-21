@@ -16,18 +16,18 @@
       "metadata": "tools/r-base/tool.json"
     },
     {
-      "key": "secure-pigeon",
+      "key": "securepigeon",
       "name": "SecurePigeon",
       "source_repository": "fongap-labs/app-source",
       "distribution": "github-release",
-      "metadata": "tools/secure-pigeon/tool.json"
+      "metadata": "tools/securepigeon/tool.json"
     },
     {
-      "key": "workbuddy-cleaner",
+      "key": "workbuddycleaner",
       "name": "WorkBuddyCleaner",
       "source_repository": "fongap-labs/app-source",
       "distribution": "github-release",
-      "metadata": "tools/workbuddy-cleaner/tool.json"
+      "metadata": "tools/workbuddycleaner/tool.json"
     }
   ]
 }

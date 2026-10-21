@@ -7,5 +7,5 @@ output/** linguist-generated=true
 *.yaml text eol=lf
 
 # Keep the verbatim upstream licence texts in their original line endings.
-output/adfilter/licenses/*.txt text eol=lf
+licenses/adfilter/*.txt text eol=lf
 tools/r-base/LICENSE text eol=lf

@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "release_key": "secure-pigeon",
+  "release_key": "securepigeon",
   "source_repository": "fongap-labs/app-source",
   "release_channel": "stable",
   "platform": "windows",
