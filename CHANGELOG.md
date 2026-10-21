@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- chore: ship the licence texts the third-party notices reference (GPL-3.0, LGPL-3.0, CC BY 3.0, CC BY-SA 3.0 and the R base GPL-2.0 text), restore the AdFilter aggregate notice, and add the missing R Base Package notice. The open licensing questions stay marked as needing legal review.
+- chore: complete the distribution catalogue with `secure-pigeon` and `workbuddy-cleaner`, and fail Central CI when a published release has no catalogue metadata.
 - chore: document the Conventional Commits subject in CONTRIBUTING.md (the eleven types, the breaking/security/migration attributes, English-only summaries). The distribution layout treats a local git hooks directory as residue, so the central PR gate stays the enforcement point.
 - ci: replace the deprecated dispatch-pr-governance workflow with the approved notify-action-worker bridge, so every push to main wakes central Intake and the Main Write Guard and CI Evidence statuses are written immediately.
 

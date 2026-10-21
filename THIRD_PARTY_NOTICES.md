@@ -15,6 +15,8 @@ Files under `output/adfilter/` are generated from third-party filter rules. Thos
 | uBlock filters – Other Annoyances, Cookie Notices | [uBlockOrigin/uAssets](https://github.com/uBlockOrigin/uAssets) `filters/annoyances-others.txt`, `filters/annoyances-cookies.txt` | GPL-3.0 | Repository `LICENSE`; list headers link to it | Needed |
 | EasyList China + EasyList | `https://easylist-downloads.adblockplus.org/easylistchina+easylist.txt` (projects: [easylist/easylist](https://github.com/easylist/easylist), [easylist/easylistchina](https://github.com/easylist/easylistchina)) | EasyList repository: dual GPL-3.0-or-later and CC BY-SA 3.0-or-later, attribution "The EasyList authors (https://easylist.to/)". The EasyList China repository carries no licence metadata on GitHub | [easylist.to/pages/licence.html](https://easylist.to/pages/licence.html) (linked from the list header). That page also says files hosted externally may be under other conditions | Needed |
 
+The licence texts named in the table are shipped verbatim under [`output/adfilter/licenses/`](output/adfilter/licenses/): [GPL-3.0](output/adfilter/licenses/GPL-3.0.txt), [LGPL-3.0](output/adfilter/licenses/LGPL-3.0.txt), [CC BY 3.0](output/adfilter/licenses/CC-BY-3.0.txt) and [CC BY-SA 3.0](output/adfilter/licenses/CC-BY-SA-3.0.txt).
+
 Notes on the previous version of this table:
 
 - The AdGuard lists were listed as MIT. The upstream licence is GPL-3.0 (see the evidence above).
@@ -35,3 +37,12 @@ OpenCodeReview binaries distributed through this repository's GitHub Releases re
 - Upstream: alibaba/open-code-review
 - License: Apache-2.0
 - Distribution: latest two stable releases, Linux amd64
+
+## R Base Package
+
+The R base source tarball distributed through this repository's GitHub Releases remains licensed by the R Project under the GNU General Public License version 2 or later. The repository redistributes the unmodified upstream source tarball and does not modify or relicense it. The tarball is published only after the SHA-256 pinned in `tools/r-base/tool.json` matches the upstream download.
+
+- Upstream: https://cran.r-project.org/src/base/R-4/R-4.6.0.tar.gz
+- License: GPL-2.0-or-later
+- Distribution: R 4.6.0 source tarball (`R-4.6.0.tar.xz`)
+- License text: [`tools/r-base/LICENSE`](tools/r-base/LICENSE), the `COPYING` file of the R sources, shipped verbatim

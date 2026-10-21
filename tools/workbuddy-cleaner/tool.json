@@ -1,0 +1,12 @@
+{
+  "schema_version": "1",
+  "release_key": "workbuddy-cleaner",
+  "source_repository": "fongap-labs/app-source",
+  "release_channel": "stable",
+  "platform": "windows",
+  "arch": "x64",
+  "upstream_asset": "WorkBuddyCleaner-windows-x64.zip",
+  "checksum_asset": "WorkBuddyCleaner-windows-x64.zip.sha256",
+  "license_path": "LICENSE",
+  "license_expression": "LicenseRef-Proprietary"
+}

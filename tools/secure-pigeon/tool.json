@@ -1,0 +1,12 @@
+{
+  "schema_version": "1",
+  "release_key": "secure-pigeon",
+  "source_repository": "fongap-labs/app-source",
+  "release_channel": "stable",
+  "platform": "windows",
+  "arch": "x64",
+  "upstream_asset": "secure-pigeon-windows-x64.exe",
+  "checksum_asset": "secure-pigeon-windows-x64.exe.sha256",
+  "license_path": "LICENSE",
+  "license_expression": "LicenseRef-Proprietary"
+}
