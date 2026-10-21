@@ -11,11 +11,7 @@
 - 摘要使用英文工程文本；非 ASCII、`Merge`/`Revert` 以外的裸消息会被拒绝。
 - 权威定义见 `fongap-labs/action-worker` 的 `docs/04_CHANGELOG_CONVENTIONS.md`；中央 PR 门禁执行同一套规则，本地的 `.githooks/commit-msg` 只是提前反馈。
 
-本地安装消息校验：
-
-```bash
-git config core.hooksPath .githooks
-```
+本仓库的分发布局对顶层目录有严格清单，本地 git hooks 目录会被当作分发残留拒绝，因此提交格式的执行方是中央 PR 门禁；写错时门禁会给出应写的格式与示例。
 
 ## CHANGELOG
 
