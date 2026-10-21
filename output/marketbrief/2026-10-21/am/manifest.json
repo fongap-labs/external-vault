@@ -1,0 +1,233 @@
+{
+  "schema_version": 2,
+  "project": "MarketBrief",
+  "date": "2026-10-21",
+  "edition": "am",
+  "generated_at": "2026-10-21T09:25:01+08:00",
+  "model": "Editor-Air",
+  "status": "publish",
+  "hook_title": "研究早观点、中银晨会聚焦成焦点",
+  "overview": "早刊基于5份有效来源分析，当前重点为研究早观点、中银晨会聚焦。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+  "visual_tone": "optimistic",
+  "usage": {
+    "calls": 4,
+    "total_tokens": 8613
+  },
+  "sources": [
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2521,
+      "quality_score": 65,
+      "cache_hit": false,
+      "elapsed_sec": 0.786,
+      "analysis_ok": false
+    },
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2073,
+      "quality_score": 60,
+      "cache_hit": false,
+      "elapsed_sec": 2.84,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3966,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 0.751,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3241,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 0.566,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 0.611,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "api",
+      "chars": 3765,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 2.945,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 12.697,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 5576,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 1.509,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 2733,
+      "quality_score": 67,
+      "cache_hit": false,
+      "elapsed_sec": 1.457,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4794,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.172,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4125,
+      "quality_score": 81,
+      "cache_hit": false,
+      "elapsed_sec": 0.195,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4799,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.622,
+      "analysis_ok": true
+    }
+  ],
+  "content": {
+    "status": "publish",
+    "hook_title": "研究早观点、中银晨会聚焦成焦点",
+    "overview": "早刊基于5份有效来源分析，当前重点为研究早观点、中银晨会聚焦。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "market_sentiment": {
+      "tone": "optimistic",
+      "emotion_score": 62,
+      "risk_level": 57,
+      "dispersion_level": 50,
+      "confidence_level": 82
+    },
+    "cards": [
+      {
+        "kicker": "今日简报",
+        "title": "研究早观点、中银晨会聚焦成焦点",
+        "subtitle": "早刊基于5份有效来源分析，当前重点为研究早观点、中银晨会聚焦。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+        "bullets": [
+          "晨会纪要",
+          "研究早观点",
+          "中银晨会聚焦"
+        ]
+      },
+      {
+        "kicker": "全球市场",
+        "title": "隔夜外部变量",
+        "subtitle": "当前来源未形成足够清晰的外盘事实，不补写缺失行情数据。",
+        "bullets": [
+          "州就业与失业月报：BLS发布各州就业与失业月度数据",
+          "生产者价格指数：BLS发布最新PPI数据",
+          "美国进出口价格指数：BLS发布最新进出口价格指数数据"
+        ]
+      },
+      {
+        "kicker": "市场概览",
+        "title": "A股结构与资金",
+        "subtitle": "当前来源未形成足够完整的A股量价事实，不对指数和成交数据做推测。",
+        "bullets": []
+      },
+      {
+        "kicker": "热点追踪",
+        "title": "主线与事件交叉验证",
+        "subtitle": "优先采用官方与研究信息，社区热度只作为辅助信号。",
+        "bullets": [
+          "关于向不特定对象发行可转换公司债券申请获得深圳证券交易所受理的公告",
+          "广东信达律师事务所关于深圳市艾比森光电股份有限公司向不特定对象发行可转换公司债券的法律意见书",
+          "深圳市艾比森光电股份有限公司向不特定对象发行可转换公司债券的财务报告及审计报告"
+        ]
+      },
+      {
+        "kicker": "事实分歧",
+        "title": "事实、观点与情绪分开看",
+        "subtitle": "先看已确认事实，再看研究判断和市场情绪是否一致。",
+        "bullets": [
+          "州就业与失业月报：BLS发布各州就业与失业月度数据",
+          "晨会纪要",
+          "美光科技创历史新高：MU总市值破万亿，社区热议"
+        ]
+      },
+      {
+        "kicker": "风险提示",
+        "title": "后续变量仍需确认",
+        "subtitle": "只保留来源自身限制和当前证据中的风险项，不额外推演。",
+        "bullets": [
+          "来源为雪球热股导航页，属社区聚合数据，仅反映讨论热度与情绪，不构成事实锚",
+          "页面无明确时间戳，数据为实时快照，无法精确判定采集时间",
+          "热股榜为动态列表，排名随时变化，不宜作为持续性信号依据"
+        ]
+      }
+    ],
+    "article": {
+      "title": "研究早观点、中银晨会聚焦成焦点",
+      "summary": "早刊基于5份有效来源分析，当前重点为研究早观点、中银晨会聚焦。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+      "body_markdown": "## 隔夜外部变量\n\n当前来源未形成足够清晰的外盘事实，不补写缺失行情数据。\n\n- 州就业与失业月报：BLS发布各州就业与失业月度数据\n- 生产者价格指数：BLS发布最新PPI数据\n- 美国进出口价格指数：BLS发布最新进出口价格指数数据\n\n## A股结构与资金\n\n当前来源未形成足够完整的A股量价事实，不对指数和成交数据做推测。\n\n\n## 主线与事件交叉验证\n\n优先采用官方与研究信息，社区热度只作为辅助信号。\n\n- 关于向不特定对象发行可转换公司债券申请获得深圳证券交易所受理的公告\n- 广东信达律师事务所关于深圳市艾比森光电股份有限公司向不特定对象发行可转换公司债券的法律意见书\n- 深圳市艾比森光电股份有限公司向不特定对象发行可转换公司债券的财务报告及审计报告\n\n## 事实、观点与情绪分开看\n\n先看已确认事实，再看研究判断和市场情绪是否一致。\n\n- 州就业与失业月报：BLS发布各州就业与失业月度数据\n- 晨会纪要\n- 美光科技创历史新高：MU总市值破万亿，社区热议\n\n## 后续变量仍需确认\n\n只保留来源自身限制和当前证据中的风险项，不额外推演。\n\n- 来源为雪球热股导航页，属社区聚合数据，仅反映讨论热度与情绪，不构成事实锚\n- 页面无明确时间戳，数据为实时快照，无法精确判定采集时间\n- 热股榜为动态列表，排名随时变化，不宜作为持续性信号依据",
+      "disclaimer": "本文仅作公开信息整理与讨论，不构成任何投资建议。"
+    },
+    "editor_note": "最终主编综合服务异常，已使用时效过滤后的前置来源分析进行本地综合；fallback_reason=504 Server Error: Gateway Timeout for url: https://api.135468.xyz/v1/chat/completions",
+    "fallback": {
+      "used": true,
+      "mode": "fresh_local_source_analysis",
+      "analysis_count": 5,
+      "evidence_rows": 26,
+      "max_age_days": 14
+    }
+  },
+  "publish": {
+    "title": "研究早观点、中银晨会聚焦成焦点",
+    "intro": "早刊基于5份有效来源分析，当前重点为研究早观点、中银晨会聚焦。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "tags": [
+      "市场观察",
+      "市场主线",
+      "行业轮动",
+      "资金情绪",
+      "风险观察"
+    ]
+  }
+}
