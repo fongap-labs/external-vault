@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 
+- chore: document the Conventional Commits subject in CONTRIBUTING.md (the eleven types, the breaking/security/migration attributes, English-only summaries). The distribution layout treats a local git hooks directory as residue, so the central PR gate stays the enforcement point.
 - ci: replace the deprecated dispatch-pr-governance workflow with the approved notify-action-worker bridge, so every push to main wakes central Intake and the Main Write Guard and CI Evidence statuses are written immediately.
 
 - docs: `docs/DISTRIBUTION_GOVERNANCE.md` states that a release tag points at a verified commit, and that the tool sync defers a release while the default-branch HEAD is unsigned.
