@@ -61,6 +61,7 @@ script_root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 bash "$script_root/validate-manifests.sh" "$TARGET_ROOT"
 bash "$script_root/secret-scan.sh" "$TARGET_ROOT"
+bash "$script_root/check-release-catalogue.sh" "$TARGET_ROOT"
 
 # Published brief retention: each project keeps at most the newest periods in the Git tree.
 # Default 14; set EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS (a whole number) to change it.
