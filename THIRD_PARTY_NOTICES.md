@@ -15,6 +15,8 @@ Files under `output/adfilter/` are generated from third-party filter rules. Thos
 | uBlock filters – Other Annoyances, Cookie Notices | [uBlockOrigin/uAssets](https://github.com/uBlockOrigin/uAssets) `filters/annoyances-others.txt`, `filters/annoyances-cookies.txt` | GPL-3.0 | Repository `LICENSE`; list headers link to it | Needed |
 | EasyList China + EasyList | `https://easylist-downloads.adblockplus.org/easylistchina+easylist.txt` (projects: [easylist/easylist](https://github.com/easylist/easylist), [easylist/easylistchina](https://github.com/easylist/easylistchina)) | EasyList repository: dual GPL-3.0-or-later and CC BY-SA 3.0-or-later, attribution "The EasyList authors (https://easylist.to/)". The EasyList China repository carries no licence metadata on GitHub | [easylist.to/pages/licence.html](https://easylist.to/pages/licence.html) (linked from the list header). That page also says files hosted externally may be under other conditions | Needed |
 
+The licence texts named in the table are shipped verbatim under [`licenses/adfilter/`](licenses/adfilter/): [GPL-3.0](licenses/adfilter/GPL-3.0.txt), [LGPL-3.0](licenses/adfilter/LGPL-3.0.txt), [CC BY 3.0](licenses/adfilter/CC-BY-3.0.txt) and [CC BY-SA 3.0](licenses/adfilter/CC-BY-SA-3.0.txt).
+
 Notes on the previous version of this table:
 
 - The AdGuard lists were listed as MIT. The upstream licence is GPL-3.0 (see the evidence above).
@@ -23,7 +25,7 @@ Notes on the previous version of this table:
 - EasyList was listed as "CC BY 3.0". Its official licence page states the dual GPL-3.0-or-later / CC BY-SA 3.0-or-later terms above.
 - Licence statements were checked on 2026-10-07 from the upstream repositories and list headers. They are facts about what the upstream projects state, not a legal conclusion.
 
-Legal review needed: whether and how the GPL, LGPL, CC BY and CC BY-SA terms of these lists apply to the aggregated `output/adfilter/adfilter.txt` (including attribution and share-alike duties), and under which terms the aggregate may be distributed. This repository makes no such determination. See [output/adfilter/NOTICE](output/adfilter/NOTICE).
+Legal review needed: whether and how the GPL, LGPL, CC BY and CC BY-SA terms of these lists apply to the aggregated `output/adfilter/adfilter.txt` (including attribution and share-alike duties), and under which terms the aggregate may be distributed. This repository makes no such determination. See [licenses/adfilter/NOTICE](licenses/adfilter/NOTICE).
 
 Released third-party program assets must carry their own license and attribution metadata through Release notes or the corresponding `tools/` metadata.
 
@@ -35,3 +37,12 @@ OpenCodeReview binaries distributed through this repository's GitHub Releases re
 - Upstream: alibaba/open-code-review
 - License: Apache-2.0
 - Distribution: latest two stable releases, Linux amd64
+
+## R Base Package
+
+The R base source tarball distributed through this repository's GitHub Releases remains licensed by the R Project under the GNU General Public License version 2 or later. The repository redistributes the unmodified upstream source tarball and does not modify or relicense it. The tarball is published only after the SHA-256 pinned in `tools/r-base/tool.json` matches the upstream download.
+
+- Upstream: https://cran.r-project.org/src/base/R-4/R-4.6.0.tar.gz
+- License: GPL-2.0-or-later
+- Distribution: R 4.6.0 source tarball (`R-4.6.0.tar.xz`)
+- License text: [`tools/r-base/LICENSE`](tools/r-base/LICENSE), the `COPYING` file of the R sources, shipped verbatim

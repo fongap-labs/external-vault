@@ -5,6 +5,11 @@ output/** linguist-generated=true
 *.sh text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
+
+# Keep the verbatim upstream licence texts in their original line endings.
+licenses/adfilter/*.txt text eol=lf
+tools/r-base/LICENSE text eol=lf
+
 # The changelog only grows, and every change adds its entry at the top of the
 # unreleased section. Two changes that are open at the same time therefore touch the
 # same lines, and the merge stops with a conflict that has to be resolved by hand.

@@ -14,6 +14,20 @@
       "source_repository": "cran.r-project.org",
       "distribution": "url",
       "metadata": "tools/r-base/tool.json"
+    },
+    {
+      "key": "securepigeon",
+      "name": "SecurePigeon",
+      "source_repository": "fongap-labs/app-source",
+      "distribution": "github-release",
+      "metadata": "tools/securepigeon/tool.json"
+    },
+    {
+      "key": "workbuddycleaner",
+      "name": "WorkBuddyCleaner",
+      "source_repository": "fongap-labs/app-source",
+      "distribution": "github-release",
+      "metadata": "tools/workbuddycleaner/tool.json"
     }
   ]
 }
