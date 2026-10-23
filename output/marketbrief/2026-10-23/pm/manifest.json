@@ -1,0 +1,232 @@
+{
+  "schema_version": 2,
+  "project": "MarketBrief",
+  "date": "2026-10-23",
+  "edition": "pm",
+  "generated_at": "2026-10-23T21:20:42+08:00",
+  "model": "Editor-Air",
+  "status": "publish",
+  "hook_title": "TPCA要点成为市场焦点",
+  "overview": "晚刊基于4份有效来源分析，当前重点为TPCA要点。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+  "visual_tone": "neutral",
+  "usage": {
+    "calls": 3,
+    "total_tokens": 5535
+  },
+  "sources": [
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2510,
+      "quality_score": 65,
+      "cache_hit": false,
+      "elapsed_sec": 1.473,
+      "analysis_ok": false
+    },
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2060,
+      "quality_score": 60,
+      "cache_hit": false,
+      "elapsed_sec": 2.168,
+      "analysis_ok": false
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3735,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 1.959,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3143,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 3.377,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 0.383,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "api",
+      "chars": 3517,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 2.977,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 6.414,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 5526,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 1.868,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 2650,
+      "quality_score": 66,
+      "cache_hit": false,
+      "elapsed_sec": 2.001,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4794,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.17,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4153,
+      "quality_score": 81,
+      "cache_hit": false,
+      "elapsed_sec": 0.334,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4799,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.593,
+      "analysis_ok": true
+    }
+  ],
+  "content": {
+    "status": "publish",
+    "hook_title": "TPCA要点成为市场焦点",
+    "overview": "晚刊基于4份有效来源分析，当前重点为TPCA要点。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "market_sentiment": {
+      "tone": "neutral",
+      "emotion_score": 50,
+      "risk_level": 54,
+      "dispersion_level": 50,
+      "confidence_level": 82
+    },
+    "cards": [
+      {
+        "kicker": "今日简报",
+        "title": "TPCA要点成为市场焦点",
+        "subtitle": "晚刊基于4份有效来源分析，当前重点为TPCA要点。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+        "bullets": [
+          "宏观周报：金融街论坛释放改革信号，日本通胀升温与内需疲弱交织",
+          "台湾科技行业：TPCA要点",
+          "印度电力行业：煤电转向VRE与BESS"
+        ]
+      },
+      {
+        "kicker": "全球市场",
+        "title": "今晚外部变量",
+        "subtitle": "当前来源未形成足够清晰的外盘事实，不补写缺失行情数据。",
+        "bullets": [
+          "BLS每周工资收入数据发布：10/21发布'Usual Weekly Earnings of Wage and Salary Workers'，为常规月度工资统计更新，页面未披露具体数值",
+          "BLS州级就业与失业月度数据：10/20发布'State Employment and Unemployment (Monthly)'，为常规州级劳动力统计更新，页面未披露具体数值",
+          "BLS进出口价格指数发布：10/16发布'U.S. Import and Export Price Indexes'，为常规月度贸易价格统计更新，页面未披露具体数值"
+        ]
+      },
+      {
+        "kicker": "市场概览",
+        "title": "A股结构与资金",
+        "subtitle": "当前来源未形成足够完整的A股量价事实，不对指数和成交数据做推测。",
+        "bullets": []
+      },
+      {
+        "kicker": "热点追踪",
+        "title": "主线与事件交叉验证",
+        "subtitle": "优先采用官方与研究信息，社区热度只作为辅助信号。",
+        "bullets": [
+          "《2026年半年度报告》（更新后）",
+          "《2023年年度报告》（更新后）",
+          "四川华信（集团）会计师事务所（特殊普通合伙）关于四川合纵药易购医药股份有限公司前期会计差错补充更正事项的专项鉴证报告"
+        ]
+      },
+      {
+        "kicker": "事实分歧",
+        "title": "事实、观点与情绪分开看",
+        "subtitle": "先看已确认事实，再看研究判断和市场情绪是否一致。",
+        "bullets": [
+          "《2026年半年度报告》（更新后）",
+          "宏观周报：金融街论坛释放改革信号，日本通胀升温与内需疲弱交织"
+        ]
+      },
+      {
+        "kicker": "风险提示",
+        "title": "后续变量仍需确认",
+        "subtitle": "只保留来源自身限制和当前证据中的风险项，不额外推演。",
+        "bullets": [
+          "页面为新闻室索引页，仅含标题与日期，无实际数据值或分析内容，信号粒度极低",
+          "部分社区信息存在时效性不足，过期内容已从当前证据中剔除。",
+          "所有新闻发布均为BLS常规统计更新，非事件性新闻，对当前主题关联度有限"
+        ]
+      }
+    ],
+    "article": {
+      "title": "TPCA要点成为市场焦点",
+      "summary": "晚刊基于4份有效来源分析，当前重点为TPCA要点。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+      "body_markdown": "## 今晚外部变量\n\n当前来源未形成足够清晰的外盘事实，不补写缺失行情数据。\n\n- BLS每周工资收入数据发布：10/21发布'Usual Weekly Earnings of Wage and Salary Workers'，为常规月度工资统计更新，页面未披露具体数值\n- BLS州级就业与失业月度数据：10/20发布'State Employment and Unemployment (Monthly)'，为常规州级劳动力统计更新，页面未披露具体数值\n- BLS进出口价格指数发布：10/16发布'U.S. Import and Export Price Indexes'，为常规月度贸易价格统计更新，页面未披露具体数值\n\n## A股结构与资金\n\n当前来源未形成足够完整的A股量价事实，不对指数和成交数据做推测。\n\n\n## 主线与事件交叉验证\n\n优先采用官方与研究信息，社区热度只作为辅助信号。\n\n- 《2026年半年度报告》（更新后）\n- 《2023年年度报告》（更新后）\n- 四川华信（集团）会计师事务所（特殊普通合伙）关于四川合纵药易购医药股份有限公司前期会计差错补充更正事项的专项鉴证报告\n\n## 事实、观点与情绪分开看\n\n先看已确认事实，再看研究判断和市场情绪是否一致。\n\n- 《2026年半年度报告》（更新后）\n- 宏观周报：金融街论坛释放改革信号，日本通胀升温与内需疲弱交织\n\n## 后续变量仍需确认\n\n只保留来源自身限制和当前证据中的风险项，不额外推演。\n\n- 页面为新闻室索引页，仅含标题与日期，无实际数据值或分析内容，信号粒度极低\n- 部分社区信息存在时效性不足，过期内容已从当前证据中剔除。\n- 所有新闻发布均为BLS常规统计更新，非事件性新闻，对当前主题关联度有限",
+      "disclaimer": "本文仅作公开信息整理与讨论，不构成任何投资建议。"
+    },
+    "editor_note": "最终主编综合服务异常，已使用时效过滤后的前置来源分析进行本地综合；fallback_reason=LLM_RESPONSE_ERROR: 响应没有正文",
+    "fallback": {
+      "used": true,
+      "mode": "fresh_local_source_analysis",
+      "analysis_count": 4,
+      "evidence_rows": 22,
+      "max_age_days": 14
+    }
+  },
+  "publish": {
+    "title": "TPCA要点成为市场焦点",
+    "intro": "晚刊基于4份有效来源分析，当前重点为TPCA要点。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "tags": [
+      "市场观察",
+      "市场主线",
+      "行业轮动",
+      "资金情绪",
+      "风险观察"
+    ]
+  }
+}
