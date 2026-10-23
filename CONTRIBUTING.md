@@ -15,7 +15,7 @@
 
 ## CHANGELOG
 
-每个 PR 在 `CHANGELOG.md` 的 `[Unreleased]` 下新增一条英文条目：`- type: summary`。
+每个 PR 在 `CHANGELOG.md` 的 `[Unreleased]` 下新增一条中文条目：`- 类别: 中文摘要`，类别取自新增、变更、弃用、移除、修复、安全六类。
 
 ## 分发约定
 
