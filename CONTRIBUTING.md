@@ -15,7 +15,7 @@
 
 ## CHANGELOG
 
-每个 PR 在 `CHANGELOG.md` 的 `[Unreleased]` 下新增一条中文条目：`- 类别: 中文摘要`，类别取自新增、变更、弃用、移除、修复、安全六类。
+每个 PR 在 `changelog.d/` 下新增一个条目文件 `<slug>.md`（`<slug>` 为仓库内唯一的小写 kebab-case 名字），文件内每行一条中文条目：`- 类别: 中文摘要`，类别取自新增、变更、弃用、移除、修复、安全六类。不要直接修改 `CHANGELOG.md` 的 `[Unreleased]`，发布时由中央汇总。
 
 ## 分发约定
 
