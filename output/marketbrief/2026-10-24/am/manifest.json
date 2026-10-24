@@ -1,0 +1,233 @@
+{
+  "schema_version": 2,
+  "project": "MarketBrief",
+  "date": "2026-10-24",
+  "edition": "am",
+  "generated_at": "2026-10-24T08:55:26+08:00",
+  "model": "Editor-Air",
+  "status": "publish",
+  "hook_title": "市场主线与外部变量成焦点",
+  "overview": "早刊基于5份有效来源分析，当前重点为主要市场线索。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+  "visual_tone": "optimistic",
+  "usage": {
+    "calls": 4,
+    "total_tokens": 8639
+  },
+  "sources": [
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2513,
+      "quality_score": 65,
+      "cache_hit": false,
+      "elapsed_sec": 0.892,
+      "analysis_ok": false
+    },
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2053,
+      "quality_score": 60,
+      "cache_hit": false,
+      "elapsed_sec": 4.413,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3735,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 2.792,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3236,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 0.872,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 0.392,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "api",
+      "chars": 3543,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 2.64,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 6.561,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 5526,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 1.272,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 2650,
+      "quality_score": 66,
+      "cache_hit": false,
+      "elapsed_sec": 1.953,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4794,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.085,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4153,
+      "quality_score": 81,
+      "cache_hit": false,
+      "elapsed_sec": 0.158,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4799,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.45,
+      "analysis_ok": true
+    }
+  ],
+  "content": {
+    "status": "publish",
+    "hook_title": "市场主线与外部变量成焦点",
+    "overview": "早刊基于5份有效来源分析，当前重点为主要市场线索。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "market_sentiment": {
+      "tone": "optimistic",
+      "emotion_score": 66,
+      "risk_level": 57,
+      "dispersion_level": 50,
+      "confidence_level": 82
+    },
+    "cards": [
+      {
+        "kicker": "今日简报",
+        "title": "市场主线与外部变量成焦点",
+        "subtitle": "早刊基于5份有效来源分析，当前重点为主要市场线索。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+        "bullets": [
+          "【粤开宏观】积极因素持续积累，资本市场稳健发展基础不断夯实",
+          "每周海内外重要政策跟踪：首批主动ETF注册发行",
+          "北交所行业点评：优化定价机制提升流动性，北交所成立五年之际的制度再突破"
+        ]
+      },
+      {
+        "kicker": "全球市场",
+        "title": "隔夜外部变量",
+        "subtitle": "当前来源未形成足够清晰的外盘事实，不补写缺失行情数据。",
+        "bullets": [
+          "州级就业与失业月度数据：BLS于10/20发布State Employment and Unemployment月度报告，反映各州劳动力市场最新状况",
+          "周度工资收入数据发布：BLS于10/21发布Wage and Salary Workers周度收入数据，为近期最新劳动力成本指标",
+          "进出口价格指数：BLS于10/16发布U.S. Import and Export Price Indexes，为近期贸易价格趋势官方指标"
+        ]
+      },
+      {
+        "kicker": "市场概览",
+        "title": "A股结构与资金",
+        "subtitle": "当前来源未形成足够完整的A股量价事实，不对指数和成交数据做推测。",
+        "bullets": []
+      },
+      {
+        "kicker": "热点追踪",
+        "title": "主线与事件交叉验证",
+        "subtitle": "优先采用官方与研究信息，社区热度只作为辅助信号。",
+        "bullets": [
+          "宁科生物关于实际控制人及一致行动人增持股份计划时间过半暨增持股份进展公告",
+          "ST椰岛2026年第三季度报告",
+          "ST椰岛2026年第三季度经营数据公告"
+        ]
+      },
+      {
+        "kicker": "事实分歧",
+        "title": "事实、观点与情绪分开看",
+        "subtitle": "先看已确认事实，再看研究判断和市场情绪是否一致。",
+        "bullets": [
+          "州级就业与失业月度数据：BLS于10/20发布State Employment and Unemployment月度报告，反映各州劳动力市场最新状况",
+          "【粤开宏观】积极因素持续积累，资本市场稳健发展基础不断夯实",
+          "美光科技创历史新高：总市值突破万亿，社区关注度上升"
+        ]
+      },
+      {
+        "kicker": "风险提示",
+        "title": "后续变量仍需确认",
+        "subtitle": "只保留来源自身限制和当前证据中的风险项，不额外推演。",
+        "bullets": [
+          "来源为雪球热股导航聚合页，非独立事件报道，内容为社区情绪信号而非事实锚",
+          "部分社区信息存在时效性不足，过期内容已从当前证据中剔除。",
+          "热股榜单为实时快照，热度分数与涨跌幅可能随时变动"
+        ]
+      }
+    ],
+    "article": {
+      "title": "市场主线与外部变量成焦点",
+      "summary": "早刊基于5份有效来源分析，当前重点为主要市场线索。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+      "body_markdown": "## 隔夜外部变量\n\n当前来源未形成足够清晰的外盘事实，不补写缺失行情数据。\n\n- 州级就业与失业月度数据：BLS于10/20发布State Employment and Unemployment月度报告，反映各州劳动力市场最新状况\n- 周度工资收入数据发布：BLS于10/21发布Wage and Salary Workers周度收入数据，为近期最新劳动力成本指标\n- 进出口价格指数：BLS于10/16发布U.S. Import and Export Price Indexes，为近期贸易价格趋势官方指标\n\n## A股结构与资金\n\n当前来源未形成足够完整的A股量价事实，不对指数和成交数据做推测。\n\n\n## 主线与事件交叉验证\n\n优先采用官方与研究信息，社区热度只作为辅助信号。\n\n- 宁科生物关于实际控制人及一致行动人增持股份计划时间过半暨增持股份进展公告\n- ST椰岛2026年第三季度报告\n- ST椰岛2026年第三季度经营数据公告\n\n## 事实、观点与情绪分开看\n\n先看已确认事实，再看研究判断和市场情绪是否一致。\n\n- 州级就业与失业月度数据：BLS于10/20发布State Employment and Unemployment月度报告，反映各州劳动力市场最新状况\n- 【粤开宏观】积极因素持续积累，资本市场稳健发展基础不断夯实\n- 美光科技创历史新高：总市值突破万亿，社区关注度上升\n\n## 后续变量仍需确认\n\n只保留来源自身限制和当前证据中的风险项，不额外推演。\n\n- 来源为雪球热股导航聚合页，非独立事件报道，内容为社区情绪信号而非事实锚\n- 部分社区信息存在时效性不足，过期内容已从当前证据中剔除。\n- 热股榜单为实时快照，热度分数与涨跌幅可能随时变动",
+      "disclaimer": "本文仅作公开信息整理与讨论，不构成任何投资建议。"
+    },
+    "editor_note": "最终主编综合服务异常，已使用时效过滤后的前置来源分析进行本地综合；fallback_reason=LLM_RESPONSE_ERROR: 响应没有正文",
+    "fallback": {
+      "used": true,
+      "mode": "fresh_local_source_analysis",
+      "analysis_count": 5,
+      "evidence_rows": 25,
+      "max_age_days": 14
+    }
+  },
+  "publish": {
+    "title": "市场主线与外部变量成焦点",
+    "intro": "早刊基于5份有效来源分析，当前重点为主要市场线索。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "tags": [
+      "市场观察",
+      "市场主线",
+      "行业轮动",
+      "资金情绪",
+      "风险观察"
+    ]
+  }
+}
