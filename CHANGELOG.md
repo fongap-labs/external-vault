@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.2.1.2](https://github.com/fongap-labs/external-vault/releases/tag/algdesign-v1.2.1.2) - 2026-10-26
+
+### 新增
+
+- 同步 CRAN 上游文件 AlgDesign_1.2.1.2.tar.gz（版本 1.2.1.2），SHA-256 已校验。
+
 ## [2.7.0](https://github.com/fongap-labs/external-vault/releases/tag/qcc-v2.7.0) - 2026-10-26
 
 ### 新增
@@ -60,6 +66,7 @@
 ### 安全
 
 - [security] 恢复对 `output/adfilter/adfilter.txt` 的密钥扫描，只放行已知误报（CSS 选择器片段与 cookie 同意 token），注入的真实凭据仍会被报告。
+
 
 
 
