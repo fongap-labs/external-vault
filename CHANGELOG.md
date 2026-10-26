@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.3.1](https://github.com/fongap-labs/external-vault/releases/tag/bland-altman-leh-v0.3.1) - 2026-10-26
+
+### 新增
+
+- 同步 CRAN 上游文件 BlandAltmanLeh_0.3.1.tar.gz（版本 0.3.1），SHA-256 已校验。
+
 ## [2.10.6](https://github.com/fongap-labs/external-vault/releases/tag/rsm-v2.10.6) - 2026-10-26
 
 ### 新增
@@ -36,5 +42,6 @@
 ### 安全
 
 - [security] 恢复对 `output/adfilter/adfilter.txt` 的密钥扫描，只放行已知误报（CSS 选择器片段与 cookie 同意 token），注入的真实凭据仍会被报告。
+
 
 
