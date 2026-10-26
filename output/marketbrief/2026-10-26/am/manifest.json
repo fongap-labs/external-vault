@@ -1,0 +1,231 @@
+{
+  "schema_version": 2,
+  "project": "MarketBrief",
+  "date": "2026-10-26",
+  "edition": "am",
+  "generated_at": "2026-10-26T09:05:31+08:00",
+  "model": "Editor-Air",
+  "status": "publish",
+  "hook_title": "研究早观点、开源晨会成焦点",
+  "overview": "早刊基于5份有效来源分析，当前重点为研究早观点、开源晨会。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+  "visual_tone": "optimistic",
+  "usage": {
+    "calls": 4,
+    "total_tokens": 8871
+  },
+  "sources": [
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2514,
+      "quality_score": 65,
+      "cache_hit": false,
+      "elapsed_sec": 1.121,
+      "analysis_ok": false
+    },
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2092,
+      "quality_score": 60,
+      "cache_hit": false,
+      "elapsed_sec": 1.846,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 4054,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 0.968,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3320,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 0.331,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 0.193,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "api",
+      "chars": 3681,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 1.6,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 6.562,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 5526,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 1.81,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 2650,
+      "quality_score": 66,
+      "cache_hit": false,
+      "elapsed_sec": 1.582,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4794,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.201,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4153,
+      "quality_score": 81,
+      "cache_hit": false,
+      "elapsed_sec": 0.183,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4799,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.586,
+      "analysis_ok": true
+    }
+  ],
+  "content": {
+    "status": "publish",
+    "hook_title": "研究早观点、开源晨会成焦点",
+    "overview": "早刊基于5份有效来源分析，当前重点为研究早观点、开源晨会。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "market_sentiment": {
+      "tone": "optimistic",
+      "emotion_score": 58,
+      "risk_level": 57,
+      "dispersion_level": 50,
+      "confidence_level": 82
+    },
+    "cards": [
+      {
+        "kicker": "今日简报",
+        "title": "研究早观点、开源晨会成焦点",
+        "subtitle": "早刊基于5份有效来源分析，当前重点为研究早观点、开源晨会。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+        "bullets": [
+          "晨会纪要",
+          "研究早观点",
+          "北交所策略专题报告：关注人工合成石墨材料小巨人鸿凌达、摄像头马达小巨人比路电子"
+        ]
+      },
+      {
+        "kicker": "全球市场",
+        "title": "隔夜外部变量",
+        "subtitle": "当前来源未形成足够清晰的外盘事实，不补写缺失行情数据。",
+        "bullets": [
+          "美国进出口价格指数：10/16例行发布，进出口价格月度更新"
+        ]
+      },
+      {
+        "kicker": "市场概览",
+        "title": "A股结构与资金",
+        "subtitle": "当前来源未形成足够完整的A股量价事实，不对指数和成交数据做推测。",
+        "bullets": []
+      },
+      {
+        "kicker": "热点追踪",
+        "title": "主线与事件交叉验证",
+        "subtitle": "优先采用官方与研究信息，社区热度只作为辅助信号。",
+        "bullets": [
+          "关于境外上市股份（H股）公开发行价格的公告",
+          "天成自控关于召开2026年第三季度业绩说明会的公告",
+          "浙江华海药业股份有限公司详式权益变动报告书"
+        ]
+      },
+      {
+        "kicker": "事实分歧",
+        "title": "事实、观点与情绪分开看",
+        "subtitle": "先看已确认事实，再看研究判断和市场情绪是否一致。",
+        "bullets": [
+          "关于境外上市股份（H股）公开发行价格的公告",
+          "晨会纪要",
+          "机器人概念板块走强：三花智控领涨，高乐民爆+6.41%、奥比中光+18.97%、星宸科技+9.56%等多股大幅上涨，板块热度集中"
+        ]
+      },
+      {
+        "kicker": "风险提示",
+        "title": "后续变量仍需确认",
+        "subtitle": "只保留来源自身限制和当前证据中的风险项，不额外推演。",
+        "bullets": [
+          "来源为雪球热股实时榜单，属社区情绪/讨论线索，非官方事实锚",
+          "部分社区信息存在时效性不足，过期内容已从当前证据中剔除。",
+          "榜单为导航/行情聚合页，非具体事件或深度讨论，信号强度有限"
+        ]
+      }
+    ],
+    "article": {
+      "title": "研究早观点、开源晨会成焦点",
+      "summary": "早刊基于5份有效来源分析，当前重点为研究早观点、开源晨会。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+      "body_markdown": "## 隔夜外部变量\n\n当前来源未形成足够清晰的外盘事实，不补写缺失行情数据。\n\n- 美国进出口价格指数：10/16例行发布，进出口价格月度更新\n\n## A股结构与资金\n\n当前来源未形成足够完整的A股量价事实，不对指数和成交数据做推测。\n\n\n## 主线与事件交叉验证\n\n优先采用官方与研究信息，社区热度只作为辅助信号。\n\n- 关于境外上市股份（H股）公开发行价格的公告\n- 天成自控关于召开2026年第三季度业绩说明会的公告\n- 浙江华海药业股份有限公司详式权益变动报告书\n\n## 事实、观点与情绪分开看\n\n先看已确认事实，再看研究判断和市场情绪是否一致。\n\n- 关于境外上市股份（H股）公开发行价格的公告\n- 晨会纪要\n- 机器人概念板块走强：三花智控领涨，高乐民爆+6.41%、奥比中光+18.97%、星宸科技+9.56%等多股大幅上涨，板块热度集中\n\n## 后续变量仍需确认\n\n只保留来源自身限制和当前证据中的风险项，不额外推演。\n\n- 来源为雪球热股实时榜单，属社区情绪/讨论线索，非官方事实锚\n- 部分社区信息存在时效性不足，过期内容已从当前证据中剔除。\n- 榜单为导航/行情聚合页，非具体事件或深度讨论，信号强度有限",
+      "disclaimer": "本文仅作公开信息整理与讨论，不构成任何投资建议。"
+    },
+    "editor_note": "最终主编综合服务异常，已使用时效过滤后的前置来源分析进行本地综合；fallback_reason=LLM_RESPONSE_ERROR: 响应没有正文",
+    "fallback": {
+      "used": true,
+      "mode": "fresh_local_source_analysis",
+      "analysis_count": 5,
+      "evidence_rows": 24,
+      "max_age_days": 14
+    }
+  },
+  "publish": {
+    "title": "研究早观点、开源晨会成焦点",
+    "intro": "早刊基于5份有效来源分析，当前重点为研究早观点、开源晨会。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "tags": [
+      "市场观察",
+      "市场主线",
+      "行业轮动",
+      "资金情绪",
+      "风险观察"
+    ]
+  }
+}
