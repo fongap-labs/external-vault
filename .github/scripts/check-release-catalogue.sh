@@ -117,7 +117,7 @@ done < <(jq -r '.tools[]? | "\(.key // "")\t\(.metadata // "")"' "$catalog" | tr
 failed=0
 while IFS= read -r tag; do
   [ -n "$tag" ] || continue
-  if [[ "$tag" =~ ^(.+)-v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+  if [[ "$tag" =~ ^(.+)-v[0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+)?$ ]]; then
     key="${BASH_REMATCH[1]}"
   else
     key="$tag"

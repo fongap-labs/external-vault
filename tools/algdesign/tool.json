@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "release_key": "AlgDesign",
+  "release_key": "algdesign",
   "platform": "source",
   "arch": "any",
   "upstream_url": "https://cran.r-project.org/src/contrib/AlgDesign_1.2.1.2.tar.gz",
