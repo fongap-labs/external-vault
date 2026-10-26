@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.6.0](https://github.com/fongap-labs/external-vault/releases/tag/blandr-v0.6.0) - 2026-10-26
+
+### 新增
+
+- 同步 CRAN 上游文件 blandr_0.6.0.tar.gz（版本 0.6.0），SHA-256 已校验。
+
 ## [0.3.1](https://github.com/fongap-labs/external-vault/releases/tag/bland-altman-leh-v0.3.1) - 2026-10-26
 
 ### 新增
@@ -42,6 +48,7 @@
 ### 安全
 
 - [security] 恢复对 `output/adfilter/adfilter.txt` 的密钥扫描，只放行已知误报（CSS 选择器片段与 cookie 同意 token），注入的真实凭据仍会被报告。
+
 
 
 
