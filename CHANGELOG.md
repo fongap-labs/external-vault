@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [2.10.6](https://github.com/fongap-labs/external-vault/releases/tag/rsm-v2.10.6) - 2026-10-26
+
+### 新增
+
+- 同步 CRAN 上游文件 rsm_2.10.6.tar.gz（版本 2.10.6），SHA-256 已校验。
+
 ## [2.3.5](https://github.com/fongap-labs/external-vault/releases/tag/frf2-v2.3.5) - 2026-10-26
 
 ### 新增
@@ -30,4 +36,5 @@
 ### 安全
 
 - [security] 恢复对 `output/adfilter/adfilter.txt` 的密钥扫描，只放行已知误报（CSS 选择器片段与 cookie 同意 token），注入的真实凭据仍会被报告。
+
 
