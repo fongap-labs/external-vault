@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "release_key": "BlandAltmanLeh",
+  "platform": "source",
+  "arch": "any",
+  "upstream_url": "https://cran.r-project.org/src/contrib/BlandAltmanLeh_0.3.1.tar.gz",
+  "upstream_version": "0.3.1",
+  "upstream_asset": "BlandAltmanLeh_0.3.1.tar.gz",
+  "upstream_sha256": "9522d321668b2cc61087c73f2ffb2f9f328dc2bbbaa1b0c77431b9b1f007e386",
+  "license_expression": "GPL-2.0-or-later OR GPL-3.0-or-later"
+}
