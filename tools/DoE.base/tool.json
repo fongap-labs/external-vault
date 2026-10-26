@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "release_key": "DoE.base",
+  "platform": "source",
+  "arch": "any",
+  "upstream_url": "https://cran.r-project.org/src/contrib/DoE.base_1.2-5.tar.gz",
+  "upstream_version": "1.2-5",
+  "upstream_asset": "DoE.base_1.2-5.tar.gz",
+  "upstream_sha256": "59cc4e2afe7bef792d454655258e8f4eb073cf3fdcb9639237f83e2fe1b7f4b9",
+  "license_expression": "GPL-2.0-or-later OR GPL-3.0-or-later"
+}

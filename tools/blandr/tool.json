@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "release_key": "blandr",
+  "platform": "source",
+  "arch": "any",
+  "upstream_url": "https://cran.r-project.org/src/contrib/blandr_0.6.0.tar.gz",
+  "upstream_version": "0.6.0",
+  "upstream_asset": "blandr_0.6.0.tar.gz",
+  "upstream_sha256": "51d80f112c93d1950163bd446803d6641aced0e07e2d90536accbf8efd6b6bb2",
+  "license_expression": "GPL-3.0-or-later"
+}

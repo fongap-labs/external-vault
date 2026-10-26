@@ -16,6 +16,55 @@
       "metadata": "tools/r-base/tool.json"
     },
     {
+      "key": "DoE.base",
+      "name": "DoE.base R Package",
+      "source_repository": "cran.r-project.org",
+      "distribution": "url",
+      "metadata": "tools/DoE.base/tool.json"
+    },
+    {
+      "key": "FrF2",
+      "name": "FrF2 R Package",
+      "source_repository": "cran.r-project.org",
+      "distribution": "url",
+      "metadata": "tools/FrF2/tool.json"
+    },
+    {
+      "key": "rsm",
+      "name": "rsm R Package",
+      "source_repository": "cran.r-project.org",
+      "distribution": "url",
+      "metadata": "tools/rsm/tool.json"
+    },
+    {
+      "key": "AlgDesign",
+      "name": "AlgDesign R Package",
+      "source_repository": "cran.r-project.org",
+      "distribution": "url",
+      "metadata": "tools/AlgDesign/tool.json"
+    },
+    {
+      "key": "qcc",
+      "name": "qcc R Package",
+      "source_repository": "cran.r-project.org",
+      "distribution": "url",
+      "metadata": "tools/qcc/tool.json"
+    },
+    {
+      "key": "blandr",
+      "name": "blandr R Package",
+      "source_repository": "cran.r-project.org",
+      "distribution": "url",
+      "metadata": "tools/blandr/tool.json"
+    },
+    {
+      "key": "BlandAltmanLeh",
+      "name": "BlandAltmanLeh R Package",
+      "source_repository": "cran.r-project.org",
+      "distribution": "url",
+      "metadata": "tools/BlandAltmanLeh/tool.json"
+    },
+    {
       "key": "securepigeon",
       "name": "SecurePigeon",
       "source_repository": "fongap-labs/app-source",

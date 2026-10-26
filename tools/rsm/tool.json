@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "release_key": "rsm",
+  "platform": "source",
+  "arch": "any",
+  "upstream_url": "https://cran.r-project.org/src/contrib/rsm_2.10.6.tar.gz",
+  "upstream_version": "2.10.6",
+  "upstream_asset": "rsm_2.10.6.tar.gz",
+  "upstream_sha256": "d276a933c1641fedbc8023a21ab86a3c7a7e2e31b6e0b71b8525cd810b4bbfff",
+  "license_expression": "GPL-2.0-or-later OR GPL-3.0-or-later"
+}
