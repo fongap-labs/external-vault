@@ -4,7 +4,7 @@
   "platform": "source",
   "arch": "any",
   "upstream_url": "https://cran.r-project.org/src/contrib/qcc_2.7.tar.gz",
-  "upstream_version": "2.7",
+  "upstream_version": "2.7.0",
   "upstream_asset": "qcc_2.7.tar.gz",
   "upstream_sha256": "ff139a046e6b139ac25537b69be24e0ff32d6a39db6c941d1d02b4710f378251",
   "license_expression": "GPL-2.0-or-later OR GPL-3.0-or-later"

@@ -1,10 +1,10 @@
 {
   "schema_version": "1",
-  "release_key": "FrF2",
+  "release_key": "frf2",
   "platform": "source",
   "arch": "any",
   "upstream_url": "https://cran.r-project.org/src/contrib/FrF2_2.3-5.tar.gz",
-  "upstream_version": "2.3-5",
+  "upstream_version": "2.3.5",
   "upstream_asset": "FrF2_2.3-5.tar.gz",
   "upstream_sha256": "8bda7afaa1a1dab4da447477d6f5408567e2a0c6e0c93d6ab0bccc16ff7eb9f7",
   "license_expression": "GPL-2.0-or-later OR GPL-3.0-or-later"

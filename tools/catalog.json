@@ -16,18 +16,18 @@
       "metadata": "tools/r-base/tool.json"
     },
     {
-      "key": "DoE.base",
+      "key": "doe-base",
       "name": "DoE.base R Package",
       "source_repository": "cran.r-project.org",
       "distribution": "url",
-      "metadata": "tools/DoE.base/tool.json"
+      "metadata": "tools/doe-base/tool.json"
     },
     {
-      "key": "FrF2",
+      "key": "frf2",
       "name": "FrF2 R Package",
       "source_repository": "cran.r-project.org",
       "distribution": "url",
-      "metadata": "tools/FrF2/tool.json"
+      "metadata": "tools/frf2/tool.json"
     },
     {
       "key": "rsm",
@@ -37,11 +37,11 @@
       "metadata": "tools/rsm/tool.json"
     },
     {
-      "key": "AlgDesign",
+      "key": "algdesign",
       "name": "AlgDesign R Package",
       "source_repository": "cran.r-project.org",
       "distribution": "url",
-      "metadata": "tools/AlgDesign/tool.json"
+      "metadata": "tools/algdesign/tool.json"
     },
     {
       "key": "qcc",
@@ -58,11 +58,11 @@
       "metadata": "tools/blandr/tool.json"
     },
     {
-      "key": "BlandAltmanLeh",
+      "key": "bland-altman-leh",
       "name": "BlandAltmanLeh R Package",
       "source_repository": "cran.r-project.org",
       "distribution": "url",
-      "metadata": "tools/BlandAltmanLeh/tool.json"
+      "metadata": "tools/bland-altman-leh/tool.json"
     },
     {
       "key": "securepigeon",
