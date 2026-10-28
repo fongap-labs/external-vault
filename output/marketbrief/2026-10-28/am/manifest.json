@@ -1,0 +1,226 @@
+{
+  "schema_version": 2,
+  "project": "MarketBrief",
+  "date": "2026-10-28",
+  "edition": "am",
+  "generated_at": "2026-10-28T10:16:54+08:00",
+  "model": "Editor-Air",
+  "status": "publish",
+  "hook_title": "鑫新闻、万和财富早班车成焦点",
+  "overview": "早刊基于3份有效来源分析，当前重点为鑫新闻、万和财富早班车。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+  "visual_tone": "neutral",
+  "usage": {
+    "calls": 0,
+    "total_tokens": 0
+  },
+  "sources": [
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2529,
+      "quality_score": 65,
+      "cache_hit": false,
+      "elapsed_sec": 0.88,
+      "analysis_ok": false
+    },
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2132,
+      "quality_score": 61,
+      "cache_hit": false,
+      "elapsed_sec": 2.626,
+      "analysis_ok": false
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 4048,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 1.255,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3049,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 0.285,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 0.236,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "api",
+      "chars": 3516,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 2.976,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 3.981,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 5301,
+      "quality_score": 93,
+      "cache_hit": false,
+      "elapsed_sec": 1.536,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 2650,
+      "quality_score": 66,
+      "cache_hit": false,
+      "elapsed_sec": 2.478,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4794,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.145,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4153,
+      "quality_score": 81,
+      "cache_hit": false,
+      "elapsed_sec": 0.216,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4799,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.628,
+      "analysis_ok": false
+    }
+  ],
+  "content": {
+    "status": "publish",
+    "hook_title": "鑫新闻、万和财富早班车成焦点",
+    "overview": "早刊基于3份有效来源分析，当前重点为鑫新闻、万和财富早班车。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "market_sentiment": {
+      "tone": "neutral",
+      "emotion_score": 50,
+      "risk_level": 45,
+      "dispersion_level": 50,
+      "confidence_level": 82
+    },
+    "cards": [
+      {
+        "kicker": "今日简报",
+        "title": "鑫新闻、万和财富早班车成焦点",
+        "subtitle": "早刊基于3份有效来源分析，当前重点为鑫新闻、万和财富早班车。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+        "bullets": [
+          "鑫新闻",
+          "晨会纪要",
+          "万和财富早班车"
+        ]
+      },
+      {
+        "kicker": "全球市场",
+        "title": "隔夜外部变量",
+        "subtitle": "当前来源未形成足够清晰的外盘事实，不补写缺失行情数据。",
+        "bullets": []
+      },
+      {
+        "kicker": "市场概览",
+        "title": "A股结构与资金",
+        "subtitle": "当前来源未形成足够完整的A股量价事实，不对指数和成交数据做推测。",
+        "bullets": []
+      },
+      {
+        "kicker": "热点追踪",
+        "title": "主线与事件交叉验证",
+        "subtitle": "优先采用官方与研究信息，社区热度只作为辅助信号。",
+        "bullets": [
+          "H股公告-变更联席公司秘书、授权代表及法律程序代理人；及豁免严格遵守上市规则第3.28条及第8.17条",
+          "关于会计政策变更的公告",
+          "关于控股股东履行承诺暨第二次增持公司股份的进展公告"
+        ]
+      },
+      {
+        "kicker": "事实分歧",
+        "title": "事实、观点与情绪分开看",
+        "subtitle": "先看已确认事实，再看研究判断和市场情绪是否一致。",
+        "bullets": [
+          "H股公告-变更联席公司秘书、授权代表及法律程序代理人；及豁免严格遵守上市规则第3.28条及第8.17条",
+          "鑫新闻"
+        ]
+      },
+      {
+        "kicker": "风险提示",
+        "title": "后续变量仍需确认",
+        "subtitle": "只保留来源自身限制和当前证据中的风险项，不额外推演。",
+        "bullets": [
+          "关于会计政策变更的公告"
+        ]
+      }
+    ],
+    "article": {
+      "title": "鑫新闻、万和财富早班车成焦点",
+      "summary": "早刊基于3份有效来源分析，当前重点为鑫新闻、万和财富早班车。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+      "body_markdown": "## 隔夜外部变量\n\n当前来源未形成足够清晰的外盘事实，不补写缺失行情数据。\n\n\n## A股结构与资金\n\n当前来源未形成足够完整的A股量价事实，不对指数和成交数据做推测。\n\n\n## 主线与事件交叉验证\n\n优先采用官方与研究信息，社区热度只作为辅助信号。\n\n- H股公告-变更联席公司秘书、授权代表及法律程序代理人；及豁免严格遵守上市规则第3.28条及第8.17条\n- 关于会计政策变更的公告\n- 关于控股股东履行承诺暨第二次增持公司股份的进展公告\n\n## 事实、观点与情绪分开看\n\n先看已确认事实，再看研究判断和市场情绪是否一致。\n\n- H股公告-变更联席公司秘书、授权代表及法律程序代理人；及豁免严格遵守上市规则第3.28条及第8.17条\n- 鑫新闻\n\n## 后续变量仍需确认\n\n只保留来源自身限制和当前证据中的风险项，不额外推演。\n\n- 关于会计政策变更的公告",
+      "disclaimer": "本文仅作公开信息整理与讨论，不构成任何投资建议。"
+    },
+    "editor_note": "最终主编综合服务异常，已使用时效过滤后的前置来源分析进行本地综合；fallback_reason=403 Client Error: Forbidden for url: https://api.135468.xyz/v1/chat/completions",
+    "fallback": {
+      "used": true,
+      "mode": "fresh_local_source_analysis",
+      "analysis_count": 3,
+      "evidence_rows": 18,
+      "max_age_days": 14
+    }
+  },
+  "publish": {
+    "title": "鑫新闻、万和财富早班车成焦点",
+    "intro": "早刊基于3份有效来源分析，当前重点为鑫新闻、万和财富早班车。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "tags": [
+      "市场观察",
+      "市场主线",
+      "行业轮动",
+      "资金情绪",
+      "风险观察"
+    ]
+  }
+}
