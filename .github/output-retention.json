@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "description": "Machine-readable output retention policy for central-ci.sh and for Action Worker's publication preparation (scripts/prepare-publication-target.ts). default_periods applies to every project under output/; projects overrides it per project directory. EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS still overrides everything at CI time.",
+  "default_periods": 14,
+  "projects": {
+    "output/marketbrief": 14
+  }
+}
