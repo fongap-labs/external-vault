@@ -64,19 +64,42 @@ bash "$script_root/secret-scan.sh" "$TARGET_ROOT"
 bash "$script_root/check-release-catalogue.sh" "$TARGET_ROOT"
 
 # Published brief retention: each project keeps at most the newest periods in the Git tree.
-# Default 14; set EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS (a whole number) to change it.
-output_retention_periods="${EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS:-14}"
-case "$output_retention_periods" in
-  '' | *[!0-9]*)
-    echo "central-ci: EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS must be a whole number, got: $output_retention_periods" >&2
-    exit 64
-    ;;
-esac
+# Limits come from .github/output-retention.json (default_periods plus optional per-project
+# overrides in projects); EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS (a whole number) overrides all.
+retention_config=".github/output-retention.json"
+default_retention=14
+if [ -f "$retention_config" ]; then
+  if ! jq -e '
+    .schema_version == "1"
+    and (.default_periods | type == "number" and floor == . and . >= 1)
+    and (.projects | type == "object")
+    and ([.projects[] | (type == "number" and floor == . and . >= 1)] | all)
+  ' "$retention_config" >/dev/null; then
+    echo "central-ci: malformed output retention config: $retention_config" >&2
+    exit 1
+  fi
+  default_retention="$(jq -r '.default_periods' "$retention_config")"
+fi
 for project_dir in output/*/; do
   [ -d "$project_dir" ] || continue
+  key="${project_dir%/}"
+  limit="${EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS:-}"
+  if [ -z "$limit" ]; then
+    if [ -f "$retention_config" ]; then
+      limit="$(jq -r --arg key "$key" '.projects[$key] // .default_periods' "$retention_config")"
+    else
+      limit="$default_retention"
+    fi
+  fi
+  case "$limit" in
+    '' | *[!0-9]*)
+      echo "central-ci: output retention limit must be a whole number, got: $limit" >&2
+      exit 64
+      ;;
+  esac
   periods="$(find "$project_dir" -type f -name manifest.json | wc -l | tr -d '[:space:]')"
-  if [ "$periods" -gt "$output_retention_periods" ]; then
-    echo "central-ci: output retention exceeded: ${project_dir%/} holds $periods periods (limit $output_retention_periods)" >&2
+  if [ "$periods" -gt "$limit" ]; then
+    echo "central-ci: output retention exceeded: $key holds $periods periods (limit $limit)" >&2
     exit 1
   fi
 done

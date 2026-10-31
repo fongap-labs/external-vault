@@ -72,7 +72,7 @@ Release 标签指向一个提交。只有该提交带有有效签名时，GitHub
 
 ## 输出保留
 
-Git 树中每个项目在 `output/` 下最多保留最新的 14 个周期。默认值为 14，可通过中央 CI 的环境变量 `EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS` 覆盖。发布流水线会清理更早的周期；长期历史应保存在 GitHub Releases 或归档中，而非 Git 树。超出保留窗口时，中央 CI 会失败。
+Git 树中每个项目在 `output/` 下最多保留最新的周期数由 `.github/output-retention.json` 声明（`default_periods` 为默认上限，`projects` 可按项目目录覆盖，当前均为 14）；中央 CI 的环境变量 `EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS` 仍可整体覆盖。发布流水线（Action Worker 的 `prepare-publication-target.ts`）在提交前按该配置清理更早的周期；长期历史应保存在 GitHub Releases 或归档中，而非 Git 树。超出保留窗口时，中央 CI 会失败。
 
 ## Release 命名
 
