@@ -1,0 +1,227 @@
+{
+  "schema_version": 2,
+  "project": "MarketBrief",
+  "date": "2026-11-01",
+  "edition": "pm",
+  "generated_at": "2026-11-01T23:02:42+08:00",
+  "model": "Editor-Air",
+  "status": "publish",
+  "hook_title": "孰能浊以止、超跌反弹成焦点",
+  "overview": "晚刊基于3份有效来源分析，当前重点为孰能浊以止、超跌反弹。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+  "visual_tone": "neutral",
+  "usage": {
+    "calls": 0,
+    "total_tokens": 0
+  },
+  "sources": [
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2533,
+      "quality_score": 65,
+      "cache_hit": false,
+      "elapsed_sec": 0.789,
+      "analysis_ok": false
+    },
+    {
+      "kind": "community",
+      "ok": true,
+      "transport": "html",
+      "chars": 2066,
+      "quality_score": 60,
+      "cache_hit": false,
+      "elapsed_sec": 1.659,
+      "analysis_ok": false
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3891,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 1.863,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "api",
+      "chars": 3368,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 1.353,
+      "analysis_ok": true
+    },
+    {
+      "kind": "research",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 0.444,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "api",
+      "chars": 3668,
+      "quality_score": 95,
+      "cache_hit": false,
+      "elapsed_sec": 2.872,
+      "analysis_ok": true
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 6000,
+      "quality_score": 100,
+      "cache_hit": false,
+      "elapsed_sec": 4.271,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 5102,
+      "quality_score": 91,
+      "cache_hit": false,
+      "elapsed_sec": 2.427,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 2641,
+      "quality_score": 66,
+      "cache_hit": false,
+      "elapsed_sec": 242.315,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4794,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.213,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4187,
+      "quality_score": 81,
+      "cache_hit": false,
+      "elapsed_sec": 0.359,
+      "analysis_ok": false
+    },
+    {
+      "kind": "official",
+      "ok": true,
+      "transport": "html",
+      "chars": 4799,
+      "quality_score": 87,
+      "cache_hit": false,
+      "elapsed_sec": 0.639,
+      "analysis_ok": false
+    }
+  ],
+  "content": {
+    "status": "publish",
+    "hook_title": "孰能浊以止、超跌反弹成焦点",
+    "overview": "晚刊基于3份有效来源分析，当前重点为孰能浊以止、超跌反弹。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "market_sentiment": {
+      "tone": "neutral",
+      "emotion_score": 50,
+      "risk_level": 45,
+      "dispersion_level": 50,
+      "confidence_level": 82
+    },
+    "cards": [
+      {
+        "kicker": "今日简报",
+        "title": "孰能浊以止、超跌反弹成焦点",
+        "subtitle": "晚刊基于3份有效来源分析，当前重点为孰能浊以止、超跌反弹。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+        "bullets": [
+          "策略月报：孰能浊以止，静之徐清（2026年11月）",
+          "超跌反弹",
+          "策略周报：三季报信号的历史验证"
+        ]
+      },
+      {
+        "kicker": "全球市场",
+        "title": "今晚外部变量",
+        "subtitle": "当前来源未形成足够清晰的外盘事实，不补写缺失行情数据。",
+        "bullets": []
+      },
+      {
+        "kicker": "市场概览",
+        "title": "A股结构与资金",
+        "subtitle": "当前来源未形成足够完整的A股量价事实，不对指数和成交数据做推测。",
+        "bullets": []
+      },
+      {
+        "kicker": "热点追踪",
+        "title": "主线与事件交叉验证",
+        "subtitle": "优先采用官方与研究信息，社区热度只作为辅助信号。",
+        "bullets": [
+          "中金公司关于投资银行业务主体变更的公告",
+          "华发股份第十一届董事会第十六次会议决议公告",
+          "华发股份关于2026年第三季度担保情况的公告"
+        ]
+      },
+      {
+        "kicker": "事实分歧",
+        "title": "事实、观点与情绪分开看",
+        "subtitle": "先看已确认事实，再看研究判断和市场情绪是否一致。",
+        "bullets": [
+          "中金公司关于投资银行业务主体变更的公告",
+          "策略月报：孰能浊以止，静之徐清（2026年11月）"
+        ]
+      },
+      {
+        "kicker": "风险提示",
+        "title": "后续变量仍需确认",
+        "subtitle": "只保留来源自身限制和当前证据中的风险项，不额外推演。",
+        "bullets": [
+          "基础化工行业周报：氨纶价格持稳，硫磺、硫酸价格下行",
+          "非银金融行业周报：3季报波动中隐含ROE和分红韧性，关注稳市催化"
+        ]
+      }
+    ],
+    "article": {
+      "title": "孰能浊以止、超跌反弹成焦点",
+      "summary": "晚刊基于3份有效来源分析，当前重点为孰能浊以止、超跌反弹。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+      "body_markdown": "## 今晚外部变量\n\n当前来源未形成足够清晰的外盘事实，不补写缺失行情数据。\n\n\n## A股结构与资金\n\n当前来源未形成足够完整的A股量价事实，不对指数和成交数据做推测。\n\n\n## 主线与事件交叉验证\n\n优先采用官方与研究信息，社区热度只作为辅助信号。\n\n- 中金公司关于投资银行业务主体变更的公告\n- 华发股份第十一届董事会第十六次会议决议公告\n- 华发股份关于2026年第三季度担保情况的公告\n\n## 事实、观点与情绪分开看\n\n先看已确认事实，再看研究判断和市场情绪是否一致。\n\n- 中金公司关于投资银行业务主体变更的公告\n- 策略月报：孰能浊以止，静之徐清（2026年11月）\n\n## 后续变量仍需确认\n\n只保留来源自身限制和当前证据中的风险项，不额外推演。\n\n- 基础化工行业周报：氨纶价格持稳，硫磺、硫酸价格下行\n- 非银金融行业周报：3季报波动中隐含ROE和分红韧性，关注稳市催化",
+      "disclaimer": "本文仅作公开信息整理与讨论，不构成任何投资建议。"
+    },
+    "editor_note": "最终主编综合服务异常，已使用时效过滤后的前置来源分析进行本地综合；fallback_reason=403 Client Error: Forbidden for url: https://api.135468.xyz/v1/chat/completions",
+    "fallback": {
+      "used": true,
+      "mode": "fresh_local_source_analysis",
+      "analysis_count": 3,
+      "evidence_rows": 18,
+      "max_age_days": 14
+    }
+  },
+  "publish": {
+    "title": "孰能浊以止、超跌反弹成焦点",
+    "intro": "晚刊基于3份有效来源分析，当前重点为孰能浊以止、超跌反弹。仅保留时效合格的公开信息，事实、研究观点与市场情绪分开呈现。",
+    "tags": [
+      "市场观察",
+      "市场主线",
+      "行业轮动",
+      "资金情绪",
+      "风险观察"
+    ]
+  }
+}
