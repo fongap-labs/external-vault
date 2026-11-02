@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.13.4](https://github.com/fongap-labs/external-vault/releases/tag/open-code-review-v1.13.4) - 2026-11-02
+
+### 新增
+
+- 同步 上游发布 alibaba/open-code-review v1.13.4，SHA-256 已校验。
+
 ## [4.6.0](https://github.com/fongap-labs/external-vault/releases/tag/r-base-v4.6.0) - 2026-10-26
 
 ### 新增
@@ -72,6 +78,7 @@
 ### 安全
 
 - [security] 恢复对 `output/adfilter/adfilter.txt` 的密钥扫描，只放行已知误报（CSS 选择器片段与 cookie 同意 token），注入的真实凭据仍会被报告。
+
 
 
 
