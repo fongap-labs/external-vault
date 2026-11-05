@@ -24,7 +24,7 @@ public download
 
 程序源码不属于 `external-vault`。
 
-## GitHub Releases
+## 公开发布
 
 GitHub Releases 是以下内容的规范位置：
 
@@ -37,11 +37,11 @@ GitHub Releases 是以下内容的规范位置：
 
 不要将版本化的程序产物提交到 Git 树中。
 
-## Release 标签与验证
+## 发布标签与验证
 
 Release 标签指向一个提交。只有该提交带有有效签名时，GitHub 才会在 Release 上显示已验证（verified）徽章，因此流水线生成的 Release 必须指向已签名的提交。工具同步（tool sync，参见 Action Worker 的工具同步）在默认分支 HEAD 没有有效签名时会推迟发布。此规则生效前创建的 Release 可能指向未签名的提交；未经 owner 批准，不得移动这些标签。
 
-## tools/
+## 工具目录
 
 `tools/` 是目录与元数据层。
 
@@ -58,7 +58,7 @@ Release 标签指向一个提交。只有该提交带有有效签名时，GitHub
 
 保持元数据小巧、确定、基于文本。
 
-## 已发布 manifest
+## 已发布清单
 
 `output/**/manifest.json` 是已发布的简报输出。发布路径与中央 CI 以失败即关闭（fail-closed）的方式执行 `.github/manifest-allowlist.json`：
 
@@ -74,7 +74,7 @@ Release 标签指向一个提交。只有该提交带有有效签名时，GitHub
 
 Git 树中每个项目在 `output/` 下最多保留最新的周期数由 `.github/output-retention.json` 声明（`default_periods` 为默认上限，`projects` 可按项目目录覆盖，当前均为 14）；中央 CI 的环境变量 `EXTERNAL_VAULT_OUTPUT_RETENTION_PERIODS` 仍可整体覆盖。发布流水线（Action Worker 的 `prepare-publication-target.ts`）在提交前按该配置清理更早的周期；长期历史应保存在 GitHub Releases 或归档中，而非 Git 树。超出保留窗口时，中央 CI 会失败。
 
-## Release 命名
+## 发布命名
 
 共享分发仓库使用按产品划分的标签：
 
@@ -121,6 +121,6 @@ Release 标签在目标仓库中创建。源来源证明（provenance）需单�
 公开仓库只存放公众消费者用于发现、下载、验证和理解已发布资产所需的内容。
 
 
-## Self-distribution
+## 自主分发
 
 A product may declare its own repository as the `target_repository` in its `release.manifest.json` and self-distribute its releases there. The tag convention `<release_key>-v<version>` applies to both this repository and a self-distributing repository. The `tools/` catalogue in this repository is the discovery layer for releases distributed here; a self-distributing product does not need a `tools/<key>/tool.json` entry here, but should state its distribution point in its own README.
