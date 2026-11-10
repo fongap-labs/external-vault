@@ -6,8 +6,9 @@ output/** linguist-generated=true
 *.yml text eol=lf
 *.yaml text eol=lf
 
-# Keep the verbatim upstream licence texts in their original line endings.
-licenses/adfilter/*.txt text eol=lf
+# Keep file-specific license texts and SPDX metadata in LF format.
+output/adfilter/LICENSE text eol=lf
+output/adfilter/adfilter.txt.license text eol=lf
 tools/r-base/LICENSE text eol=lf
 
 # The changelog only grows, and every change adds its entry at the top of the
