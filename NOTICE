@@ -1,9 +1,13 @@
 External Vault
 Copyright 2026 Fongap Labs
 
-This product includes third-party software and assets. See
-THIRD_PARTY_NOTICES.md for applicable notices and license texts.
+No repository-wide default license is granted. Public accessibility does not
+imply permission to reuse content that has no specific license declaration.
 
-The Apache License, Version 2.0 does not grant permission to use External Vault
-trade names, trademarks, service marks, or product names except as required for
-reasonable and customary use in describing the origin of the work.
+output/adfilter/adfilter.txt has file-specific GPL-3.0-only metadata in
+output/adfilter/adfilter.txt.license and the GPL-3.0 text in output/adfilter/LICENSE.
+This declaration does not override the licenses and attribution obligations
+of incorporated upstream third-party filter lists.
+
+See THIRD_PARTY_NOTICES.md for individual upstream license terms and notices.
+Distribution artifacts published as GitHub Releases retain their own licenses.
