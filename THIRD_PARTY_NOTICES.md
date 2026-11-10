@@ -1,10 +1,10 @@
 # Third-party notices
 
-The root [licensing notice](LICENSE) defines the repository's mixed-license scope. Its Apache-2.0 terms apply only to original repository-authored material unless a more specific notice says otherwise.
+This repository has **no default repository-wide license**. File-specific declarations and upstream licenses govern the relevant materials. Public availability is not a blanket grant of reuse rights.
 
 ## AdFilter data
 
-Files under `output/adfilter/` are generated from third-party filter rules. Those rules remain subject to the terms, notices, attribution requirements, and copyright of their respective upstream projects. The Apache-2.0 License in this repository does not replace or relicense third-party rule data.
+The aggregated file [`output/adfilter/adfilter.txt`](output/adfilter/adfilter.txt) is marked **GPL-3.0-only** using [`output/adfilter/adfilter.txt.license`](output/adfilter/adfilter.txt.license) and the corresponding [`GPL-3.0 license text`](output/adfilter/LICENSE). This records the intended license for Fongap Labs' original compilation and contributions to this file; it **does not relicense third-party source rules**. Those rules remain subject to their individual upstream terms, notices, attribution requirements, and copyrights.
 
 | Upstream list | Fetched from | Licence stated by the upstream | Evidence | Legal review |
 | --- | --- | --- | --- | --- |
@@ -23,7 +23,7 @@ Notes on the previous version of this table:
 - EasyList was listed as "CC BY 3.0". Its official licence page states the dual GPL-3.0-or-later / CC BY-SA 3.0-or-later terms above.
 - Licence statements were checked on 2026-10-07 from the upstream repositories and list headers. They are facts about what the upstream projects state, not a legal conclusion.
 
-Legal review needed: whether and how the GPL, LGPL, CC BY and CC BY-SA terms of these lists apply to the aggregated `output/adfilter/adfilter.txt` (including attribution and share-alike duties), and under which terms the aggregate may be distributed. This repository makes no such determination.
+Legal review still needed: whether all GPL-3.0, LGPL-3.0, CC BY 3.0 and CC BY-SA 3.0 upstream terms can be satisfied when combining and distributing `output/adfilter/adfilter.txt`, including attribution, share-alike and license compatibility. The file-specific GPL-3.0-only label must not be taken as a legal conclusion that incompatible upstream rights were relicensed.
 
 Released third-party program assets must carry their own license and attribution metadata through Release notes or the corresponding `tools/` metadata.
 
