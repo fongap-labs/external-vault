@@ -53,8 +53,12 @@ for path in LICENSE LICENSE.md COPYING; do
     exit 1
   fi
 done
-if [ ! -f output/adfilter/LICENSE ] || [ ! -f output/adfilter/adfilter.txt.license ]; then
-  echo "central-ci: AdFilter GPL-3.0 license text or SPDX metadata is missing" >&2
+if [ ! -f output/adfilter/adfilter.txt ] || [ ! -f output/adfilter/LICENSE ] || [ ! -f output/adfilter/adfilter.txt.license ]; then
+  echo "central-ci: AdFilter rules, GPL-3.0 license text or SPDX metadata is missing" >&2
+  exit 1
+fi
+if ! grep -Fq "Version 3, 29 June 2007" output/adfilter/LICENSE; then
+  echo "central-ci: AdFilter must retain the GPL-3.0 license text" >&2
   exit 1
 fi
 if ! grep -Fxq "SPDX-License-Identifier: GPL-3.0-only" output/adfilter/adfilter.txt.license; then
