@@ -46,6 +46,22 @@ for path in "${forbidden_paths[@]}"; do
   fi
 done
 
+# Repository-wide licensing must remain unset. AdFilter alone has an explicit GPL-3.0 license.
+for path in LICENSE LICENSE.md COPYING; do
+  if [ -e "$path" ]; then
+    echo "central-ci: repository-wide default license is forbidden: $path" >&2
+    exit 1
+  fi
+done
+if [ ! -f output/adfilter/LICENSE ] || [ ! -f output/adfilter/adfilter.txt.license ]; then
+  echo "central-ci: AdFilter GPL-3.0 license text or SPDX metadata is missing" >&2
+  exit 1
+fi
+if ! grep -Fxq "SPDX-License-Identifier: GPL-3.0-only" output/adfilter/adfilter.txt.license; then
+  echo "central-ci: AdFilter SPDX license must be GPL-3.0-only" >&2
+  exit 1
+fi
+
 if git ls-files -z | grep -zEi '\.(exe|msi|dmg|pkg|deb|rpm|appimage)$' >/dev/null; then
   echo "central-ci: program release binary detected in Git tree" >&2
   git ls-files | grep -Ei '\.(exe|msi|dmg|pkg|deb|rpm|appimage)$' || true
