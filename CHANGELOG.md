@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 
+- 维护: 仓库取消默认许可证；AdFilter 规则文件单独声明 GPL-3.0-only，并保留上游许可与署名义务。
 - 维护: 完成加密任务发布验收后清理两个临时测试产物，历史合并记录保留。
 ## [1.13.4](https://github.com/fongap-labs/external-vault/releases/tag/open-code-review-v1.13.4) - 2026-11-02
 
