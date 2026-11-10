@@ -4,7 +4,7 @@
 
 **公开发布、可复用资产与分发元数据，不承载程序源码。**
 
-[![Release](https://img.shields.io/github/v/release/fongap-labs/external-vault?label=Release&display_name=tag&sort=semver&style=flat-square&labelColor=1B2A41&color=2A5588)](https://github.com/fongap-labs/external-vault/releases) [![License](https://img.shields.io/badge/License-Apache%202.0-2A5588?style=flat-square&labelColor=1B2A41)](#许可证) [![Governed by Action Worker](https://img.shields.io/badge/Governed%20by-Action%20Worker-2A5588?style=flat-square&labelColor=1B2A41)](https://github.com/fongap-labs/action-worker)
+[![Release](https://img.shields.io/github/v/release/fongap-labs/external-vault?label=Release&display_name=tag&sort=semver&style=flat-square&labelColor=1B2A41&color=2A5588)](https://github.com/fongap-labs/external-vault/releases) [![Governed by Action Worker](https://img.shields.io/badge/Governed%20by-Action%20Worker-2A5588?style=flat-square&labelColor=1B2A41)](https://github.com/fongap-labs/action-worker)
 
 [获取产物](#获取产物) · [发布约定](#发布约定) · [治理](#治理) · [许可证](#许可证) · [安全](#安全)
 
@@ -96,11 +96,12 @@ README
 
 ## 许可证
 
-本仓库采用混合授权。除非另有说明，本仓库原创内容按 Apache License 2.0 条款授权；第三方、衍生与生成型资产继续遵循各自上游的许可条款。
+本仓库**不设统一的默认许可协议**。仓库公开可访问，不等于所有文件均被统一授权复制、修改或再分发。未单独声明许可的内容，应向相应权利人取得授权。
 
-由 Action Worker 管理的跨仓库 App Release，**若源仓库 manifest 未声明其他许可证，则默认采用 `Apache-2.0`**。每个 App / Release 均可显式覆盖该默认值，实际生效的许可证随对应 Release 记录。根目录的 [LICENSE](LICENSE) 不覆盖 App Release 的许可证。
+- [`output/adfilter/adfilter.txt`](output/adfilter/adfilter.txt) 单独标记为 **GPL-3.0-only**，依据同目录的 [`adfilter.txt.license`](output/adfilter/adfilter.txt.license)（SPDX 声明）与 [`LICENSE`](output/adfilter/LICENSE)（GPL-3.0 正文）。该声明不替代合并规则各上游项目的版权、署名及许可义务。
+- 其他第三方或镜像资产遵循各自上游许可；每个 GitHub Release 的实际许可按其来源和随包声明确定，本仓库不施加默认许可。
 
-第三方归属与许可信息见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+上游归属、许可兼容性待核查事项见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
 ## 安全
 
