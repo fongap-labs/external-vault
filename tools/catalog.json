@@ -77,6 +77,13 @@
       "source_repository": "fongap-labs/app-source",
       "distribution": "github-release",
       "metadata": "tools/workbuddycleaner/tool.json"
+    },
+    {
+      "key": "steno-v0.1.0-beta.1",
+      "name": "Steno v0.1.0-beta.1",
+      "source_repository": "fongap-labs/app-source",
+      "distribution": "github-release",
+      "metadata": "tools/steno-v0.1.0-beta.1/tool.json"
     }
   ]
 }
