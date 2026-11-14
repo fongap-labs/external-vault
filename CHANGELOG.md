@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- 新增: Steno v0.1.0-beta.1 Windows x64 预发布包登记至分发目录，附 Apache-2.0 许可证与 NOTICE；稳定版同步流程保持独立。
+- 维护: 更新 AdFilter 规则输出快照，保留 GPL-3.0-only 许可证文件与上游署名元数据。
 - 维护: 仓库取消默认许可证；AdFilter 规则文件单独声明 GPL-3.0-only，并保留上游许可与署名义务。
 - 维护: 完成加密任务发布验收后清理两个临时测试产物，历史合并记录保留。
 ## [1.13.4](https://github.com/fongap-labs/external-vault/releases/tag/open-code-review-v1.13.4) - 2026-11-02

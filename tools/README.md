@@ -15,6 +15,8 @@
 - `secure-pigeon`（SecurePigeon）：Windows x64 专有发行版，来源仓库 `fongap-labs/app-source`；资产名、校验和资产与许可证元数据见 [`secure-pigeon/tool.json`](secure-pigeon/tool.json)。
 - `workbuddy-cleaner`（WorkBuddyCleaner）：Windows x64 便携工具包，来源仓库 `fongap-labs/app-source`；资产名、校验和资产与许可证元数据见 [`workbuddy-cleaner/tool.json`](workbuddy-cleaner/tool.json)。
 
+- `steno-v0.1.0-beta.1`：Steno Windows x64 beta 安装包；版本元数据、Apache-2.0 许可证与 NOTICE 位于 `tools/steno-v0.1.0-beta.1/`。
+
 后续的工具元数据应保持小巧、基于文本。
 
 可执行文件的版本化载荷属于 GitHub Releases。
