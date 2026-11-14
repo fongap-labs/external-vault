@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Distribution catalogue contract (fail-closed): every Release published in this repository must be
-# described by the distribution catalogue, and every catalogue entry must point at metadata that
-# exists.
+# Stable distribution catalogue contract (fail-closed): every non-prerelease Release published in
+# this repository must be described by the distribution catalogue, and every catalogue entry must
+# point at metadata that exists. Beta/prerelease tags are intentionally outside the stable catalogue.
 #   1. list the published release tags through the GitHub API
 #   2. a tag must resolve to a tools/<key>/tool.json and a tools/catalog.json entry
 #   3. a catalogue entry must point at an existing tools/<key>/tool.json
@@ -50,7 +50,8 @@ fi
 work_dir="$(mktemp -d)"
 trap 'rm -rf "$work_dir"' EXIT
 
-# The release list is public. Pages are read until a short page ends the listing.
+# The release list is public. Pages are read until a short page ends the listing; drafts and
+# prereleases are excluded because tools/catalog.json describes stable distributions only.
 tags_file="$work_dir/tags.txt"
 : > "$tags_file"
 page=1
@@ -74,7 +75,7 @@ while [ "$page" -le 20 ]; do
     break
   fi
   count="$(jq 'length' "$page_file" | tr -d '\r')"
-  jq -r '.[].tag_name // empty' "$page_file" | tr -d '\r' >> "$tags_file"
+  jq -r '.[] | select(.draft != true and .prerelease != true) | .tag_name // empty' "$page_file" | tr -d '\r' >> "$tags_file"
   if [ "$count" -lt 100 ]; then
     break
   fi
