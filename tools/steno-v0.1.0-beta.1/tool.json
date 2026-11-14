@@ -1,0 +1,12 @@
+{
+  "schema_version": "1",
+  "release_key": "steno-v0.1.0-beta.1",
+  "source_repository": "fongap-labs/app-source",
+  "release_channel": "beta",
+  "platform": "windows",
+  "arch": "x64",
+  "upstream_asset": "Steno-windows-x64-setup.exe",
+  "checksum_asset": "Steno-windows-x64-setup.exe.sha256",
+  "license_path": "LICENSE",
+  "license_expression": "Apache-2.0"
+}
