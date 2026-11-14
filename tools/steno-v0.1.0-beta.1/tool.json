@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "release_key": "steno-v0.1.0-beta.1",
+  "release_key": "steno",
   "source_repository": "fongap-labs/app-source",
   "release_channel": "beta",
   "platform": "windows",
