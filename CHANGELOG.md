@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 
+- 新增: Steno v0.1.0-beta.1 Windows x64 预发布包登记至分发目录，附 Apache-2.0 许可证与 NOTICE；稳定版同步流程保持独立。
 - 修复: 分发目录完整性门禁仅校验稳定正式版；beta/prerelease 仍可发布，但不再被误判为稳定工具目录缺项。
 - 维护: 更新 AdFilter 规则输出快照，保留 GPL-3.0-only 许可证文件与上游署名元数据。
 - 维护: 仓库取消默认许可证；AdFilter 规则文件单独声明 GPL-3.0-only，并保留上游许可与署名义务。
