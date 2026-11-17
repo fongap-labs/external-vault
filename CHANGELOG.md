@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 
+- 维护: 恢复 AdFilter 输出的 GPL 许可证与上游署名文件，并更新自动任务规则快照。
 - 新增: Steno v0.1.0-beta.1 Windows x64 预发布包登记至分发目录，附 Apache-2.0 许可证与 NOTICE；稳定版同步流程保持独立。
 - 维护: 更新 AdFilter 规则输出快照，保留 GPL-3.0-only 许可证文件与上游署名元数据。
 - 维护: 仓库取消默认许可证；AdFilter 规则文件单独声明 GPL-3.0-only，并保留上游许可与署名义务。
