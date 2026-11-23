@@ -33,3 +33,7 @@ Do not commit versioned executables, installers or program packages into the Git
 ## Governance
 
 Shared naming, changelog, development, PR Gate and release-governance rules are inherited from `fongap-labs/action-worker`. This repository keeps only distribution-specific architecture and rules.
+
+## Commit messages
+
+- Follow the organization’s required format for commit titles. Every non-empty Git commit body must use Chinese for its natural-language explanation; preserve technical identifiers, paths, and commands verbatim. See the [changelog conventions](https://github.com/fongap-labs/action-worker/blob/main/docs/04_CHANGELOG_CONVENTIONS.md).
