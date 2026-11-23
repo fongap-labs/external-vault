@@ -1,5 +1,8 @@
 <div align="center">
 
+文档索引：[仓库文档](docs/README.md) · [分发治理](docs/DISTRIBUTION_GOVERNANCE.md)
+
+
 # external-vault
 
 **公开发布、可复用资产与分发元数据，不承载程序源码。**

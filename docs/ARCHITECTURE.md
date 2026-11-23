@@ -33,8 +33,8 @@ external-vault/
 ├─ tools/               Public tool catalog and distribution metadata
 ├─ skills/              Reusable public guidance and references
 ├─ output/              Generated non-program public artifacts
-├─ AGENTS.md             Agent redirect
-├─ CLAUDE.md             Repository Agent entry point
+├─ AGENTS.md             Repository Agent entry point
+├─ CLAUDE.md             Agent redirect
 └─ README.md             Repository index
 ```
 
