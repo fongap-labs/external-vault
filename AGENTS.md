@@ -1,39 +1,27 @@
-# Agent Guide
+# AGENTS
 
-## Documentation map
+## Common rules
 
-Read docs/README.md for the repository documentation map.
+- Inspect the requested branch, source SHA, relevant code and existing contracts before editing. Do not read unrelated trees or expand the task.
+- Reuse existing implementations; fix the root cause. Delete obsolete code. No speculative features, duplicate abstractions, unnecessary dependencies, fallback stacking or new workflows.
+- Own boolean variables and parameters must use is/has/can/should: `enabled` -> `isEnabled`, `retry` -> `shouldRetry`; Python/Rust: `is_enabled`. Preserve external protocol names.
+- Use precise language-native identifiers. Governed file names: `helper.ts` -> `validate-token-format.ts`. Own external configuration: `AW_TOKEN` -> `AW_STATUS_TOKEN`. Use three semantic segments; preserve standard platform names.
+- Comments: add or retain only if omission would cause a concrete foreseeable error. Delete optional explanations, code narration, decorative separators and commented-out code. Preserve required legal notices, machine directives and external contracts.
+- Tests: verify necessary observable behavior, security and regressions. Extend existing coverage before adding tests. Delete redundant or retired tests; never weaken useful coverage. Externalizable tests belong in the central test packs; local tests require an existing approved exception.
+- Update existing authoritative documentation; no duplicate guides, task summaries or speculative plans.
+- Commit and PR titles: only feat/fix/chore, in English (e.g. `fix(auth): reject invalid token`). Every commit requires a blank line and a substantive Chinese body explaining why and what changed. No AI attribution.
+- Update only the Unreleased section of CHANGELOG.md with matching Chinese entries (feat=addition, fix=correction, chore=maintenance); do not rewrite released history.
+- Use the declared target branch; omitted targets mean main. main is stable/production; dev is Beta only when enabled. Never fall back to another branch. No direct protected-branch writes, cross-branch transfer or history rewrite without the applicable authorization.
+- No secrets in code, logs or untrusted execution. No bypass of security, CI, merge or release gates. Never change tests merely to obtain green status.
+- Run the applicable central preflight before submission; fix introduced failures. Verify the final diff and actual outcomes. Report unverified checks and blockers; never claim success without fresh evidence.
 
-`external-vault` is the public distribution and asset repository for Fongap Labs.
+## Branch rules
 
-## Required reading
+- Use main only. Dev is disabled; do not initialize, target, publish or deploy from dev.
 
-1. Action Worker `docs/01_SHARED_GOVERNANCE.md`
-2. Action Worker `docs/03_NAMING_CONVENTIONS.md`
-3. Action Worker `docs/04_CHANGELOG_CONVENTIONS.md`
-4. Action Worker `docs/DEVELOPMENT_GUIDE.md`
-5. `docs/ARCHITECTURE.md`
-6. `docs/DISTRIBUTION_GOVERNANCE.md`
+## Repository rules
 
-## Repository boundary
-
-- `tools/` contains public catalog and distribution metadata.
-- `skills/` contains reusable public rules, specifications, prompts and references.
-- `output/` contains generated or directly consumable non-program artifacts.
-- GitHub Releases contain versioned executable payloads.
-
-Program source, tests, build/package implementation and private configuration belong to their owning source repositories.
-
-## Distribution boundary
-
-Source repositories build and validate release artifacts, then dispatch `run-release` to Action Worker. Target-repository write credentials remain in Action Worker.
-
-Do not commit versioned executables, installers or program packages into the Git tree.
-
-## Governance
-
-Shared naming, changelog, development, PR Gate and release-governance rules are inherited from `fongap-labs/action-worker`. This repository keeps only distribution-specific architecture and rules.
-
-## Commit messages
-
-- Follow the organization’s required format for commit titles. Every non-empty Git commit body must use Chinese for its natural-language explanation; preserve technical identifiers, paths, and commands verbatim. See the [changelog conventions](https://github.com/fongap-labs/action-worker/blob/main/docs/04_CHANGELOG_CONVENTIONS.md).
+- tools/ holds public catalog and distribution metadata; skills/ holds reusable public rules and prompts; output/ holds non-program artifacts; GitHub Releases hold versioned executables.
+- Program source, tests, build/package implementation and private configuration belong to their source repositories. Never commit versioned executables, installers or program packages into the Git tree.
+- Source repositories build and validate artifacts, then dispatch run-release to Action Worker. Target write credentials stay in Action Worker.
+- Follow docs/ARCHITECTURE.md and docs/DISTRIBUTION_GOVERNANCE.md when changing distribution behavior.
